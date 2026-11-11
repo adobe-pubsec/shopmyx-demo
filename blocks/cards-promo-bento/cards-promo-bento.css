@@ -1,0 +1,57 @@
+/*
+ * Bento: groups of six tiles = two source rows of three; wide tile first in odd rows,
+ * last in even rows. Source: Tailwind gap-4 (16px), tiles mt-2 (8px), img rounded-xl (12px).
+ */
+.cards-promo-bento > ul {
+  list-style: none;
+  margin: 0;
+
+  /* source tiles sit mt-2 (8px) inside their grid; padding so it does not collapse */
+  padding: 8px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row dense;
+  align-items: start;
+  gap: 16px;
+}
+
+.cards-promo-bento > ul > li:nth-child(6n + 1),
+.cards-promo-bento > ul > li:nth-child(6n) {
+  grid-column: span 2;
+}
+
+/* mobile: source stacks the wide tile and the 2-up pair 24px apart (gap 16px + mt-2 8px) */
+.cards-promo-bento > ul > li:nth-child(6n + 2),
+.cards-promo-bento > ul > li:nth-child(6n + 3),
+.cards-promo-bento > ul > li:nth-child(6n) {
+  margin-top: 8px;
+}
+
+.cards-promo-bento .cards-promo-bento-card-image {
+  line-height: 0;
+}
+
+.cards-promo-bento .cards-promo-bento-card-image a,
+.cards-promo-bento .cards-promo-bento-card-image picture {
+  display: block;
+}
+
+.cards-promo-bento .cards-promo-bento-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 12px;
+}
+
+@media (width >= 640px) {
+  .cards-promo-bento > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cards-promo-bento > ul > li:nth-child(6n + 2),
+  .cards-promo-bento > ul > li:nth-child(6n + 3),
+  .cards-promo-bento > ul > li:nth-child(6n) {
+    margin-top: 0;
+  }
+}

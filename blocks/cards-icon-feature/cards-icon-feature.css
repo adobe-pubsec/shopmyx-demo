@@ -1,0 +1,79 @@
+/* Block: cards-icon-feature -- values from source computed styles (shopmyexchange.com "Serving the Military Family") */
+
+/* source grid: mt-5, grid-cols-2 md:grid-cols-3, gap-5 */
+.cards-icon-feature {
+  margin-top: 20px;
+}
+
+.cards-icon-feature > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* source item: text-center my-4 */
+.cards-icon-feature > ul > li {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.cards-icon-feature .cards-icon-feature-card-image {
+  line-height: 0;
+}
+
+/* source icon: 190x130, max-w-max w-full h-auto mx-auto */
+.cards-icon-feature .cards-icon-feature-card-image img {
+  display: block;
+  width: 100%;
+  max-width: max-content;
+  height: auto;
+  margin: 0 auto;
+}
+
+.cards-icon-feature .cards-icon-feature-card-body > * {
+  margin: 0;
+}
+
+/* source title: font-extrabold text-sm (lg:text-2xl) uppercase text-blue-900 */
+.cards-icon-feature .cards-icon-feature-card-title {
+  margin: 0;
+  color: var(--link-color);
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/* source lines: text-sm (lg:text-2xl) text-blue-900 inside a 24px line box */
+.cards-icon-feature .cards-icon-feature-card-body p {
+  color: var(--link-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.cards-icon-feature .cards-icon-feature-card-body a:any-link {
+  color: var(--link-color);
+}
+
+@media (width >= 768px) {
+  .cards-icon-feature > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1024px) {
+  .cards-icon-feature .cards-icon-feature-card-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .cards-icon-feature .cards-icon-feature-card-body p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

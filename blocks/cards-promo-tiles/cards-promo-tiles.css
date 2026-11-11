@@ -1,0 +1,40 @@
+/* source: Tailwind grid-cols-2 sm:grid-cols-4 gap-4; tiles are img.w-full.rounded-xl */
+.cards-promo-tiles > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cards-promo-tiles .cards-promo-tiles-card {
+  min-width: 0;
+}
+
+.cards-promo-tiles .cards-promo-tiles-card-image {
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.cards-promo-tiles .cards-promo-tiles-card-image a {
+  display: block;
+}
+
+.cards-promo-tiles .cards-promo-tiles-card-image picture {
+  display: block;
+}
+
+.cards-promo-tiles .cards-promo-tiles-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+@media (width >= 640px) {
+  .cards-promo-tiles > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

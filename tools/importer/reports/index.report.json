@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "url": "https://www.shopmyexchange.com/",
+  "path": "index",
+  "timestamp": "2026-11-10T20:04:14.499Z",
+  "title": "Shop Army & Air Force Exchange Service",
+  "template": "home",
+  "blocks": [
+    "columns-promo-strip",
+    "hero-image-banner",
+    "cards-promo-wide",
+    "cards-promo-wide",
+    "cards-promo-wide",
+    "cards-promo-tiles",
+    "cards-promo-tiles",
+    "cards-promo-tiles",
+    "cards-promo-tiles",
+    "cards-promo-bento",
+    "cards-promo-bento",
+    "tabs-product-recs",
+    "cards-logo-circle",
+    "cards-category",
+    "cards-icon-feature"
+  ],
+  "importScript": "93526f0863fe"
+}

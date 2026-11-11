@@ -1,0 +1,35 @@
+/* Source: #mt_id_moreways + div.grid (grid grid-cols-2 sm:grid-cols-6 gap-2).
+   The circle is part of each image, so the image is shown whole at full cell width
+   with no clipping. The source has no hover styling. */
+.cards-logo-circle > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cards-logo-circle > ul > li {
+  min-width: 0;
+}
+
+.cards-logo-circle .cards-logo-circle-card-image,
+.cards-logo-circle .cards-logo-circle-card-image a,
+.cards-logo-circle .cards-logo-circle-card-image picture {
+  display: block;
+}
+
+.cards-logo-circle .cards-logo-circle-card-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+@media (width >= 640px) {
+  .cards-logo-circle > ul {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

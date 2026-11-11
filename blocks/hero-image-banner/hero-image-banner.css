@@ -1,0 +1,41 @@
+/* Source: #mt_id_hero.grid > .carousel > .carousel-slide > a > img.w-full.rounded-xl */
+.hero-image-banner {
+  position: relative;
+}
+
+.hero-image-banner .hero-image-banner-media {
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.hero-image-banner .hero-image-banner-media a {
+  display: block;
+}
+
+.hero-image-banner .hero-image-banner-media picture {
+  display: block;
+  width: 100%;
+}
+
+/*
+ * The source hero slot is the Scene7 $HP1$ preset (1380x460, 3:1), rendered 1410x470 at 1440px.
+ * Adding wid= to that preset keeps its fixed canvas height and pads the art with white
+ * (2000x460 desktop, 750x460 mobile); cover-fitting into the preset's 3:1 box crops the padding.
+ */
+.hero-image-banner .hero-image-banner-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero-image-banner .hero-image-banner-text {
+  padding: 16px 0 0;
+}
+
+.hero-image-banner .hero-image-banner-text > :first-child {
+  margin-top: 0;
+}

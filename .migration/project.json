@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "shopmyx-demo": {
+      "previewOrg": "adobe-pubsec",
+      "previewSite": "shopmyx-demo",
+      "contentHostUrl": "https://content.da.live/adobe-pubsec/shopmyx-demo/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

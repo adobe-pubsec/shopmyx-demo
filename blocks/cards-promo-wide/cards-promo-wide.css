@@ -1,0 +1,45 @@
+/* Source: #mt_id_hp2 (grid gap-4, mt-3) and the "Discover More" grids (gap-5, mb-5) */
+.cards-promo-wide > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Multi-row banner sets ("Discover More"): 20px gap plus the 4px caption spacer between rows */
+.cards-promo-wide > ul:has(> li:nth-child(3)) {
+  gap: 24px 20px;
+}
+
+.cards-promo-wide .cards-promo-wide-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.cards-promo-wide .cards-promo-wide-card-image {
+  line-height: 0;
+}
+
+.cards-promo-wide .cards-promo-wide-card-image a {
+  display: block;
+}
+
+.cards-promo-wide .cards-promo-wide-card-image picture {
+  display: block;
+}
+
+.cards-promo-wide .cards-promo-wide-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 12px;
+}
+
+@media (width >= 640px) {
+  .cards-promo-wide > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

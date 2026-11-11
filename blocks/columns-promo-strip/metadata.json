@@ -1,0 +1,18 @@
+{
+  "variantName": "columns-promo-strip",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Thin strip of two linked promo images at the top of the homepage",
+    "description": "Two-cell strip of linked image banners with a vertical divider between them; stacks with a bottom divider on mobile."
+  },
+  "contentPattern": {
+    "structure": "1 row(s): Linked image (left) | Linked image (right)",
+    "description": "Two linked promo banners side by side (Tax Free + Free Shipping with Military Star; Authorized Patron Information), separated by a vertical divider"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Thin strip of two linked promo images at the top of the homepage.",
+  "reuseGuidance": "Use for a pair of side-by-side linked banners separated by a divider. For more than two, or for repeating tiles, use a cards-promo-* block.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

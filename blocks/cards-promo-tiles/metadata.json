@@ -1,0 +1,18 @@
+{
+  "variantName": "cards-promo-tiles",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Near-square linked promo tiles, four per row (two on mobile)",
+    "description": "Image-only linked near-square promo tiles, 4 per row (2 on mobile), rounded corners."
+  },
+  "contentPattern": {
+    "structure": "one row per card, 2 cells (Image | Link (destination; link text becomes the accessible label))",
+    "description": "Four linked Military Star offer tiles in a 4-up grid | Eight linked promo tiles in two rows of four (Diamonds, Fine Jewelry, Watches, Fragrance Gift Sets, Sunglasses, Handbags, Bath & Body Works, Beauty Brands); source splits into #mt_id_hp6 and #mt_id_hp7 | Four linked brand clothing/shoe promo tiles (American Eagle, Levi's, Under Armour, Nike)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Near-square linked promo tiles, four per row (two on mobile).",
+  "reuseGuidance": "Use for image-only offer/brand tiles. Author one row per tile in visual order.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

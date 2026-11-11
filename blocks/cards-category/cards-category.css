@@ -1,0 +1,64 @@
+/* source: div.mx-4.mb-5 (margin 0 16px 20px) > grid grid-cols-2 sm:grid-cols-6 gap-4 */
+.cards-category {
+  margin: 0 16px 20px;
+}
+
+.cards-category > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* item: text-center text-base(14px) uppercase */
+.cards-category .cards-category-card {
+  margin: 0;
+  text-align: center;
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.cards-category .cards-category-link {
+  display: block;
+  text-decoration: none;
+}
+
+.cards-category a.cards-category-link:any-link {
+  color: var(--text-color);
+  overflow-wrap: normal;
+}
+
+.cards-category a.cards-category-link:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.cards-category .cards-category-card-image {
+  display: block;
+  line-height: 0;
+}
+
+.cards-category .cards-category-card-image picture {
+  display: block;
+}
+
+.cards-category .cards-category-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+/* label stays inline under the image, as on the source (span inside the link) */
+.cards-category .cards-category-card-label {
+  display: inline;
+}
+
+@media (width >= 640px) {
+  .cards-category > ul {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

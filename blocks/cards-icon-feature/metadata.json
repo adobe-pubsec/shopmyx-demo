@@ -1,0 +1,18 @@
+{
+  "variantName": "cards-icon-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Centered feature items with a line icon, uppercase title and one or two linked lines",
+    "description": "Centered line icon, bold uppercase blue title and large blue linked lines; 3 per row, no card chrome."
+  },
+  "contentPattern": {
+    "structure": "one row per card, 2 cells (Icon image | Title (heading) and linked lines)",
+    "description": "Three centered items: line icon, uppercase blue title, one or two linked text lines (Exchange Hub, We Give Back, Family Serving Family)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Centered feature items with a line icon, uppercase title and one or two linked lines.",
+  "reuseGuidance": "Use for small icon-led feature callouts with no card chrome.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

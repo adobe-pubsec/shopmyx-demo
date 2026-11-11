@@ -1,0 +1,18 @@
+{
+  "variantName": "cards-logo-circle",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Row of circular linked brand/program logos",
+    "description": "Image-only linked circular logos, 6 per row, no text."
+  },
+  "contentPattern": {
+    "structure": "one row per card, 2 cells (Logo image | Link (destination; link text becomes the accessible label))",
+    "description": "Six circular linked brand/program logos in one row (Home Depot, Bass Pro Shops, Outlet, More Deals, Military Pride, Tactical Gear)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Row of circular linked brand/program logos.",
+  "reuseGuidance": "Use for image-only round logos with no visible label. Use cards-category when a text label is shown under the icon.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

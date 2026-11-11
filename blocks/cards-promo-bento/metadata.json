@@ -1,0 +1,18 @@
+{
+  "variantName": "cards-promo-bento",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Linked promo tiles in a bento grid; each group of three has one double-width tile (first in odd rows, last in even rows)",
+    "description": "Image-only linked tiles in a bento grid where one tile per row spans two columns (wide first in row 1, wide last in row 2)."
+  },
+  "contentPattern": {
+    "structure": "one row per card, 2 cells (Image | Link (destination; link text becomes the accessible label))",
+    "description": "Six linked product-category promo tiles in a bento grid (row 1: wide WOW Deals + Audio + Smartwatches; row 2: Computers + Gaming Deals + wide Soundbars); source splits it into #mt_id_hp4 and #mt_id_hp5 grids"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Linked promo tiles in a bento grid; each group of three has one double-width tile (first in odd rows, last in even rows).",
+  "reuseGuidance": "Author tiles in visual order, in groups of three. Use cards-promo-tiles when all tiles are the same size.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

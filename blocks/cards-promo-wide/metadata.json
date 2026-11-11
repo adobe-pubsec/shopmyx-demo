@@ -1,0 +1,18 @@
+{
+  "variantName": "cards-promo-wide",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Wide (~4:1) linked promo banners, two per row",
+    "description": "Image-only linked wide (~4:1) banners, 2 per row."
+  },
+  "contentPattern": {
+    "structure": "one row per card, 2 cells (Image | Link (destination; link text becomes the accessible label))",
+    "description": "Two wide linked promo banners in a 2-up grid (Home Depot daily deal, Veterans Day book) | Four wide linked promo banners in a 2-up grid (Tactical, Holiday Gift Guide, Download the App, DoW Civilian CAC Holders); source splits into two grids (empty #mt_id_hp10 heading between them is dropped)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Wide (~4:1) linked promo banners, two per row.",
+  "reuseGuidance": "Use for wide image-only banners. For near-square tiles use cards-promo-tiles; for the mixed wide/narrow layout use cards-promo-bento.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

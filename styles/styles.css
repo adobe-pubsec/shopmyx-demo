@@ -1,3 +1,5 @@
+@import url('brand.css');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -10,64 +12,14 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
-}
-
-/* fallback fonts */
+/* fallback font: Lato metrics over Arial to limit CLS while the web font loads */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: lato-fallback;
+  size-adjust: 97.4%;
+  ascent-override: 101%;
+  descent-override: 22%;
+  line-gap-override: 0%;
   src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
 }
 
 body {
@@ -77,7 +29,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: var(--body-line-height);
 }
 
 body.appear {
@@ -106,9 +58,10 @@ h5,
 h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
+  color: var(--heading-color);
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: var(--heading-line-height);
   scroll-margin: 40px;
 }
 
@@ -118,6 +71,15 @@ h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
+
+/* default-content section headings: bold, uppercase, centered (source: h3 / h2 titles) */
+main .default-content-wrapper h1,
+main .default-content-wrapper h2,
+main .default-content-wrapper h3 {
+  margin: 0 0 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 p,
 dl,
@@ -143,7 +105,7 @@ pre {
 }
 
 main > div {
-  margin: 40px 16px;
+  margin: var(--block-gap) var(--content-gutter);
 }
 
 input,
@@ -163,6 +125,16 @@ a:any-link {
 a:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+/* image-only links (promo tiles/banners) never show an underline */
+a:has(> picture, > img):hover {
+  text-decoration: none;
 }
 
 /* buttons */
@@ -278,6 +250,24 @@ button.button.accent:disabled:focus-visible {
   color: var(--dark-color);
 }
 
+/* EDS button reset: source links are plain text links, not pill buttons */
+main .button-container {
+  display: inline;
+}
+
+main a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--link-color);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  white-space: normal;
+}
+
 main img {
   max-width: 100%;
   width: auto;
@@ -295,25 +285,29 @@ main img {
   width: 100%;
 }
 
-/* sections */
+/* sections: full-width content with 15px gutters, ~16px between blocks (source layout) */
 main > .section {
-  margin: 40px 0;
+  margin: var(--block-gap) 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+  max-width: var(--content-max-width);
+  margin: 0 auto var(--block-gap);
+  padding: 0 var(--content-gutter);
+  box-sizing: border-box;
+}
+
+main > .section > div:last-child {
+  margin-bottom: 0;
+}
+
+main > .section > .default-content-wrapper {
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
 }
 
 /* section metadata */

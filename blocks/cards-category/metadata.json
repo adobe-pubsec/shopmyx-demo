@@ -1,0 +1,18 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Shop-by-category grid: circular icon with uppercase label, each linking to a listing",
+    "description": "Circular line-icon images with small uppercase grey label beneath, 6 per row."
+  },
+  "contentPattern": {
+    "structure": "one row per card, 2 cells (Icon image | Linked label)",
+    "description": "Twelve circular category icons with uppercase text labels, each linking to a sale category listing (Electronics ... Outlet), 6 per row"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Shop-by-category grid: circular icon with uppercase label, each linking to a listing.",
+  "reuseGuidance": "Use for icon + label links. The label is the link text; the whole item becomes one link.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

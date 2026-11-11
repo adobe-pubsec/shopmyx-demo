@@ -1,0 +1,1570 @@
+{
+  "schemaVersion": 2,
+  "url": "https://www.shopmyexchange.com/",
+  "title": "Shop Army & Air Force Exchange Service",
+  "timestamp": "2026-11-10T19:31:35.962Z",
+  "duration": "16.7s",
+  "cleanup": {
+    "elementsRemoved": 2,
+    "types": [
+      "overlay",
+      "popup"
+    ],
+    "cookieConsentDismissed": false,
+    "lateConsentOverlaysRemoved": 0,
+    "removed": [
+      {
+        "selector": "div.light.bg-white > div:nth-child(2)",
+        "type": "overlay"
+      },
+      {
+        "selector": "section.modalHeader.relative",
+        "type": "popup",
+        "rule": "body [class*=\"modal\"]:not(nav *)"
+      }
+    ]
+  },
+  "snapshot": {
+    "html": "page.html",
+    "unresolvedSelectors": []
+  },
+  "images": [
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732106/ztk5bgdv18ymvzmmmlat.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732105/zghqcqmi3xj0xgmkyckb.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/clearance-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/military-blue-bar-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/outlet-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/weeklyad-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/marketplace-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/unitpurchases-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681722493/yjjc1frjalse4r4ir0v4.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681721529/asca5tv6lzpqafzo0mth.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/content/aafes/aafes/media/ecom/assets/static/icons/severe-weather-cloud01.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/home-taxfree",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/home-patron-information",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/tax-free-banner01?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/HP1_26_1106_3_tab?$HP1$",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/HPM_26_1106_3_tab",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-FanGearArrowLFT?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-FanGearArrowRT?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/HP1_26_1106_3_tab",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-special-homedepot",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-veteransdaybook",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-milstar-alloffers",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-milstar-doublepoints",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-milstar-furnituremattress",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-milstar-toys",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/long-transparent01?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-vettech-audio01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-vettech-smartwatches",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-vettech-wowdeals",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-vettech-computers",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-vettech-gamingdeals01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-vettech-soundbars",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-dazzlingdeals-diamondsengagement",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-dazzlingdeals-finejewelry",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-dazzlingdeals-watches",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-dazzlingdeals-fragrancegiftsets",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-dazzlingdeals-sunglasses",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-dazzlingdeals-handbags",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-special-dazzlingdeals-bathbodyworks",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-dazzlingdeals-beautybrands",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-milstar-extra10",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-milstar-app-extra10",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-clothingshoes-americaneagle",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-clothingshoes-levis",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-clothingshoes-underarmour",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-clothingshoes-nike",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-left-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/1876101_2910-3:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/1430956_0002:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6914451_1007:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4928577_V58J:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3437147_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4384533_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6300245_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3479859_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6200960_2041:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5363442_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4829258_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4147065_3550:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4409802_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2395446_WAST:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/1732553_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4996810_CKUH:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3430743_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3202998_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4785487_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4573756_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-right-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5081526_ZRI9:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4928920_TT2U:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4240137_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6756653_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5081407_3635:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3901504_0002:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2395440_WAST:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/7779732_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6605994_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3475945_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4946708_0001:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2392227_0001:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4854475_CZSL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/8660935_0000-1:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/7079925_2TLD:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3137287_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3703670_0004:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2392228_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6326038_1453:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_1370:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/7414133_0000-3:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/7338113_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4419899_1191:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/1430956_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4799305_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3479864_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3901065_0002:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6340455_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4649899_0001:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4409807_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2657910_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4928925_1191:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2215179_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/7815975_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/6339366_0000-4:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4015283_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2005558_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/7779731_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5282850_3550:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3407169_1927_alt1:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2559679_KNQX:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4804053_JOLB:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4419904_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3903163_QIGZ:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2601956_5601-10:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3618301_CTDZ:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3834452_1927:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4198901_2041:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4060071_NVLP:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/1407527_6F69:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3001161_831V:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/031425-hp-mwts-homedepot",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/111425-hp-mwts-bassproshops",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/050225-hp-mwts-outlet",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/011025-hp-mwts-more",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-mwts-militarypride",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-mwts-tacticalgear",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-electronics",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-furniture",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-patiogardengarage",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-household",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-sports",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-shoes",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-clothing",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-beautyhealth",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-jewelrywatches",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-babytoys",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-food",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626a-hp-cat-outlet",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/053124-hp-special-tactical",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/103026-hp-special-holidaygiftguide",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-myexchangeapp",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110626-hp-special-cac",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/100723-hp-militaryfamily-hub",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/100723-hp-militaryfamily-giveback",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/100723-hp-militaryfamily-serving",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/100926-hp-fsf-giveserve",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/chat-bubble-icon01",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/mail.db837a94.png",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/facebook.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/twitter.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/pinterest.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://sp.analytics.yahoo.com/sp.pl?a=10000&d=Tue%2C%2010%20Nov%202026%2019%3A31%3A23%20GMT&n=6&b=Shop%20Army%20%26%20Air%20Force%20Exchange%20Service&.yp=10204186&f=https%3A%2F%2Fwww.shopmyexchange.com%2F&enc=UTF-8&yv=1.17.1&tagmgr=gtm",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/checkboxCheck.13db094e.png",
+      "type": "background"
+    }
+  ],
+  "skeleton": {
+    "signature": "sB(s(s,s,s(2x1,s,2x1,s(s,4x1),s(s,2x1),s(s,2x1),s(s,4x1),s(s,4x1),s(s,s),s(s,4x1),sB(s(,),3x2(,)),s,6x1,s(s,6x2),s,2x1,s,2x1,s,3x1,s),s,s,s,s,s,s),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow",
+      "rc1c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1)",
+      "rc1c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2)",
+      "rc1c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3)",
+      "rc1c3c1": "#mt_id_taxfree",
+      "rc1c3c2": "body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > section > div > div > div > div:nth-of-type(4)",
+      "rc1c3c3": "#mt_id_hp2",
+      "rc1c3c4": "#mt_id_hp3",
+      "rc1c3c4c1": "#mt_id_hp3 > div.mt-1",
+      "rc1c3c4c2": "#mt_id_hp3 > div.grid.grid-cols-1",
+      "rc1c3c5": "#mt_id_hp4",
+      "rc1c3c5c1": "#mt_id_hp4 > div.mt-1",
+      "rc1c3c5c2": "#mt_id_hp4 > div.grid.grid-cols-1.sm\\:grid-cols-2.md\\:grid-cols-2.lg\\:grid-cols-2.gap-4.mt-2",
+      "rc1c3c6": "#mt_id_hp5",
+      "rc1c3c6c1": "#mt_id_hp5 > div.mt-1",
+      "rc1c3c6c2": "#mt_id_hp5 > div.grid.grid-cols-1.sm\\:grid-cols-2.md\\:grid-cols-2.lg\\:grid-cols-2.mt-2.gap-4",
+      "rc1c3c7": "#mt_id_hp6",
+      "rc1c3c7c1": "#mt_id_hp6 > div.mt-1",
+      "rc1c3c7c2": "#mt_id_hp6 > div.grid.grid-cols-1",
+      "rc1c3c8": "#mt_id_hp7",
+      "rc1c3c8c1": "#mt_id_hp7 > div.mt-1",
+      "rc1c3c8c2": "#mt_id_hp7 > div.grid.grid-cols-1",
+      "rc1c3c9": "body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > section > div > div > div > div:nth-of-type(13)",
+      "rc1c3c9c1": "body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > section > div > div > div > div:nth-of-type(13) > div:nth-of-type(1)",
+      "rc1c3c9c2": "body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > section > div > div > div > div:nth-of-type(13) > div:nth-of-type(2)",
+      "rc1c3c10": "#mt_id_hp8",
+      "rc1c3c10c1": "#mt_id_hp8 > div.mt-1",
+      "rc1c3c10c2": "#mt_id_hp8 > div.grid.grid-cols-1",
+      "rc1c3c11": "#monetate_selectorHTML_47e926d4_0",
+      "rc1c3c11c1": "#mt-tabbed-recs > div.mt-aafes-recs__header",
+      "rc1c3c11c1c1": "#mt-tabbed-recs-title",
+      "rc1c3c11c1c2": "#mt-tabbed-recs > div.mt-aafes-recs__header > div.mt-aafes-recs__tabs",
+      "rc1c3c11c2": "#mt-tabbed-recs > div.mt-aafes-recs__panels",
+      "rc1c3c11c2c1": "#mt-slider-5988112-0 > div.col-span-12.px-0 > div",
+      "rc1c3c11c2c2": "#mt-slider-5988112-0 > div.col-span-12.px-0 > ul",
+      "rc1c3c12": "#mt_id_moreways",
+      "rc1c3c13": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3) > section.cms-container-c18z4.mb-5 > div > div > div > div.grid.grid-cols-2.sm\\:grid-cols-6.md\\:grid-cols-6.lg\\:grid-cols-6.gap-2",
+      "rc1c3c14": "#mt_id_shopbycategory",
+      "rc1c3c14c1": "#mt_id_shopbycategory > h3.mb-2.lg\\:text-2xl.text-xl.font-bold.text-center.uppercase.font-sans.text-black-600",
+      "rc1c3c14c2": "#mt_id_shopbycategory > div.mx-4.mb-5",
+      "rc1c3c15": "#mt_id_hp9",
+      "rc1c3c16": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3) > section.cms-container-c18z4.mb-5 > div > div > div > div.mb-5.grid.grid-cols-1.sm\\:grid-cols-2.md\\:grid-cols-2.lg\\:grid-cols-2.gap-5:nth-of-type(21)",
+      "rc1c3c17": "#mt_id_hp10",
+      "rc1c3c18": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3) > section.cms-container-c18z4.mb-5 > div > div > div > div.mb-5.grid.grid-cols-1.sm\\:grid-cols-2.md\\:grid-cols-2.lg\\:grid-cols-2.gap-5:nth-of-type(23)",
+      "rc1c3c19": "#mt_id_servingfamily",
+      "rc1c3c20": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3) > section.cms-container-c18z4.mb-5 > div > div > div > div.grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-3.gap-5.mt-5",
+      "rc1c3c21": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3) > section.cms-container-c18z4.mb-5 > div > div > div > div.App",
+      "rc1c4": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(4)",
+      "rc1c5": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(5)",
+      "rc1c6": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(6)",
+      "rc1c7": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(7)",
+      "rc1c8": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(8)",
+      "rc1c9": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(9)",
+      "rc2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(4)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc5",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(5)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(6)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc7",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(7)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc8",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(8)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc9",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(9)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc10",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 125,
+      "height": 5328.03125
+    },
+    "splits": [
+      {
+        "selector": "div.grid.grid-cols-2 > div.banner-tile, div.grid.grid-cols-2 > div.banner-tile, div.grid.grid-cols-2 > div.banner-tile, div.grid.grid-cols-2 > div.banner-tile, div.grid.grid-cols-2 > div.banner-tile",
+        "sides": [
+          [
+            0,
+            0.1619366349361141
+          ],
+          [
+            0.16761045667615998,
+            0.3295470916122741
+          ],
+          [
+            0.33522091335231996,
+            0.49715754828843406
+          ],
+          [
+            0.670452908387726,
+            0.8323895433238401
+          ],
+          [
+            0.8380633650638859,
+            1
+          ]
+        ],
+        "top": 3882.265625,
+        "bottom": 4123.78125,
+        "cover": 0.04532924332979466,
+        "above": 9
+      },
+      {
+        "selector": "div.grid.grid-cols-2 > div.text-center.my-4, div.grid.grid-cols-2 > div.text-center.my-4",
+        "sides": [
+          [
+            0,
+            0.3238732698722282
+          ],
+          [
+            0.6761267301277718,
+            1
+          ]
+        ],
+        "top": 5179.03125,
+        "bottom": 5405.03125,
+        "cover": 0.04241716863053309,
+        "above": 13
+      }
+    ],
+    "start": {
+      "kind": "repeated cards"
+    }
+  },
+  "blocks": [
+    {
+      "id": "5c68b34ae762",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#mt_id_taxfree",
+      "bounds": {
+        "x": 15,
+        "y": 137,
+        "width": 1410,
+        "height": 70
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "taxfree-wrap",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]"
+      },
+      "screenshot": "blocks/5c68b34ae762.jpg",
+      "html": "blocks/5c68b34ae762.html"
+    },
+    {
+      "id": "c33a3733e1e2",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > section > div > div > div > div:nth-of-type(4)",
+      "bounds": {
+        "x": 15,
+        "y": 223,
+        "width": 1410,
+        "height": 470
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "link + image"
+      },
+      "description": "grid",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/c33a3733e1e2.html"
+    },
+    {
+      "id": "195a49072525",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp2",
+      "bounds": {
+        "x": 15,
+        "y": 709,
+        "width": 1410,
+        "height": 175
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "mb-4",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/195a49072525.jpg",
+      "html": "blocks/195a49072525.html"
+    },
+    {
+      "id": "ed4e16ec8e13",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp3",
+      "bounds": {
+        "x": 15,
+        "y": 900,
+        "width": 1410,
+        "height": 183
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + link + image"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/ed4e16ec8e13.jpg",
+      "html": "blocks/ed4e16ec8e13.html"
+    },
+    {
+      "id": "b8ae59316c0f",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp4 > div.mt-1",
+      "bounds": {
+        "x": 15,
+        "y": 1102,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "mt-1",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/b8ae59316c0f.html"
+    },
+    {
+      "id": "8fe4dfee0d67",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp4 > div.grid.grid-cols-1.sm\\:grid-cols-2.md\\:grid-cols-2.lg\\:grid-cols-2.gap-4.mt-2",
+      "bounds": {
+        "x": 15,
+        "y": 1142,
+        "width": 1410,
+        "height": 360
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "grid",
+      "features": {
+        "skeleton": "[[T]|T]",
+        "variant": "[[T]|T]",
+        "variantClean": "[[T]|T]"
+      },
+      "screenshot": "blocks/8fe4dfee0d67.jpg",
+      "html": "blocks/8fe4dfee0d67.html"
+    },
+    {
+      "id": "f0940f14702d",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp5",
+      "bounds": {
+        "x": 15,
+        "y": 1510,
+        "width": 1410,
+        "height": 360
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + link + image"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[[T]|T]",
+        "variant": "[[T]|T]",
+        "variantClean": "[[T]|T]"
+      },
+      "screenshot": "blocks/f0940f14702d.jpg",
+      "html": "blocks/f0940f14702d.html"
+    },
+    {
+      "id": "25a1dfa34c9a",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp6 > div.mt-1",
+      "bounds": {
+        "x": 15,
+        "y": 1890,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "mt-1",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/25a1dfa34c9a.html"
+    },
+    {
+      "id": "b5d91da28864",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp6 > div.grid.grid-cols-1",
+      "bounds": {
+        "x": 15,
+        "y": 1922,
+        "width": 1410,
+        "height": 359
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "grid",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/b5d91da28864.jpg",
+      "html": "blocks/b5d91da28864.html"
+    },
+    {
+      "id": "579d793aa836",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp7",
+      "bounds": {
+        "x": 15,
+        "y": 2285,
+        "width": 1410,
+        "height": 359
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + link + image"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/579d793aa836.jpg",
+      "html": "blocks/579d793aa836.html"
+    },
+    {
+      "id": "993ffcf87128",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > section > div > div > div > div:nth-of-type(13) > div:nth-of-type(1)",
+      "bounds": {
+        "x": 15,
+        "y": 2665,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "sm-text-2xl",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/993ffcf87128.html"
+    },
+    {
+      "id": "e54c0c916373",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3) > section > div > div > div > div:nth-of-type(13) > div:nth-of-type(2)",
+      "bounds": {
+        "x": 15,
+        "y": 2697,
+        "width": 1410,
+        "height": 164
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "link + image"
+      },
+      "description": "banner-tile",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/e54c0c916373.html"
+    },
+    {
+      "id": "0f5be5bed6c6",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp8",
+      "bounds": {
+        "x": 15,
+        "y": 2881,
+        "width": 1410,
+        "height": 359
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + link + image"
+      },
+      "description": "mt-5",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/0f5be5bed6c6.jpg",
+      "html": "blocks/0f5be5bed6c6.html"
+    },
+    {
+      "id": "4688752ce57d",
+      "type": "tabs",
+      "detectionTier": 1,
+      "selector": "#monetate_selectorHTML_47e926d4_0",
+      "bounds": {
+        "x": 15,
+        "y": 3288,
+        "width": 1410,
+        "height": 514
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "dense",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading + button + list + link + image + text"
+      },
+      "description": "monetate-selectorhtml-47e926d4",
+      "features": {
+        "skeleton": "(T [tab] [button|[(T [T])|T]*3] [~(T)] button)",
+        "variant": "(Tk [tab] [button|[(Tk [Tk|Tr])|Tk|Tbk]*3] [~b(T)|~n(T)] button)",
+        "variantClean": "(Tk [tab] [button|[(Tk [Tk])|Tk]*3] [~b(T)|~n(T)] button)"
+      },
+      "screenshot": "blocks/4688752ce57d.jpg",
+      "html": "blocks/4688752ce57d.html"
+    },
+    {
+      "id": "9b4e23c1c8dd",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt_id_moreways",
+      "bounds": {
+        "x": 15,
+        "y": 3830,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "my-5",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/9b4e23c1c8dd.html"
+    },
+    {
+      "id": "06bf4b78e021",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(3) > section > div > div > div > div.grid.grid-cols-2.sm\\:grid-cols-6.md\\:grid-cols-6.lg\\:grid-cols-6.gap-2",
+      "bounds": {
+        "x": 15,
+        "y": 3882,
+        "width": 1410,
+        "height": 242
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "grid",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/06bf4b78e021.jpg",
+      "html": "blocks/06bf4b78e021.html"
+    },
+    {
+      "id": "71471c1afaec",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt_id_shopbycategory > h3",
+      "bounds": {
+        "x": 15,
+        "y": 4124,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "mb-2",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/71471c1afaec.html"
+    },
+    {
+      "id": "1ed7a2694286",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt_id_shopbycategory > div",
+      "bounds": {
+        "x": 31,
+        "y": 4164,
+        "width": 1378,
+        "height": 491
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "mx-4",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tn]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/1ed7a2694286.jpg",
+      "html": "blocks/1ed7a2694286.html"
+    },
+    {
+      "id": "bd2f83e9e1bd",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt_id_hp9",
+      "bounds": {
+        "x": 23,
+        "y": 4674,
+        "width": 1394,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "mb-2",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/bd2f83e9e1bd.html"
+    },
+    {
+      "id": "0b5a83d94fea",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(3) > section > div > div > div > div:nth-child(27)",
+      "bounds": {
+        "x": 15,
+        "y": 4714,
+        "width": 1410,
+        "height": 178
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading"
+      },
+      "description": "mb-5",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/0b5a83d94fea.jpg",
+      "html": "blocks/0b5a83d94fea.html"
+    },
+    {
+      "id": "98d9265f6273",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(3) > section > div > div > div > div:nth-child(29)",
+      "bounds": {
+        "x": 15,
+        "y": 4913,
+        "width": 1410,
+        "height": 178
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading"
+      },
+      "description": "mb-5",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/98d9265f6273.jpg",
+      "html": "blocks/98d9265f6273.html"
+    },
+    {
+      "id": "42a7f9b2f1b9",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt_id_servingfamily",
+      "bounds": {
+        "x": 15,
+        "y": 5111,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "mb-2",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/42a7f9b2f1b9.html"
+    },
+    {
+      "id": "7fde0121bc7c",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(3) > section > div > div > div > div.grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-3.gap-5.mt-5",
+      "bounds": {
+        "x": 15,
+        "y": 5163,
+        "width": 1410,
+        "height": 258
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading"
+      },
+      "description": "grid",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tb]",
+        "variantClean": "[Tk]"
+      },
+      "screenshot": "blocks/7fde0121bc7c.jpg",
+      "html": "blocks/7fde0121bc7c.html"
+    },
+    {
+      "id": "0e4b9619d703",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(3) > section > div > div > div > div.App > button > img",
+      "bounds": {
+        "x": 1343,
+        "y": 857,
+        "width": 32,
+        "height": 26
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": ""
+      },
+      "description": "w-full",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/0e4b9619d703.html"
+    },
+    {
+      "id": "21ccd4300aad",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(3) > section > div > div > div > div.App > button > span",
+      "bounds": {
+        "x": 1379,
+        "y": 857,
+        "width": 44,
+        "height": 26
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": ""
+      },
+      "description": "contact-us-label",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tb",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/21ccd4300aad.html"
+    }
+  ],
+  "globalElements": {
+    "header": {
+      "selector": "div.flex.min-h-screen > div:nth-child(1)"
+    },
+    "footer": {
+      "selector": "section.relative.min-h-\\[760px\\]"
+    },
+    "isFirstCapture": true
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.shopmyexchange.com/"
+      ],
+      "representativeUrl": "https://www.shopmyexchange.com/",
+      "description": "Shop My Exchange homepage: promo banners, tile grids, product recommendation tabs, category icons and feature cards",
+      "blocks": [
+        {
+          "name": "columns-promo-strip",
+          "instances": [
+            "#mt_id_taxfree"
+          ]
+        },
+        {
+          "name": "hero-image-banner",
+          "instances": [
+            "#mt_id_hero.grid"
+          ]
+        },
+        {
+          "name": "cards-promo-wide",
+          "instances": [
+            "#mt_id_hp2",
+            "#mt_id_hp9 + div.grid",
+            "#mt_id_hp10 + div.grid"
+          ]
+        },
+        {
+          "name": "cards-promo-tiles",
+          "instances": [
+            "#mt_id_hp3",
+            "#mt_id_hp6 > div.grid",
+            "#mt_id_hp7 > div.grid",
+            "#mt_id_hp8"
+          ]
+        },
+        {
+          "name": "cards-promo-bento",
+          "instances": [
+            "#mt_id_hp4 > div.grid",
+            "#mt_id_hp5 > div.grid"
+          ]
+        },
+        {
+          "name": "tabs-product-recs",
+          "instances": [
+            "#mt-tabbed-recs"
+          ]
+        },
+        {
+          "name": "cards-logo-circle",
+          "instances": [
+            "#mt_id_moreways + div.grid"
+          ]
+        },
+        {
+          "name": "cards-category",
+          "instances": [
+            "#mt_id_shopbycategory > div.mx-4.mb-5"
+          ]
+        },
+        {
+          "name": "cards-icon-feature",
+          "instances": [
+            "#mt_id_servingfamily + div.grid"
+          ]
+        }
+      ],
+      "urlPattern": "/",
+      "sections": [
+        {
+          "id": "main",
+          "name": "Homepage main content",
+          "selector": [
+            "div:has(> #mt_id_taxfree)",
+            "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-promo-strip",
+            "hero-image-banner",
+            "cards-promo-wide",
+            "cards-promo-tiles",
+            "cards-promo-bento",
+            "tabs-product-recs",
+            "cards-logo-circle",
+            "cards-category",
+            "cards-icon-feature"
+          ],
+          "defaultContent": [
+            "#mt_id_hp4 > div.mt-1",
+            "#mt_id_hp6 > div.mt-1",
+            "#mt_id_milstar:not(.hidden)",
+            "#mt-tabbed-recs-title",
+            "#mt_id_moreways",
+            "#mt_id_shopbycategory > h3",
+            "#mt_id_hp9",
+            "#mt_id_servingfamily"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

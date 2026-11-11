@@ -1,0 +1,18 @@
+{
+  "variantName": "tabs-product-recs",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Featured products: tabs (Trending, Top Sellers, Most Popular), each panel a horizontal product slider with arrows and dots",
+    "description": "Centered uppercase tab labels with active underline; each panel is a horizontal product slider (5 visible, arrows and dots) of image, name and price."
+  },
+  "contentPattern": {
+    "structure": "one row per tab, 2 cells (Tab label | Products: list items or repeated image, linked product name, price)",
+    "description": "Tabbed product recommendations: tabs TRENDING / TOP SELLERS / MOST POPULAR; each panel is a horizontal product slider (image, product name, list/sale price, link to product page) with prev/next arrows and dots"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Featured products: tabs (Trending, Top Sellers, Most Popular), each panel a horizontal product slider with arrows and dots.",
+  "reuseGuidance": "Use for tabbed product carousels. Each panel holds products as a list, or as repeated image / linked name / price lines. Self-contained: does not need a tabs block.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}

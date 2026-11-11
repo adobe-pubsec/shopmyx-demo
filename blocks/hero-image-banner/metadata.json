@@ -1,0 +1,18 @@
+{
+  "variantName": "hero-image-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Top-of-page campaign banner whose message is baked into the image",
+    "description": "Image-only linked banner with rounded corners and no overlaid text; message is baked into the image."
+  },
+  "contentPattern": {
+    "structure": "2 row(s): Image (linked, or followed by a link); then Optional text (usually empty)",
+    "description": "Full-width Veterans Day Sale banner image linking to /deals (text baked into image)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Top-of-page campaign banner whose message is baked into the image.",
+  "reuseGuidance": "Use when the banner text is part of the artwork. For a hero with live text over an image, use hero.",
+  "sourceUrl": "https://www.shopmyexchange.com/"
+}
