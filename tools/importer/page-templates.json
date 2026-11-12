@@ -237,6 +237,85 @@
           ]
         }
       ]
+    },
+    {
+      "name": "store",
+      "urls": [
+        "https://www.shopmyexchange.com/store-locator/ft-hood-main-exchange"
+      ],
+      "representativeUrl": "https://www.shopmyexchange.com/store-locator/ft-hood-main-exchange",
+      "description": "Store locator page for one installation: store header (name, address, hours, phones, photo), Express Online promo, vendor directory (categories > subcategories > vendors, each vendor a fragment placed with vendor-list), letter from the manager",
+      "urlPattern": "/store-locator/*",
+      "blocks": [
+        {
+          "name": "store-info",
+          "instances": [
+            ".aafes-store-details > .grid:has(> .aafes-title-box > h1)"
+          ]
+        },
+        {
+          "name": "cards-promo-wide",
+          "instances": [
+            ".aafes-store-details div.hidden-sm-down > div.flex.flex-wrap:has(a img)"
+          ]
+        },
+        {
+          "name": "vendor-list",
+          "instances": [
+            ".aafes-store-details .store-content"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "store-header",
+          "name": "Store header",
+          "selector": [
+            ".aafes-store-details > .grid:has(> .aafes-title-box > h1)"
+          ],
+          "style": null,
+          "blocks": [
+            "store-info"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "store-promo",
+          "name": "Express Online promo",
+          "selector": [
+            ".aafes-store-details div.hidden-sm-down:has(a img)"
+          ],
+          "style": "store-promo",
+          "blocks": [
+            "cards-promo-wide"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "store-directory",
+          "name": "Vendor directory",
+          "selector": [
+            ".aafes-store-details .store-content"
+          ],
+          "style": "store-directory",
+          "blocks": [
+            "vendor-list"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "store-letter",
+          "name": "Letter from the Manager",
+          "selector": [
+            ".aafes-store-details .store-content + div"
+          ],
+          "style": "store-letter",
+          "blocks": [],
+          "defaultContent": [
+            ".aafes-store-details .store-content + div"
+          ]
+        }
+      ]
     }
   ],
   "metadata": {

@@ -1,0 +1,75 @@
+/* Find it fast: a search field above the vendor directory (site field and button look). */
+.vendor-search {
+  margin-bottom: 16px;
+}
+
+.vendor-search .vendor-search-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.vendor-search .vendor-search-field {
+  display: flex;
+  gap: 8px;
+}
+
+.vendor-search input[type='search'] {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: #333;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+}
+
+.vendor-search input[type='search']:focus {
+  border-color: var(--brand-primary);
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 1px;
+}
+
+.vendor-search .vendor-search-clear {
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--brand-primary);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--brand-primary);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vendor-search .vendor-search-clear:hover,
+.vendor-search .vendor-search-clear:focus-visible {
+  background-color: var(--brand-primary);
+  color: #fff;
+}
+
+.vendor-search .vendor-search-clear[hidden] {
+  display: none;
+}
+
+.vendor-search .vendor-search-status {
+  min-height: 21px;
+  margin: 6px 0 0;
+  color: #555;
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+}
+
+/* items the search hides, whatever their own display rules */
+.section:has(.vendor-search) [hidden] {
+  display: none !important;
+}

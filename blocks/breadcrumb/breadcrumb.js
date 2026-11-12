@@ -1,5 +1,3 @@
-import { getMetadata } from '../../scripts/aem.js';
-
 // Label of the homepage level (the source breadcrumb starts with "Exchange").
 const ROOT_LABEL = 'Exchange';
 
@@ -14,12 +12,22 @@ function splitBase(pathname) {
   return { base, path };
 }
 
-/** "tvs-and-home-theaters" -> "Tvs And Home Theaters" (when a page has no breadcrumb title). */
+/** "tvs-and-home-theaters" -> "Tvs And Home Theaters" (when a page has no title at all). */
 function labelFromSlug(slug) {
   return decodeURIComponent(slug)
     .replace(/[-_]+/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase())
     .trim();
+}
+
+/**
+ * A page's breadcrumb label: its `Breadcrumb Title` metadata, else its Title
+ * (the <title> element, set from the Title metadata). Empty when it has neither.
+ */
+function pageLabel(doc) {
+  const meta = doc.querySelector('meta[name="breadcrumb-title"]');
+  const title = doc.querySelector('head > title');
+  return (meta && meta.content.trim()) || (title && title.textContent.trim()) || '';
 }
 
 /**
@@ -31,8 +39,7 @@ async function fetchAncestor(href, slug) {
     const resp = await fetch(href);
     if (!resp.ok || !(resp.headers.get('content-type') || '').includes('text/html')) return null;
     const doc = new DOMParser().parseFromString(await resp.text(), 'text/html');
-    const meta = doc.querySelector('meta[name="breadcrumb-title"]');
-    return (meta && meta.content.trim()) || labelFromSlug(slug);
+    return pageLabel(doc) || labelFromSlug(slug);
   } catch {
     return null;
   }
@@ -55,7 +62,7 @@ function item(label, href) {
 /**
  * Breadcrumb built from the page path: homepage, then every ancestor path that has a
  * page, then the current page (not linked). Labels come from each page's
- * `Breadcrumb Title` metadata, else from the path segment. Added to every page except
+ * `Breadcrumb Title` metadata, else its Title, else the path segment. Added to every page except
  * the homepage by scripts.js; `Breadcrumbs: off` in the page metadata turns it off.
  */
 async function fill(ol, base, segments) {
@@ -63,7 +70,7 @@ async function fill(ol, base, segments) {
     slug,
     href: `${base}/${segments.slice(0, i + 1).join('/')}`,
   }));
-  const current = getMetadata('breadcrumb-title') || labelFromSlug(segments[segments.length - 1]);
+  const current = pageLabel(document) || labelFromSlug(segments[segments.length - 1]);
   const labels = await Promise.all(ancestors.map(({ href, slug }) => fetchAncestor(href, slug)));
   const items = [item(ROOT_LABEL, base ? `${base}/index` : '/')];
   ancestors.forEach(({ href }, i) => {

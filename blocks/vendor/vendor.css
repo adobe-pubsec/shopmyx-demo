@@ -1,0 +1,103 @@
+/*
+ * Source: .shop-tile.border.border-gray-400.flex.sm:block.sm:text-center.text-left — 1px #ccc
+ * border, 8px padding, 14px/21px text; logo (73px + pt-1 pr-2) beside left-aligned text
+ * below 640px, centered above centered text from 640px; phone bold #043c63; delivery
+ * badge 121x28 (mt-2). (20 source tiles use 2px vertical padding; one value is used.)
+ */
+.vendor {
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+  text-align: start;
+}
+
+.vendor .vendor-logo {
+  flex: 0 0 auto;
+}
+
+.vendor .vendor-logo picture {
+  display: block;
+}
+
+.vendor .vendor-logo img {
+  display: block;
+  box-sizing: content-box;
+  width: auto;
+  max-width: 73px;
+  height: auto;
+  margin: 0 auto;
+  padding: 4px 8px 0 0;
+}
+
+.vendor .vendor-body {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.vendor .vendor-body p {
+  margin: 0;
+}
+
+.vendor .vendor-body .vendor-name-hidden {
+  display: none;
+}
+
+.vendor .vendor-phone {
+  color: var(--link-color);
+  font-weight: 700;
+}
+
+.vendor .vendor-note a:any-link {
+  color: var(--link-color);
+  overflow-wrap: anywhere;
+}
+
+.vendor .vendor-phone a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.vendor .vendor-phone a:any-link:hover {
+  text-decoration: underline;
+}
+
+.vendor .vendor-body .vendor-delivery-line {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.vendor .vendor-delivery {
+  display: inline-block;
+}
+
+.vendor .vendor-delivery img {
+  display: block;
+  width: 121px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (width >= 640px) {
+  .vendor {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* preview only: authoring mistakes are outlined and explained */
+.vendor.vendor-warning {
+  outline: 2px dashed #c00;
+  outline-offset: 2px;
+}
+
+.vendor.vendor-warning::after {
+  content: attr(data-warning);
+  display: block;
+  color: #c00;
+  font-size: 12px;
+}

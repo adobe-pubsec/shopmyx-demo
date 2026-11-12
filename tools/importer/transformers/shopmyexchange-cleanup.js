@@ -60,6 +60,15 @@ export default function transform(hookName, element, payload) {
   // that link so the destination survives. Only import-category.js calls this hook,
   // and it is gated on the category panel, so home and deals are unaffected.
   if (hookName === 'preprocess') {
+    // Store locator pages: the store photo is a CSS background in a <style> element,
+    // which the importer drops before transform; copy it onto the (empty) banner image.
+    // Called from import-store.js preprocess.
+    const storeBanner = element.querySelector('.aafes-store-details .aafes-title-banner img');
+    if (storeBanner && !storeBanner.getAttribute('src')) {
+      const css = [...element.querySelectorAll('.aafes-store-details style')].map((st) => st.textContent).join(' ');
+      const bg = css.match(/aafes-title-banner[^}]*background-image:\s*url\(([^)]+)\)/);
+      if (bg) storeBanner.setAttribute('src', bg[1].replace(/['"]/g, '').trim());
+    }
     if (!element.querySelector('main section#category.lp-standard-category')) return;
     element.querySelectorAll(
       '#category .lpcategory-container > div, #brands .lpcategory-container > div, #sizecharts .guide-container > div',
@@ -81,6 +90,24 @@ export default function transform(hookName, element, payload) {
       'section.relative.min-h-\\[760px\\]',
       'section.SME-footer',
     ]);
+
+    // Store locator pages (.aafes-store-details): page chrome and source quirks.
+    if (element.querySelector('.aafes-store-details')) {
+      // The source breadcrumb; the site builds it from the page path (breadcrumb block).
+      WebImporter.DOMUtils.remove(element, ['.aafes-store-details nav.aafes-breadcrumb']);
+      // Image URLs with leading spaces (" https://media...") would not be recognized.
+      element.querySelectorAll('.aafes-store-details img[src]').forEach((img) => {
+        const src = img.getAttribute('src');
+        if (src !== src.trim()) img.setAttribute('src', src.trim());
+      });
+      // "Letter from the Manager" sits beside the directory: a top-level heading, not a
+      // subheading of the last category.
+      element.querySelectorAll('.aafes-store-details .store-content + div > h3').forEach((h3) => {
+        const h2 = h3.ownerDocument.createElement('h2');
+        h2.textContent = h3.textContent.trim();
+        h3.replaceWith(h2);
+      });
+    }
 
     // Category landing (/browse?pageCategories=...): only these pages carry the
     // CMS "Shop By Category" panel section#category.lp-standard-category inside

@@ -1,0 +1,46 @@
+/*
+ * Source: div.flex.flex-wrap.justify-center.-mx-4 > div.px-4.w-full.sm:w-1/2.lg:w-1/3
+ * (tiles have my-2), so each card is a 16px-padded column and tiles fill its height.
+ */
+.vendor-list > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -16px;
+  padding: 0;
+  list-style: none;
+}
+
+.vendor-list .vendor-list-item {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+/* reserved while the fragment loads, so nothing below moves */
+.vendor-list .vendor-list-item.loading {
+  min-height: 154px;
+}
+
+.vendor-list .vendor-list-error {
+  outline: 2px dashed #c00;
+  outline-offset: -8px;
+  color: #c00;
+  font-size: 12px;
+}
+
+@media (width >= 640px) {
+  .vendor-list .vendor-list-item {
+    width: 50%;
+  }
+}
+
+@media (width >= 1024px) {
+  .vendor-list .vendor-list-item {
+    width: 33.333%;
+  }
+
+  .vendor-list .vendor-list-item.loading {
+    min-height: 231px;
+  }
+}

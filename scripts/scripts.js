@@ -11,6 +11,9 @@ import {
   loadCSS,
   buildBlock,
   getMetadata,
+  readBlockConfig,
+  toClassName,
+  toCamelCase,
 } from './aem.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
@@ -375,11 +378,34 @@ function decorateButtons(main) {
 }
 
 /**
+ * Applies Section Metadata tables the HTML pipeline has not already turned into section
+ * attributes (the local dev server serves them as-is): Style -> section classes, other
+ * keys -> data-* attributes. On aem.page/aem.live there is nothing left to do.
+ * @param {Element} main The container element
+ */
+function applySectionMetadata(main) {
+  main.querySelectorAll(':scope > div > div.section-metadata').forEach((meta) => {
+    const section = meta.parentElement;
+    const config = readBlockConfig(meta);
+    Object.entries(config).forEach(([key, value]) => {
+      if (key === 'style') {
+        `${value}`.split(',').map((v) => toClassName(v.trim())).filter(Boolean)
+          .forEach((cls) => section.classList.add(cls));
+      } else {
+        section.dataset[toCamelCase(key)] = value;
+      }
+    });
+    meta.remove();
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
+  applySectionMetadata(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);

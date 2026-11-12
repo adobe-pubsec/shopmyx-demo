@@ -411,3 +411,201 @@ main > .section:has(.cards-category.tiles) + .section > .default-content-wrapper
 main > .section:has(.cards-category.tiles) > .cards-promo-wide-wrapper:has(> .cards-promo-wide > ul > li:only-child) {
   margin-top: 32px;
 }
+
+/* Store rules are scoped to store sections only, so order against other pages' rules
+   does not matter. */
+/* stylelint-disable no-descending-specificity */
+
+/*
+ * Store locator pages (sections styled store-promo / store-directory / store-letter).
+ * Source: .aafes-store-details > .grid.lg:grid-cols-4 — left column (Express promo,
+ * hidden below md), center col-span-2 (directory, mx-3), right column (letter, mx-3).
+ */
+main > .section.store-promo {
+  display: none;
+}
+
+@media (width >= 768px) {
+  main > .section.store-promo {
+    display: block;
+  }
+}
+
+@media (width >= 1024px) {
+  main:has(> .section.store-directory) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 var(--content-gutter);
+    box-sizing: border-box;
+  }
+
+  main:has(> .section.store-directory) > .section {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  main:has(> .section.store-directory) > .section > div {
+    max-width: none;
+    padding: 0;
+  }
+
+  main:has(> .section.store-directory) > .section.store-promo {
+    grid-column: 1;
+    margin-top: 20px;
+  }
+
+  main:has(> .section.store-directory) > .section.store-directory {
+    grid-column: 2 / span 2;
+    margin: 20px 12px 16px;
+  }
+
+  main:has(> .section.store-directory) > .section.store-letter {
+    grid-column: 4;
+    margin: 20px 12px 0;
+  }
+}
+
+/* Express promo: natural size, centered in its column (source flex justify-center pr-5) */
+main > .section.store-promo > .cards-promo-wide-wrapper:has(> .cards-promo-wide > ul > li:only-child) {
+  margin: 0;
+}
+
+main > .section.store-promo .cards-promo-wide > ul:has(> li:only-child) .cards-promo-wide-card-image img {
+  margin: 0 auto;
+}
+
+@media (width >= 1024px) {
+  main > .section.store-promo .cards-promo-wide {
+    padding: 6px 20px 0 0;
+  }
+}
+
+/* directory: categories (h2) and subcategory bands (h3 + info lines) */
+main > .section.store-directory > .default-content-wrapper {
+  margin: 0;
+}
+
+main > .section.store-directory h2 {
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #999;
+  color: #333;
+  font-family: var(--body-font-family);
+  font-size: 24px;
+  line-height: 32px;
+  text-align: start;
+  text-transform: none;
+}
+
+main > .section.store-directory h3,
+main > .section.store-directory h3 ~ p {
+  margin: 0;
+  padding: 0 16px;
+  background-color: #eaf0f5;
+  color: #333;
+  text-align: start;
+  text-transform: none;
+}
+
+main > .section.store-directory h3 {
+  padding-top: 6px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+main > .section.store-directory h3 ~ p {
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+}
+
+main > .section.store-directory .default-content-wrapper > :is(h3, p):last-child {
+  padding-bottom: 6px;
+}
+
+main > .section.store-directory .vendor-list-wrapper {
+  margin: 0;
+}
+
+/* later category headings: 6px more space above (source pt-1.5) */
+main > .section.store-directory .vendor-list-wrapper + .default-content-wrapper > h2:first-child {
+  padding-top: 6px;
+}
+
+/* letter from the manager */
+main > .section.store-letter > .default-content-wrapper {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  line-height: 22.4px;
+}
+
+main > .section.store-letter h2 {
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #999;
+  color: #333;
+  font-family: var(--body-font-family);
+  font-size: 24px;
+  line-height: 32px;
+  text-align: start;
+  text-transform: none;
+}
+
+main > .section.store-letter p {
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+main > .section.store-letter .default-content-wrapper > picture:first-of-type {
+  float: left;
+  margin-right: 8px;
+}
+
+main > .section.store-letter .default-content-wrapper > picture:first-of-type img {
+  display: block;
+  width: 125px;
+  height: auto;
+}
+
+main > .section.store-letter p:has(> strong > a) {
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+main > .section.store-letter p:has(> strong > a) + p {
+  padding-bottom: 8px;
+}
+
+main > .section.store-letter p > strong > a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* the manager's name: a bold link alone in its paragraph (styled as a button by
+   decorateButtons) is shown as the source's bold blue name */
+main > .section.store-letter p.button-wrapper {
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+main > .section.store-letter p.button-wrapper + p {
+  padding-bottom: 8px;
+}
+
+main > .section.store-letter a.button:any-link {
+  color: var(--link-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (width >= 1024px) {
+  main > .section.store-letter h2 {
+    border-bottom: 0;
+  }
+}
+/* stylelint-enable no-descending-specificity */

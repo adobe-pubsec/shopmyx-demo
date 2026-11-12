@@ -6,7 +6,7 @@ Site-wide **breadcrumb**, built from the page path. Authors don't add it to page
 
 - `scripts/scripts.js` adds the block automatically at the top of every page except the homepage.
 - Levels: the homepage ("Exchange"), then every ancestor path that has a page (paths without a page, such as `/categories`, are skipped), then the current page (not linked, `aria-current="page"`).
-- Labels: each page's `Breadcrumb Title` metadata; without it, the path segment (`deals` -> "Deals").
+- Labels: each page's `Breadcrumb Title` metadata; without it, the page's Title; without either, the path segment (`deals` -> "Deals").
 - Ancestor labels are read from those pages, after the page has rendered; the block reserves its line so nothing below moves.
 
 ## Authoring (Document Authoring)

@@ -1,0 +1,78 @@
+/*
+ * Source: .aafes-store-details > .grid.lg:grid-cols-4 — .aafes-title-box (col-span-1,
+ * #eaf0f5) with h1 24.5px/600, address 14px/21px #555, labels 16px/600 #333, phone
+ * #043c63; .aafes-title-banner (col-span-3) store photo as a cover background, hidden
+ * below 1024px.
+ */
+.store-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+}
+
+.store-info .store-info-details {
+  padding-bottom: 12px;
+  background-color: #eaf0f5;
+  color: #555;
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+}
+
+.store-info .store-info-details h1 {
+  margin: 0;
+  padding: 0.25em 0.4em 0;
+  color: #000;
+  font-family: var(--body-font-family);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.store-info .store-info-details p {
+  margin: 0;
+  padding: 0 12px;
+}
+
+.store-info .store-info-details .store-info-label {
+  margin-top: 6px;
+  color: #333;
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.store-info .store-info-phone,
+.store-info .store-info-phone a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.store-info .store-info-image {
+  display: none;
+}
+
+@media (width >= 1024px) {
+  .store-info {
+    grid-template-columns: 1fr 3fr;
+    min-height: 283px;
+  }
+
+  .store-info .store-info-details h1 {
+    font-size: 24.5px;
+  }
+
+  .store-info .store-info-image {
+    display: block;
+    position: relative;
+  }
+
+  .store-info .store-info-image picture,
+  .store-info .store-info-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+}
