@@ -1,0 +1,917 @@
+{
+  "schemaVersion": 2,
+  "url": "https://www.shopmyexchange.com/browse?pageCategories=Electronics%20%3E%20Computers",
+  "title": "Shop Army & Air Force Exchange Service",
+  "timestamp": "2026-11-11T20:00:26.783Z",
+  "duration": "19.0s",
+  "cleanup": {
+    "elementsRemoved": 2,
+    "types": [
+      "overlay",
+      "popup"
+    ],
+    "cookieConsentDismissed": false,
+    "lateConsentOverlaysRemoved": 0,
+    "removed": [
+      {
+        "selector": "div.light.bg-white > div:nth-child(2)",
+        "type": "overlay"
+      },
+      {
+        "selector": "section.modalHeader.relative",
+        "type": "popup",
+        "rule": "body [class*=\"modal\"]:not(nav *)"
+      }
+    ]
+  },
+  "snapshot": {
+    "html": "page.html",
+    "unresolvedSelectors": []
+  },
+  "images": [
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732106/ztk5bgdv18ymvzmmmlat.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732105/zghqcqmi3xj0xgmkyckb.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/clearance-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/military-blue-bar-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/outlet-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/weeklyad-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/marketplace-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/unitpurchases-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681722493/yjjc1frjalse4r4ir0v4.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681721529/asca5tv6lzpqafzo0mth.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO1197566155_1007:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2032442728_1927_ALT2:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4928925_TT2U:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4007209_1007:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3391851_1007:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3969684_1007:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5270084_1007:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2017554376_1007:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2018886574_1007_ALT1:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2706438_1007_alt1:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4798686_0000:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-apple-authorized-reseller01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-lg01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-samsung01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-sony01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-bose01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-shop-all-brands01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/L2-ElectronicsWk46",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/assets/img/icons/exchange-mini-logo01.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931168_EHBL:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931168_EHBL:Swatch?fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931168_KZZH:Swatch?fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931168_2350:Swatch?fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_EHBL:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_EHBL:Swatch?fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_1370:Swatch?fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_1112:Swatch?fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2017164385_HZGC:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/MP-ibuypower-logo-tile01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2054500687_2518:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2049305950_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5162925_ZRI9:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066991255_acmnom:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/MP-clx-logo-tile01a",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2029211210_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2017554450_HZGC:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993507_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2017554213_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2029211290_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/MP-cyberpowerpc-logo-tile01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2054290187_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993518_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2054290190_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2062762104_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2029211232_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2029211317_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2028433686_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066991266_AaVBac:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2029211213_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993190_apPils:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO1259751203_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2029262621_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993499_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993512_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066991271_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5162927_ZRI9:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993493_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO1259751175_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066991259_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2029211297_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993523_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066991260_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2066993545_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2049314194_1007:2000-full-web?wid=360&hei=360&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-left-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4828953_0SMC:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930983_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4419899_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4147065_3550:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4928925_TT2U:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2041077816_3604:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931007_0SMC:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4928920_2729:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4857927_ZRI9:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4419904_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931167_6737:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930994_VYT0:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_1112:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931168_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930982_1370:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-right-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/mail.db837a94.png",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/facebook.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/twitter.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/pinterest.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://sp.analytics.yahoo.com/sp.pl?a=10000&d=Wed%2C%2011%20Nov%202026%2020%3A00%3A14%20GMT&n=8&b=Shop%20Army%20%26%20Air%20Force%20Exchange%20Service&.yp=10204186&f=https%3A%2F%2Fwww.shopmyexchange.com%2Fbrowse%3FpageCategories%3DElectronics%2520%253E%2520Computers&enc=UTF-8&yv=1.17.1&tagmgr=gtm",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/checkboxCheck.13db094e.png",
+      "type": "background"
+    }
+  ],
+  "skeleton": {
+    "signature": "sB(s(s(s,s(s,s(,,),7x1),s),s(s,3x2(35x1,3x1))),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow",
+      "rc1c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1)",
+      "rc1c1c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1)",
+      "rc1c1c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2)",
+      "rc1c1c2c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > nav.mb-5.flex",
+      "rc1c1c2c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex",
+      "rc1c1c2c2c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > section.cms-container-80xad.mb-5",
+      "rc1c1c2c2c1c1": "#category",
+      "rc1c1c2c2c1c2": "#brands",
+      "rc1c1c2c2c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > section.cms-container-oqjee.mb-5",
+      "rc1c1c2c2c2c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > section.cms-container-oqjee.mb-5 > div > div > div > div.banner-container.body-banner.relative.w-full",
+      "rc1c1c2c2c2c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > section.cms-container-oqjee.mb-5 > div > div > div > div.col-span-12.relative.border-b-1.border-blue-900.mt-8.mb-8.w-full.flex.flex-col.justify-center.items-center",
+      "rc1c1c2c2c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > div.w-full",
+      "rc1c1c2c2c3c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > div.w-full > div.flex.items-center.gap-3",
+      "rc1c1c2c2c3c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > div.w-full > div.pt-1:nth-of-type(2)",
+      "rc1c1c2c2c3c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > div.w-full > div.gap-x-5.pt-1.md\\:flex.md\\:flex-row.md\\:items-start.xl\\:\\!gap-x-10",
+      "rc1c1c2c2c3c3c1": "#product-list-container",
+      "rc1c1c2c2c3c3c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main.w-full.pt-1 > div.w-full > div.gap-x-5.pt-1.md\\:flex.md\\:flex-row.md\\:items-start.xl\\:\\!gap-x-10 > div.w-full.min-w-0.md\\:flex-1 > section:nth-of-type(2)",
+      "rc1c1c2c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.my-3.flex.justify-center.gap-x-2.md\\:gap-x-4",
+      "rc1c1c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3)",
+      "rc1c2": "#recommendationContainer",
+      "rc1c2c1": "#mt-slider-5360309-0 > h2.col-span-12.px-0.aafes-page-head-sm.jsPDPAccordionToggle",
+      "rc1c2c2": "#mt-slider-5360309-0 > div.col-span-12.px-0",
+      "rc1c2c2c1": "#mt-slider-5360309-0 > div.col-span-12.px-0 > div",
+      "rc1c2c2c2": "#mt-slider-5360309-0 > div.col-span-12.px-0 > ul",
+      "rc2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "#recommendationContainer",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 125,
+      "height": 8514.15625
+    },
+    "splits": [],
+    "start": {
+      "kind": "heading",
+      "look": {
+        "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "color": "rgb(0, 0, 0)",
+        "align": "center"
+      }
+    }
+  },
+  "blocks": [
+    {
+      "id": "613da8e8c9a6",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-child(1) > div > div:nth-child(2) > div > nav",
+      "bounds": {
+        "x": 15,
+        "y": 125,
+        "width": 1410,
+        "height": 20
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "mb-5",
+      "features": {
+        "skeleton": "nav",
+        "variant": "nav",
+        "variantClean": "nav"
+      },
+      "screenshot": "blocks/613da8e8c9a6.jpg",
+      "html": "blocks/613da8e8c9a6.html"
+    },
+    {
+      "id": "9dc08d9fe376",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#category > h3",
+      "bounds": {
+        "x": 586,
+        "y": 185,
+        "width": 268,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "px-0",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/9dc08d9fe376.html"
+    },
+    {
+      "id": "245343e7818c",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#category > div",
+      "bounds": {
+        "x": 27,
+        "y": 233,
+        "width": 1386,
+        "height": 537
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + text + link"
+      },
+      "description": "lpcategory-container",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tn]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/245343e7818c.jpg",
+      "html": "blocks/245343e7818c.html"
+    },
+    {
+      "id": "fcc11a81a28d",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#brands > h3",
+      "bounds": {
+        "x": 589,
+        "y": 819,
+        "width": 261,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "px-0",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/fcc11a81a28d.html"
+    },
+    {
+      "id": "7cf9228193a2",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#brands > div",
+      "bounds": {
+        "x": 27,
+        "y": 867,
+        "width": 1386,
+        "height": 78
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + link"
+      },
+      "description": "lpcategory-container",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/7cf9228193a2.jpg",
+      "html": "blocks/7cf9228193a2.html"
+    },
+    {
+      "id": "9aff2cb45039",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-child(1) > div > div:nth-child(2) > div > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main > section.cms-container-oqjee.mb-5 > div > div > div > div.banner-container.body-banner.relative.w-full",
+      "bounds": {
+        "x": 15,
+        "y": 977,
+        "width": 1410,
+        "height": 165
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "link + image"
+      },
+      "description": "banner-container",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/9aff2cb45039.html"
+    },
+    {
+      "id": "a492d55c0b94",
+      "type": "unknown",
+      "detectionTier": 2,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-child(1) > div > div:nth-child(2) > div > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main > section.cms-container-oqjee.mb-5 > div > div > div > div.col-span-12.relative.border-b-1.border-blue-900.mt-8.mb-8.w-full.flex.flex-col.justify-center.items-center",
+      "bounds": {
+        "x": 15,
+        "y": 1174,
+        "width": 1410,
+        "height": 1
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": ""
+      },
+      "description": "col-span-12",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": "blocks/a492d55c0b94.jpg",
+      "html": "blocks/a492d55c0b94.html"
+    },
+    {
+      "id": "2f04b1db8494",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-child(1) > div > div:nth-child(2) > div > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main > div > div.flex.items-center.gap-3",
+      "bounds": {
+        "x": 15,
+        "y": 1207,
+        "width": 1410,
+        "height": 42
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "text + button"
+      },
+      "description": "flex",
+      "features": {
+        "skeleton": "[[T|button]|[button]|[[T|button]|button]]",
+        "variant": "[[Tk|button~k]|[button~k]|[[Tb|button~n]|button~k]]",
+        "variantClean": "[[Tk|button~k]|[button~k]|[[Tk|button~n]|button~k]]"
+      },
+      "screenshot": "blocks/2f04b1db8494.jpg",
+      "html": "blocks/2f04b1db8494.html"
+    },
+    {
+      "id": "6e6aa97364e4",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-child(1) > div > div:nth-child(2) > div > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10.md\\:flex > main > div > div.gap-x-5.pt-1.md\\:flex.md\\:flex-row.md\\:items-start.xl\\:\\!gap-x-10",
+      "bounds": {
+        "x": 15,
+        "y": 1253,
+        "width": 1410,
+        "height": 6881
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "dense",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + button + text + heading"
+      },
+      "description": "gap-x-5",
+      "features": {
+        "skeleton": "([({~@(~(T)) [T] T [[svg]|T] svg} button)|({~@(~(T)) [T] T [T] T [[svg]|T] svg} button)|({T [[svg]|T] svg} button)|(T button)] [({T [[svg]|T] svg} button)|({~@(~(T)) T [[svg]|T] svg} button)] [(T button)|({T [[svg]|T] svg} button)|({~@(~(T)) T [[svg]|T] svg} button)] [({T [[svg]|T] svg} button)|(T button)|({T [[svg]|T] svg} button)] [({~@(~(T)) T [[svg]|T] svg} button)|({T [[svg]|T] svg} button)] [({T [[svg]|T] svg} button)|({~@(~(T)) T [[svg]|T] svg} button)|({T [[svg]|T] svg} button)] [({~@(~(T)) T [[svg]|T] svg} button)|({T [[svg]|T] svg} button)|({~@(~(T)) T [[svg]|T] svg} button)] [({~@(~(T)) T [[svg]|T] svg} button)] [({T [[svg]|T] svg} button)|({~@(~(T)) T [[svg]|T] svg} button)|({T [[svg]|T] svg} button)|({~@(~(T)) T [[svg]|T] svg} button)] [({~@(~(T)) T [[svg]|T] svg} button)|({T [[svg]|T] svg} button)])",
+        "variant": "([({~@(~b(Tw)) [T] Tbkr [[svg]|Tn] svg} button)|({~@(~r(Tw)) [T] Tb [Tk|Tr] Tnr [[svg]|Tn] svg} button)|({Tbknr [[svg]|Tn] svg} button)|(Tn button)] [({Tbknr [[svg]|Tn] svg} button)|({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)] [(Tn button)|({Tbknr [[svg]|Tn] svg} button)|({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)] [({Tbknr [[svg]|Tn] svg} button)|(Tn button)|({Tbknr [[svg]|Tn] svg} button)] [({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)|({Tbknr [[svg]|Tn] svg} button)] [({Tbknr [[svg]|Tn] svg} button)|({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)|({Tbknr [[svg]|Tn] svg} button)] [({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)|({Tbknr [[svg]|Tn] svg} button)|({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)] [({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)] [({Tbknr [[svg]|Tn] svg} button)|({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)|({Tbknr [[svg]|Tn] svg} button)|({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)] [({~@(~y(Tw)) Tbkr [[svg]|Tn] svg} button)|({Tbknr [[svg]|Tn] svg} button)])",
+        "variantClean": "([({~@(~b(Tw)) [T] Tk [[svg]|Tk] svg} button)|({~@(~r(Tw)) [T] Tk [Tk] Tk [[svg]|Tk] svg} button)|({Tk [[svg]|Tk] svg} button)|(Tk button)] [({Tk [[svg]|Tk] svg} button)|({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)] [(Tk button)|({Tk [[svg]|Tk] svg} button)|({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)] [({Tk [[svg]|Tk] svg} button)|(Tk button)|({Tk [[svg]|Tk] svg} button)] [({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)|({Tk [[svg]|Tk] svg} button)] [({Tk [[svg]|Tk] svg} button)|({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)|({Tk [[svg]|Tk] svg} button)] [({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)|({Tk [[svg]|Tk] svg} button)|({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)] [({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)] [({Tk [[svg]|Tk] svg} button)|({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)|({Tk [[svg]|Tk] svg} button)|({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)] [({~@(~y(Tw)) Tk [[svg]|Tk] svg} button)|({Tk [[svg]|Tk] svg} button)])"
+      },
+      "screenshot": "blocks/6e6aa97364e4.jpg",
+      "html": "blocks/6e6aa97364e4.html"
+    },
+    {
+      "id": "79e2517ce428",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-child(1) > div > div:nth-child(2) > div > div.my-3.flex.justify-center.gap-x-2.md\\:gap-x-4",
+      "bounds": {
+        "x": 15,
+        "y": 8146,
+        "width": 1410,
+        "height": 24
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "button"
+      },
+      "description": "my-3",
+      "features": {
+        "skeleton": "[~(T)|T|~(T)|button]",
+        "variant": "[~k(Tw)|~b(Tb)|Tk|~b(Tb)|button~k]",
+        "variantClean": "[~k(Tw)|~b(Tk)|Tk|~b(Tk)|button~k]"
+      },
+      "screenshot": "blocks/79e2517ce428.jpg",
+      "html": "blocks/79e2517ce428.html"
+    },
+    {
+      "id": "7648f2274fcf",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5360309-0 > h2",
+      "bounds": {
+        "x": 15,
+        "y": 8224,
+        "width": 1410,
+        "height": 29
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "col-span-12",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/7648f2274fcf.html"
+    },
+    {
+      "id": "812bfed4cffe",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5360309-0 > div > button.aafes-block-arrow.left",
+      "bounds": {
+        "x": 25,
+        "y": 8400,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/812bfed4cffe.html"
+    },
+    {
+      "id": "671e47060deb",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5360309-0 > div > div",
+      "bounds": {
+        "x": 40,
+        "y": 8277,
+        "width": 1360,
+        "height": 276
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "dense",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link + image + text"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T|(T [T])|T|(T [T])]",
+        "variant": "[Tk|(Tk [Tk|Tr])|Tk|(Tk [Tk|Tr])]",
+        "variantClean": "[Tk|(Tk [Tk])|Tk|(Tk [Tk])]"
+      },
+      "screenshot": "blocks/671e47060deb.jpg",
+      "html": "blocks/671e47060deb.html"
+    },
+    {
+      "id": "7442baf22e04",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5360309-0 > div > ul",
+      "bounds": {
+        "x": 15,
+        "y": 8559,
+        "width": 1410,
+        "height": 24
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[~(T)]",
+        "variant": "[~b(T)|~n(T)]",
+        "variantClean": "[~b(T)|~n(T)]"
+      },
+      "screenshot": null,
+      "html": "blocks/7442baf22e04.html"
+    },
+    {
+      "id": "6586f5db08cd",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5360309-0 > div > button.aafes-block-arrow.right",
+      "bounds": {
+        "x": 1403,
+        "y": 8400,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/6586f5db08cd.html"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ Custom **hero** block. Purpose: Top-of-page campaign banner whose message is bak
 
 Model: `standalone`
 
-Single block table. Content: 2 row(s): Image (linked, or followed by a link); then Optional text (usually empty).
+Single block table. Content: row 1 = 2 cells (Banner image | Destination link), same as every linked-image block: the image in the left cell, the page it opens as a link in the right cell. Optional row 2: text (usually empty).
 
 ## Supported variations
 

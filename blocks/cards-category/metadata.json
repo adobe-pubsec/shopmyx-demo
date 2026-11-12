@@ -12,7 +12,16 @@
   },
   "options": [],
   "memberVariantIds": [],
-  "usage": "Shop-by-category grid: circular icon with uppercase label, each linking to a listing.",
+  "usage": {
+    "purpose": "Shop-by-category grid: circular icon with uppercase label, each linking to a listing.",
+    "pagesUsing": [
+      "/deals",
+      "/categories/electronics",
+      "/categories/electronics/computers"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-11-11"
+  },
   "reuseGuidance": "Use for icon + label links. The label is the link text; the whole item becomes one link.",
   "sourceUrl": "https://www.shopmyexchange.com/"
 }

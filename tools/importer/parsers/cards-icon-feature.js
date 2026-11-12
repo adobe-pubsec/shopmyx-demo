@@ -6,7 +6,8 @@
  * Source: #mt_id_servingfamily + div.grid > div.text-center (3 items), each:
  *   a > img (icon), h2 > a (title), a.text-sm (linked lines separated by <br>).
  * The "SERVING THE MILITARY FAMILY" heading (#mt_id_servingfamily) stays as default content.
- * Output: one row per item: [linked icon image | h2 title (linked) + one <p> per linked line].
+ * Output: one row per item: [icon image | h2 title (linked to the destination) + one <p>
+ *   per linked line]. The block links the icon with the title link.
  */
 
 function clean(text) {
@@ -26,22 +27,14 @@ export default function parse(element, { document, params }) {
 
   const cells = [];
   items.forEach((item) => {
-    // Icon cell: linked image.
+    // Icon cell: the image only (the destination is the title link).
     let iconCell = '';
     const img = item.querySelector('img');
     if (img && img.getAttribute('src')) {
       const image = document.createElement('img');
       image.src = img.getAttribute('src');
       if (img.getAttribute('alt')) image.alt = clean(img.getAttribute('alt'));
-      const imgLink = img.closest('a');
-      if (imgLink && imgLink.getAttribute('href')) {
-        const a = document.createElement('a');
-        a.href = imgLink.getAttribute('href');
-        a.append(image);
-        iconCell = a;
-      } else {
-        iconCell = image;
-      }
+      iconCell = image;
     }
 
     // Text cell: title heading + linked lines.

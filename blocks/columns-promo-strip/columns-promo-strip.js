@@ -8,30 +8,48 @@ function optimizePictures(root) {
   });
 }
 
+function isUrlText(text) {
+  return /^(https?:)?\/\//.test(text) || text.startsWith('/');
+}
+
 /**
- * Wraps a lone picture in the cell's only link when the image is not already linked,
- * so an author can write "image + link" or a linked image and get the same result.
+ * Content model: one row per promo, [image | destination link]. The rows become the
+ * columns of a single row, each holding the picture wrapped in its destination link,
+ * so the promos sit side by side. The link text is the accessible label only when the
+ * image has no alt text. Rows that don't follow the model are left untouched.
  */
-function linkPicture(cell) {
-  const pic = cell.querySelector('picture');
-  if (!pic || pic.closest('a')) return;
-  const links = [...cell.querySelectorAll('a')];
-  if (links.length !== 1) return;
-  const [link] = links;
-  const label = link.textContent.trim();
-  const otherText = cell.textContent.replace(link.textContent, '').trim();
-  if (otherText) return;
-  const anchor = link.cloneNode(false);
-  if (label && !/^(https?:)?\/\//.test(label) && !label.startsWith('/')) {
-    anchor.setAttribute('aria-label', label);
-  }
-  const holder = link.closest('p') || link;
-  pic.replaceWith(anchor);
-  anchor.append(pic);
-  if (holder !== anchor && holder.isConnected) holder.remove();
+function promoRowsToColumns(block) {
+  const promos = [...block.children].map((row) => {
+    const [imageCell, linkCell, ...rest] = [...row.children];
+    const pic = imageCell && imageCell.querySelector('picture');
+    if (!pic || rest.length || imageCell.textContent.trim()) return null;
+    const links = linkCell ? [...linkCell.querySelectorAll('a[href]')] : [];
+    if (linkCell && (links.length > 1 || linkCell.querySelector('picture, img'))) return null;
+    if (links.length && linkCell.textContent.trim() !== links[0].textContent.trim()) return null;
+    const col = document.createElement('div');
+    if (links.length) {
+      const anchor = links[0].cloneNode(false);
+      anchor.removeAttribute('title');
+      const label = links[0].textContent.trim();
+      const hasAlt = Boolean(pic.querySelector('img')?.alt);
+      if (!hasAlt && label && !isUrlText(label)) anchor.setAttribute('aria-label', label);
+      anchor.append(pic);
+      const p = document.createElement('p');
+      p.append(anchor);
+      col.append(p);
+    } else {
+      col.append(pic);
+    }
+    return col;
+  });
+  if (!promos.length || promos.some((p) => !p)) return;
+  const row = document.createElement('div');
+  row.append(...promos);
+  block.replaceChildren(row);
 }
 
 export default function decorate(block) {
+  promoRowsToColumns(block);
   const firstRow = block.firstElementChild;
   if (!firstRow) return;
   const cols = [...firstRow.children];
@@ -41,7 +59,6 @@ export default function decorate(block) {
     row.classList.add('columns-promo-strip-row');
     [...row.children].forEach((col) => {
       col.classList.add('columns-promo-strip-col');
-      linkPicture(col);
       if (col.querySelector('picture') && !col.textContent.trim()) {
         col.classList.add('columns-promo-strip-img-col');
       }

@@ -1,0 +1,1397 @@
+{
+  "schemaVersion": 2,
+  "url": "https://www.shopmyexchange.com/deals",
+  "title": "Shop Army & Air Force Exchange Service",
+  "timestamp": "2026-11-11T15:25:39.254Z",
+  "duration": "15.1s",
+  "cleanup": {
+    "elementsRemoved": 2,
+    "types": [
+      "overlay",
+      "popup"
+    ],
+    "cookieConsentDismissed": false,
+    "lateConsentOverlaysRemoved": 0,
+    "removed": [
+      {
+        "selector": "div.light.bg-white > div:nth-child(2)",
+        "type": "overlay"
+      },
+      {
+        "selector": "section.modalHeader.relative",
+        "type": "popup",
+        "rule": "body [class*=\"modal\"]:not(nav *)"
+      }
+    ]
+  },
+  "snapshot": {
+    "html": "page.html",
+    "unresolvedSelectors": []
+  },
+  "images": [
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732106/ztk5bgdv18ymvzmmmlat.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732105/zghqcqmi3xj0xgmkyckb.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/clearance-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/military-blue-bar-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/outlet-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/weeklyad-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/marketplace-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/unitpurchases-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681722493/yjjc1frjalse4r4ir0v4.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681721529/asca5tv6lzpqafzo0mth.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-command-header",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/121925-hp-special-homedepot",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/savings-center-clearance-tile-2020-01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-samsung-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-ninen-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-bose-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-asus-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-sheet-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-tvs-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-computee-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-sony-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-gaming-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-head-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-cam-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-garmin-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-moni-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-apple-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-furni-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-matt-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-kitch-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-iron-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-vaccuu-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-grills-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-candles-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-bedding-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-towels-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-rugs-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-oxo-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-dining-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-storeage-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-steri-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-clean-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-pet-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-yeti-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-coleman-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-nike-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-mens-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-womens-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-kids-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-hands-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-sun-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-gel-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-pres-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-bath-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-hair-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-mikoo-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-skin-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-oral-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-shave-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-duke-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-jack-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-diamonds-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-fine-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-fashion-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-watches-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-toys-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-kanas-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/sc-treats-46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-left-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3901065_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3609850_1944:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4373095_PHFB:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/7160151_1963:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4567310_1007:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4996810_HO84:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4799307_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5000650_3604:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5069123_2041:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4829258_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3407169_1927:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3767387_1007:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4147066_ZRI9:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3834452_1927:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4176879_4161:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3584981_1191:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4788811_ZY6X:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3834448_1927:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3456311_1453:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-right-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5069121_2041:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5069098_2910:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4637739_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4373095_GEPA:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/9165428_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/2008097_0000-5:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4922137_8EGY:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4798686_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5097271_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4857927_ZRI9:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4996810_CKUH:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4147065_3550:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4573756_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3479859_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4928577_V58J:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4217944_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3818201_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5069114_2910:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3078769_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4909083_0ZZU:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/110126-hp-special-milstar-holidaybill",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-electronics",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-furniture",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-patiogarden",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-household",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-sportsoutdoors",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-shoes",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-clothing",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-beautyhealth",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-jewelrywatches",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-babytoys",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-foodgifts",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-outlet",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/mail.db837a94.png",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/facebook.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/twitter.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/pinterest.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://sp.analytics.yahoo.com/sp.pl?a=10000&d=Wed%2C%2011%20Nov%202026%2015%3A25%3A29%20GMT&n=8&b=Shop%20Army%20%26%20Air%20Force%20Exchange%20Service&.yp=10204186&f=https%3A%2F%2Fwww.shopmyexchange.com%2Fdeals&enc=UTF-8&yv=1.17.1&tagmgr=gtm",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/checkboxCheck.13db094e.png",
+      "type": "background"
+    }
+  ],
+  "skeleton": {
+    "signature": "sB(s(2x11(s,s,sB,5x1,sB,6x9,s(s,3x2(,)),s(s,3x2(,)),s(s,s),s(s,6x2)),s),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow",
+      "rc1c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1)",
+      "rc1c1c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1) > section.cms-container-dakz8.mb-5 > div > div > div > nav.mb-5.flex",
+      "rc1c1c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1) > section.cms-container-dakz8.mb-5 > div > div > div > div.banner-container.pointer-events-none.mb-4",
+      "rc1c1c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1) > section.cms-container-dakz8.mb-5 > div > div > div > div.w-full.clear-both.px-0.pt-10.mb-4:nth-of-type(4)",
+      "rc1c1c4": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1) > section.cms-container-dakz8.mb-5 > div > div > div > div.mb-10.cat-container.grid.grid-cols-2.md\\:grid-cols-4.lg\\:grid-cols-6.mx-3.gap-4:nth-of-type(5)",
+      "rc1c1c5": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1) > section.cms-container-dakz8.mb-5 > div > div > div > div.w-full.clear-both.px-0.pt-10.mb-4:nth-of-type(6)",
+      "rc1c1c6": "#mt-deals",
+      "rc1c1c7": "#mt-slider-5978177-0",
+      "rc1c1c7c1": "#mt-slider-5978177-0 > h3.lg\\:text-2xl.text-xl.text-center.uppercase.font-bold.font-sans.text-black-600",
+      "rc1c1c7c2": "#mt-slider-5978177-0 > div.col-span-12.px-0",
+      "rc1c1c7c2c1": "#mt-slider-5978177-0 > div.col-span-12.px-0 > div",
+      "rc1c1c7c2c2": "#mt-slider-5978177-0 > div.col-span-12.px-0 > ul",
+      "rc1c1c8": "#mt-slider-5569509-0",
+      "rc1c1c8c1": "#mt-slider-5569509-0 > h3.lg\\:text-2xl.text-xl.text-center.uppercase.font-bold.font-sans.text-black-600",
+      "rc1c1c8c2": "#mt-slider-5569509-0 > div.col-span-12.px-0",
+      "rc1c1c8c2c1": "#mt-slider-5569509-0 > div.col-span-12.px-0 > div",
+      "rc1c1c8c2c2": "#mt-slider-5569509-0 > div.col-span-12.px-0 > ul",
+      "rc1c1c9": "body > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > section > div > div > div > div:nth-of-type(11)",
+      "rc1c1c9c1": "body > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > section > div > div > div > div:nth-of-type(11) > div:nth-of-type(1)",
+      "rc1c1c9c2": "body > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > section > div > div > div > div:nth-of-type(11) > div:nth-of-type(2)",
+      "rc1c1c10": "#mt_id_shopbycategory",
+      "rc1c1c10c1": "#mt_id_shopbycategory > h3.mb-2.lg\\:text-2xl.text-xl.font-bold.text-center.uppercase.font-sans.text-black-600",
+      "rc1c1c10c2": "#mt_id_shopbycategory > div.mx-4.mb-5",
+      "rc1c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2)",
+      "rc2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1)",
+        "layout": "2x11",
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 125,
+      "height": 5020.875
+    },
+    "splits": [
+      {
+        "selector": "div.mb-10.cat-container > div.mb-4.cat-box, div.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.18888391707006197
+          ],
+          [
+            0.6083336723209807,
+            0.7972175893910426
+          ]
+        ],
+        "top": 607.046875,
+        "bottom": 866.71875,
+        "cover": 0.05171845046929071,
+        "above": 1
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 986.71875,
+        "bottom": 1246.390625,
+        "cover": 0.05171845046929071,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 1278.390625,
+        "bottom": 1538.0625,
+        "cover": 0.05171845046929071,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 1570.0625,
+        "bottom": 1829.734375,
+        "cover": 0.05171845046929071,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 1861.734375,
+        "bottom": 2121.40625,
+        "cover": 0.05171845046929071,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 2153.40625,
+        "bottom": 2389.078125,
+        "cover": 0.04693840715014813,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 2421.078125,
+        "bottom": 2680.75,
+        "cover": 0.05171845046929071,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 2712.75,
+        "bottom": 2972.421875,
+        "cover": 0.05171845046929071,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box, div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.1570391414141414
+          ],
+          [
+            0.5057720057720058,
+            0.6628111471861472
+          ]
+        ],
+        "top": 3004.421875,
+        "bottom": 3288.09375,
+        "cover": 0.05649849378843329,
+        "above": 2
+      },
+      {
+        "selector": "div#mt-deals.mb-10.cat-container > div.mb-4.cat-box",
+        "sides": [
+          [
+            0,
+            0.482257226934395
+          ]
+        ],
+        "top": 3320.09375,
+        "bottom": 3579.75,
+        "cover": 0.05171533846192148,
+        "above": 2
+      }
+    ],
+    "start": {
+      "kind": "photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "714699052868",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(1) > section > div > div > div > nav",
+      "bounds": {
+        "x": 15,
+        "y": 125,
+        "width": 1410,
+        "height": 20
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "mb-5",
+      "features": {
+        "skeleton": "nav",
+        "variant": "nav",
+        "variantClean": "nav"
+      },
+      "screenshot": "blocks/714699052868.jpg",
+      "html": "blocks/714699052868.html"
+    },
+    {
+      "id": "7211cdb32def",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(1) > section > div > div > div > div.banner-container.pointer-events-none.mb-4",
+      "bounds": {
+        "x": 15,
+        "y": 165,
+        "width": 1410,
+        "height": 187
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "link + image"
+      },
+      "description": "banner-container",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/7211cdb32def.html"
+    },
+    {
+      "id": "12a2767896e9",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(1) > section > div > div > div > div.banner-container.w-full.md\\:w-1\\/2.px-0.md\\:pr-2.float-left",
+      "bounds": {
+        "x": 15,
+        "y": 368,
+        "width": 705,
+        "height": 175
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "link + image"
+      },
+      "description": "banner-container",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/12a2767896e9.html"
+    },
+    {
+      "id": "90d8b9995887",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(1) > section > div > div > div > div.banner-container.w-full.md\\:w-1\\/2.px-0.md\\:pl-2.float-right",
+      "bounds": {
+        "x": 720,
+        "y": 368,
+        "width": 705,
+        "height": 175
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "link + image"
+      },
+      "description": "banner-container",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/90d8b9995887.html"
+    },
+    {
+      "id": "ee8b752cfb90",
+      "type": "unknown",
+      "detectionTier": 2,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(1) > section > div > div > div > div:nth-child(5)",
+      "bounds": {
+        "x": 15,
+        "y": 543,
+        "width": 1410,
+        "height": 48
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "w-full",
+      "features": {
+        "skeleton": "~(T)",
+        "variant": "~b(Tc)",
+        "variantClean": "~b(Tk)"
+      },
+      "screenshot": "blocks/ee8b752cfb90.jpg",
+      "html": "blocks/ee8b752cfb90.html"
+    },
+    {
+      "id": "a39e02bb2a8d",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(1) > section > div > div > div > div:nth-child(8)",
+      "bounds": {
+        "x": 27,
+        "y": 607,
+        "width": 1386,
+        "height": 276
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "mb-10",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tn]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/a39e02bb2a8d.jpg",
+      "html": "blocks/a39e02bb2a8d.html"
+    },
+    {
+      "id": "8fead595853d",
+      "type": "unknown",
+      "detectionTier": 2,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div > div > div:nth-child(1) > section > div > div > div > div:nth-child(9)",
+      "bounds": {
+        "x": 15,
+        "y": 923,
+        "width": 1410,
+        "height": 48
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "w-full",
+      "features": {
+        "skeleton": "~(T)",
+        "variant": "~b(Tc)",
+        "variantClean": "~b(Tk)"
+      },
+      "screenshot": "blocks/8fead595853d.jpg",
+      "html": "blocks/8fead595853d.html"
+    },
+    {
+      "id": "2991d017a928",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt-deals",
+      "bounds": {
+        "x": 27,
+        "y": 987,
+        "width": 1386,
+        "height": 2609
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "mb-10",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tn]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/2991d017a928.jpg",
+      "html": "blocks/2991d017a928.html"
+    },
+    {
+      "id": "044a68f4e01c",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5978177-0 > h3",
+      "bounds": {
+        "x": 15,
+        "y": 3638,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "lg-text-2xl",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/044a68f4e01c.html"
+    },
+    {
+      "id": "e313db229018",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5978177-0 > div > button.aafes-block-arrow.left",
+      "bounds": {
+        "x": 25,
+        "y": 3816,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/e313db229018.html"
+    },
+    {
+      "id": "05704133128b",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5978177-0 > div > div",
+      "bounds": {
+        "x": 40,
+        "y": 3694,
+        "width": 1360,
+        "height": 276
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link + image + text"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T|(T [T])|T]",
+        "variant": "[Tbk|(Tk [Tk|Tr])|Tbk]",
+        "variantClean": "[Tk|(Tk [Tk])|Tk]"
+      },
+      "screenshot": "blocks/05704133128b.jpg",
+      "html": "blocks/05704133128b.html"
+    },
+    {
+      "id": "89f1b34fa5d3",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5978177-0 > div > ul",
+      "bounds": {
+        "x": 15,
+        "y": 3976,
+        "width": 1410,
+        "height": 24
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[~(T)]",
+        "variant": "[~b(T)|~n(T)]",
+        "variantClean": "[~b(T)|~n(T)]"
+      },
+      "screenshot": null,
+      "html": "blocks/89f1b34fa5d3.html"
+    },
+    {
+      "id": "2d81d8a6e3fc",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5978177-0 > div > button.aafes-block-arrow.right",
+      "bounds": {
+        "x": 1403,
+        "y": 3816,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/2d81d8a6e3fc.html"
+    },
+    {
+      "id": "2a63a7d67d2e",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5569509-0 > h3",
+      "bounds": {
+        "x": 15,
+        "y": 4042,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "lg-text-2xl",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/2a63a7d67d2e.html"
+    },
+    {
+      "id": "f29f429ad89a",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5569509-0 > div > button.aafes-block-arrow.left",
+      "bounds": {
+        "x": 25,
+        "y": 4220,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/f29f429ad89a.html"
+    },
+    {
+      "id": "48cf97d04e14",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5569509-0 > div > div",
+      "bounds": {
+        "x": 40,
+        "y": 4098,
+        "width": 1360,
+        "height": 276
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "dense",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link + image + text"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[(T [T])|T|(T [T])]",
+        "variant": "[(Tk [Tk|Tr])|Tbk|(Tk [Tk|Tr])]",
+        "variantClean": "[(Tk [Tk])|Tk|(Tk [Tk])]"
+      },
+      "screenshot": "blocks/48cf97d04e14.jpg",
+      "html": "blocks/48cf97d04e14.html"
+    },
+    {
+      "id": "8af7373a08f9",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5569509-0 > div > ul",
+      "bounds": {
+        "x": 15,
+        "y": 4380,
+        "width": 1410,
+        "height": 24
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[~(T)]",
+        "variant": "[~b(T)|~n(T)]",
+        "variantClean": "[~b(T)|~n(T)]"
+      },
+      "screenshot": null,
+      "html": "blocks/8af7373a08f9.html"
+    },
+    {
+      "id": "7b91cedd023d",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5569509-0 > div > button.aafes-block-arrow.right",
+      "bounds": {
+        "x": 1403,
+        "y": 4220,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/7b91cedd023d.html"
+    },
+    {
+      "id": "7464ad384257",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > section > div > div > div > div:nth-of-type(11) > div:nth-of-type(1)",
+      "bounds": {
+        "x": 15,
+        "y": 4432,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "sm-text-2xl",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/7464ad384257.html"
+    },
+    {
+      "id": "8bb946a71c55",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "body > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > section > div > div > div > div:nth-of-type(11) > div:nth-of-type(2)",
+      "bounds": {
+        "x": 15,
+        "y": 4464,
+        "width": 1410,
+        "height": 164
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "link + image"
+      },
+      "description": "banner-tile",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null,
+      "html": "blocks/8bb946a71c55.html"
+    },
+    {
+      "id": "71471c1afaec",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt_id_shopbycategory > h3",
+      "bounds": {
+        "x": 15,
+        "y": 4628,
+        "width": 1410,
+        "height": 32
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "mb-2",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/71471c1afaec.html"
+    },
+    {
+      "id": "1ed7a2694286",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt_id_shopbycategory > div",
+      "bounds": {
+        "x": 31,
+        "y": 4668,
+        "width": 1378,
+        "height": 458
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "mx-4",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tn]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/1ed7a2694286.jpg",
+      "html": "blocks/1ed7a2694286.html"
+    }
+  ]
+}

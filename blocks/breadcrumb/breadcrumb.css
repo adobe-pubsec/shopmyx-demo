@@ -1,0 +1,22 @@
+/* Source: nav.mb-5.flex > ol.flex.items-center.space-x-2.text-sm (14px/20px, #333 current page) */
+.breadcrumb {
+  min-height: 20px; /* reserved while the levels load, so nothing below moves */
+  color: #333;
+  font-size: var(--body-font-size-s);
+  line-height: 20px;
+}
+
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li + li::before {
+  content: ' » ';
+  white-space: pre;
+}

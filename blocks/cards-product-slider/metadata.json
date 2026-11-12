@@ -1,0 +1,26 @@
+{
+  "variantName": "cards-product-slider",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Product recommendations under a section heading (e.g. MOST POPULAR, TRENDING) shown as a horizontal slider",
+    "description": "Horizontal product slider: 2 cards visible on mobile, 5 from 768px; each card has a contained product image, a two-line-clamped product name link and a price line (regular and red bold sale price, or a 'Log in for Exchange pricing' note). Prev/next chevron arrows (from 768px) wrap around; page dots below."
+  },
+  "contentPattern": {
+    "structure": "one row per product, 2 cells (Image | Product name link + price line)",
+    "description": "Each row is one product: cell 1 the product image (optionally linked), cell 2 a paragraph with the product name linked to the product page, then a paragraph with the price ('$24.95 $19.96 Sale' is split into regular and sale price) or a pricing note. Arrows and dots are built by the block."
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "purpose": "Stand-alone horizontal product slider (image, linked product name, price) placed under a default-content heading, e.g. MOST POPULAR and TRENDING on /deals.",
+    "pagesUsing": [
+      "/categories/electronics",
+      "/categories/electronics/computers"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-11"
+  },
+  "reuseGuidance": "Use for any single list of products shown as a carousel. For several product lists switched by tabs use tabs-product-recs, which renders the same slider. For static category or deal tiles use cards-category.",
+  "sourceUrl": "https://www.shopmyexchange.com/deals"
+}

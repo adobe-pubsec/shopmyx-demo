@@ -12,7 +12,7 @@
  * tracking pixel tile is skipped. The hp6 + hp7 grids are one visual group, so the
  * hp6 parse merges the hp7 grid into one block of 8 tiles (the block renders a flat
  * 4-per-row grid) and removes the hp7 grid.
- * Output: one row per tile: [linked image | (empty link cell)].
+ * Output: one row per tile: [image | destination link].
  */
 
 const MERGED_ATTR = 'data-cards-promo-tiles-merged';
@@ -42,6 +42,16 @@ function collectTiles(root) {
   return tiles;
 }
 
+// Content model shared by every linked-image block: [image | destination link].
+// The image cell holds only the image (a DM URL link after the DM transformer);
+// the link cell holds the destination, its text describing the image.
+function destinationLink(document, href, image) {
+  const a = document.createElement('a');
+  a.href = href;
+  a.textContent = (image.alt || '').trim() || href;
+  return a;
+}
+
 function buildRow(tile, document) {
   const img = tile.querySelector('img');
   if (!img) return null;
@@ -51,10 +61,7 @@ function buildRow(tile, document) {
   if (img.getAttribute('alt')) image.alt = img.getAttribute('alt').replace(/\s+/g, ' ').trim();
   const href = link && link.getAttribute('href');
   if (href && !/^javascript:/i.test(href)) {
-    const a = document.createElement('a');
-    a.href = href;
-    a.append(image);
-    return [a, ''];
+    return [image, destinationLink(document, href, image)];
   }
   return [image, ''];
 }

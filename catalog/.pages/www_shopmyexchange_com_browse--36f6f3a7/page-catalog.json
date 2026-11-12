@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 2,
+  "url": "https://www.shopmyexchange.com/browse?pageCategories=Electronics",
+  "title": "Shop Army & Air Force Exchange Service",
+  "timestamp": "2026-11-11T16:17:49.188Z",
+  "duration": "9.9s",
+  "cleanup": {
+    "elementsRemoved": 2,
+    "types": [
+      "overlay",
+      "popup"
+    ],
+    "cookieConsentDismissed": false,
+    "lateConsentOverlaysRemoved": 0,
+    "removed": [
+      {
+        "selector": "div.light.bg-white > div:nth-child(2)",
+        "type": "overlay"
+      },
+      {
+        "selector": "section.modalHeader.relative",
+        "type": "popup",
+        "rule": "body [class*=\"modal\"]:not(nav *)"
+      }
+    ]
+  },
+  "snapshot": {
+    "html": "page.html",
+    "unresolvedSelectors": []
+  },
+  "images": [
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732106/ztk5bgdv18ymvzmmmlat.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681732105/zghqcqmi3xj0xgmkyckb.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/deals-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/clearance-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/military-blue-bar-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/outlet-iconR?fmt=png-alpha&bfc=on",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/weeklyad-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/marketplace-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/unitpurchases-iconR",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681722493/yjjc1frjalse4r4ir0v4.png",
+      "type": "img"
+    },
+    {
+      "url": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1681721529/asca5tv6lzpqafzo0mth.png",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5009807_1191:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4419899_3604:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4817850_1007:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4735507_2910:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/3767384_XZ92:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO1240810139_1007_ALT1:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4177670_EHBL:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO2000011831_2910_ALT1:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4810011_LVKE:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/DSCO1244955721_3563:2000-full-web?wid=326&hei=326&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-apple-authorized-reseller01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-lg01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-samsung01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-att-01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-brand-bose01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/LP-shop-all-brands01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/electronics-tv-buying-guide-tile01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/electronics-smart-home-guide-tile01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/L1-LGWk46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/L1-GarminPaidWk46",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-left-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930994_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930981_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5004973_LZ3V:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5033573_1007:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4674016_1007:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931168_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930982_1112:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5058778_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4828953_0SMC:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4930983_EHBL:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5097271_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4857927_ZRI9:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4637739_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/5071664_0000:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/4931167_6737:2000-full-web?wid=172&hei=172&fmt=jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://media.shopmyexchange.com/is/image/aafes/icon-arrow-right-blue01",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/mail.db837a94.png",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/facebook.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/twitter.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://platform-cdn.sharethis.com/img/pinterest.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://sp.analytics.yahoo.com/sp.pl?a=10000&d=Wed%2C%2011%20Nov%202026%2016%3A17%3A43%20GMT&n=-1&b=Shop%20Army%20%26%20Air%20Force%20Exchange%20Service&.yp=10204186&f=https%3A%2F%2Fwww.shopmyexchange.com%2Fbrowse%3FpageCategories%3DElectronics&enc=UTF-8&yv=1.17.1&tagmgr=gtm",
+      "type": "img"
+    },
+    {
+      "url": "https://www.shopmyexchange.com/_next/static/media/checkboxCheck.13db094e.png",
+      "type": "background"
+    }
+  ],
+  "skeleton": {
+    "signature": "sB(s(s(s,s(s,s,s(,,,),2x1,sB),s),s(s,3x2(35x1,3x1))),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow",
+      "rc1c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1)",
+      "rc1c1c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(1)",
+      "rc1c1c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2)",
+      "rc1c1c2c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10 > main.w-full.pt-1 > section.cms-container-241fu.mb-5",
+      "rc1c1c2c2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10 > main.w-full.pt-1 > section.cms-container-vt3oh.mb-5",
+      "rc1c1c2c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10 > main.w-full.pt-1 > section.cms-container-45i07.mb-5",
+      "rc1c1c2c3c1": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10 > main.w-full.pt-1 > section.cms-container-45i07.mb-5 > div > div > div > nav.mb-5.flex",
+      "rc1c1c2c3c2": "#category",
+      "rc1c1c2c3c3": "#brands",
+      "rc1c1c2c3c4": "body > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) > div > div > main > section:nth-of-type(3) > div > div > div > section:nth-of-type(3)",
+      "rc1c1c2c3c4c1": "#sizecharts > h3.text-center.mt-4.mb-2.text-xl.sm\\:text-2xl.lg\\:text-2xl.font-bold.font-sans.text-black-600.uppercase.mt-6.mb-4.mx-auto",
+      "rc1c1c2c3c4c2": "#sizecharts > div.mb-2.guide-container.flex.flex-wrap.justify-center",
+      "rc1c1c2c4": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10 > main.w-full.pt-1 > section.cms-container-96n0h.mb-5",
+      "rc1c1c2c5": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(2) > div.mx-auto > div.gap-x-5.md\\:flex-row.xl\\:\\!gap-x-10 > main.w-full.pt-1 > section:nth-of-type(5)",
+      "rc1c1c3": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1) > div.block.md\\:block.lg\\:\\!block > div.w-full.block.md\\:block.lg\\:\\!block:nth-of-type(3)",
+      "rc1c2": "#recommendationContainer",
+      "rc1c2c1": "#mt-slider-5656824-0 > h2.text-xl.sm\\:text-2xl.lg\\:text-2xl.font-bold.font-sans.text-black-600.uppercase.px-0.mt-4.mx-auto.mb-4.jsPDPAccordionToggle",
+      "rc1c2c2": "#mt-slider-5656824-0 > div.relative.mt-2.mb-6\\;",
+      "rc1c2c2c1": "#mt-slider-5656824-0 > div.relative.mt-2.mb-6\\; > div",
+      "rc1c2c2c2": "#mt-slider-5656824-0 > div.relative.mt-2.mb-6\\; > ul",
+      "rc2": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-of-type(1)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "#recommendationContainer",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "body > div.default > div.light.bg-white.transition.duration-300.ease-out > div > div.flex.min-h-screen.flex-col.items-stretch.justify-start > div.px-0.lg\\:max-w-\\[1440px\\].lg\\:m-auto.w-full",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 125,
+      "height": 2011.359375
+    },
+    "splits": [],
+    "start": {
+      "kind": "heading",
+      "look": {
+        "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "color": "rgb(0, 0, 0)",
+        "align": "center"
+      }
+    }
+  },
+  "blocks": [
+    {
+      "id": "4ab9cc752ca8",
+      "type": "default-content",
+      "detectionTier": 2,
+      "selector": "body > div.default > div > div > div > div.slug_gridWrapper__Pd_ps.w-full.grow > div:nth-child(1)",
+      "bounds": {
+        "x": 15,
+        "y": 125,
+        "width": 1410,
+        "height": 1615
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "dense",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading + list + link + image + text"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "(T nav T [T] T [T] T [T] T [T])",
+        "variant": "(Tn nav Tk [Tn] Tk [T] Tk [Tn] Tn [T])",
+        "variantClean": "(Tk nav Tk [Tk] Tk [T] Tk [Tk] Tk [T])"
+      },
+      "screenshot": null,
+      "html": "blocks/4ab9cc752ca8.html"
+    },
+    {
+      "id": "f15cc116a7a3",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5656824-0 > h2",
+      "bounds": {
+        "x": 15,
+        "y": 1782,
+        "width": 1410,
+        "height": 29
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "text-xl",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/f15cc116a7a3.html"
+    },
+    {
+      "id": "b5953e3d0212",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5656824-0 > div > button.aafes-block-arrow.left",
+      "bounds": {
+        "x": 25,
+        "y": 1946,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/b5953e3d0212.html"
+    },
+    {
+      "id": "ec1c2a3e9ed5",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5656824-0 > div > div",
+      "bounds": {
+        "x": 40,
+        "y": 1834,
+        "width": 1360,
+        "height": 248
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link + image"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T|(T [T])|T]",
+        "variant": "[Tbk|(Tk [Tk|Tr])|Tbk|Tk]",
+        "variantClean": "[Tk|(Tk [Tk])|Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/ec1c2a3e9ed5.jpg",
+      "html": "blocks/ec1c2a3e9ed5.html"
+    },
+    {
+      "id": "a0eeafa07eb8",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5656824-0 > div > ul",
+      "bounds": {
+        "x": 15,
+        "y": 2088,
+        "width": 1410,
+        "height": 24
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list"
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[~(T)]",
+        "variant": "[~b(T)|~n(T)]",
+        "variantClean": "[~b(T)|~n(T)]"
+      },
+      "screenshot": null,
+      "html": "blocks/a0eeafa07eb8.html"
+    },
+    {
+      "id": "ea9934c75cf6",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#mt-slider-5656824-0 > div > button.aafes-block-arrow.right",
+      "bounds": {
+        "x": 1403,
+        "y": 1946,
+        "width": 12,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "aafes-block-arrow",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null,
+      "html": "blocks/ea9934c75cf6.html"
+    }
+  ]
+}

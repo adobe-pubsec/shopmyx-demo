@@ -310,10 +310,104 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+/* breadcrumb (auto block from the page path): source nav.mb-5 sits 20px below the
+   header and 20px above the first heading */
+main > .section > .breadcrumb-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* Single full-width promo banner under a heading (Military Star banner): keeps the
+   default-content image spacing (0.8em above; 4px before a following heading, 8px
+   before a following block). */
+main > .section > .cards-promo-wide-wrapper:has(> .cards-promo-wide > ul > li:only-child) {
+  margin-top: 0.8em;
+  margin-bottom: 8px;
+}
+
+main > .section > .cards-promo-wide-wrapper:has(> .cards-promo-wide > ul > li:only-child):has(+ .default-content-wrapper) {
+  margin-bottom: 4px;
+}
+
+main > .section > :where(.cards-promo-wide-wrapper:has(> .cards-promo-wide > ul > li:only-child)) + .default-content-wrapper {
+  margin-top: 4px;
+}
+
+/*
+ * Category landing pages (/categories/*): scoped to the section holding the
+ * category-tile look of cards-category (class "tiles", added by its block JS),
+ * so the homepage and deals sections are never matched.
+ * Source: breadcrumb nav (14px/20px, #333 current page, mb-5), panel headings
+ * (16px top and bottom inside flex panels), 1px brand-blue rules below the
+ * "Shop By Category" panel and above "Electronic Guides".
+ */
+main > .section:has(.cards-category.tiles) > .default-content-wrapper {
+  display: flow-root;
+  margin-bottom: 0;
+}
+
+main > .section:has(.cards-category.tiles) > .default-content-wrapper:not(:first-child) {
+  margin-top: var(--block-gap);
+}
+
+main > .section:has(.cards-category.tiles) > .default-content-wrapper h3 {
+  margin: 16px 0;
+}
+
+main > .section > .cards-category-wrapper:has(> .cards-category.tiles)::after {
+  content: '';
+  display: block;
+  margin-top: 16px;
+  border-bottom: 1px solid var(--brand-primary);
+}
+
+main > .section:has(.cards-category.tiles) > .cards-logo-circle-wrapper + .default-content-wrapper {
+  margin-top: 32px;
+}
+
+main > .section:has(.cards-category.tiles) > .cards-logo-circle-wrapper + .default-content-wrapper::before {
+  content: '';
+  display: block;
+  border-top: 1px solid var(--brand-primary);
+}
+
+main > .section:has(.cards-category.tiles) > .cards-logo-circle-wrapper + .default-content-wrapper h3 {
+  margin-top: 24px;
+}
+
+/* guides panel mb-8 before the promo banners */
+main > .section:has(.cards-category.tiles) > .cards-category-wrapper:has(> .cards-category.guides) {
+  margin-bottom: 32px;
+}
+
+/* "You May Also Like" title: banner mb-4 + h2 mt 42px / mb 24px, line-height 1.2 */
+main > .section:has(.cards-category.tiles) + .section > .default-content-wrapper:first-child {
+  display: flow-root;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main > .section:has(.cards-category.tiles) + .section > .default-content-wrapper:first-child h2 {
+  margin: 42px 0 21px;
+  line-height: 1.2;
+}
+
+@media (width >= 768px) {
+  main > .section:has(.cards-category.tiles) + .section > .default-content-wrapper:first-child h2 {
+    margin-bottom: 16px;
+  }
+}
+
+/* Category landing pages: a single full-width banner sits 32px below the brands
+   panel (source: #brands mb-8 before the banner section). */
+main > .section:has(.cards-category.tiles) > .cards-promo-wide-wrapper:has(> .cards-promo-wide > ul > li:only-child) {
+  margin-top: 32px;
 }

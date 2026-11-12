@@ -12,7 +12,15 @@
   },
   "options": [],
   "memberVariantIds": [],
-  "usage": "Row of circular linked brand/program logos.",
+  "usage": {
+    "purpose": "Row of circular linked brand/program logos.",
+    "pagesUsing": [
+      "/categories/electronics",
+      "/categories/electronics/computers"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-11"
+  },
   "reuseGuidance": "Use for image-only round logos with no visible label. Use cards-category when a text label is shown under the icon.",
   "sourceUrl": "https://www.shopmyexchange.com/"
 }

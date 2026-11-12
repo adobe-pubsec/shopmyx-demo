@@ -5,9 +5,9 @@ function isUrlText(text) {
 }
 
 /**
- * Image-only linked card: the picture becomes the link. Accepts an already linked image,
- * or an image plus a link in either cell. Link text (when not a bare URL) becomes the
- * accessible label; it is not shown.
+ * Image-only linked card. Content model: [image | destination link]. The picture is
+ * wrapped in the destination link; the link text is not shown and becomes the
+ * accessible label only when the image has no alt text.
  */
 function decorateCard(li) {
   const pic = li.querySelector('picture');
@@ -16,8 +16,7 @@ function decorateCard(li) {
 
   if (pic && !anchor && link) {
     anchor = link.cloneNode(false);
-    const label = link.textContent.trim();
-    if (label && !isUrlText(label)) anchor.setAttribute('aria-label', label);
+    anchor.removeAttribute('title');
   }
 
   const media = document.createElement('div');
@@ -44,6 +43,29 @@ function decorateCard(li) {
   else if (link) li.append(link);
 }
 
+// Wide strip banners are ~4:1; landing-page banner pairs (e.g. category pages) are ~1.55:1.
+const TALL_RATIO = 2;
+
+/**
+ * Adds the `tall` modifier once every loaded banner image is narrower than TALL_RATIO:1.
+ * Content-derived, so wide-strip instances never get it. Authors can also set it explicitly.
+ */
+function watchBannerShape(block) {
+  if (block.classList.contains('tall')) return;
+  const imgs = [...block.querySelectorAll('img')];
+  if (!imgs.length) return;
+  const update = () => {
+    const loaded = imgs.filter((img) => img.complete && img.naturalWidth && img.naturalHeight);
+    if (!loaded.length) return;
+    const tall = loaded.every((img) => img.naturalWidth / img.naturalHeight < TALL_RATIO);
+    block.classList.toggle('tall', tall);
+  };
+  imgs.forEach((img) => {
+    if (!img.complete) img.addEventListener('load', update, { once: true });
+  });
+  update();
+}
+
 export default function decorate(block) {
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -62,4 +84,5 @@ export default function decorate(block) {
   });
 
   block.replaceChildren(ul);
+  watchBannerShape(block);
 }

@@ -1,0 +1,57 @@
+/*
+ * Placeholder for the live product listing. Source context:
+ *  - the listing is preceded by a decorative divider: 1px brand-blue rule with 32px above
+ *    and below, a 26x27 Exchange mini logo centered on it on a white box
+ *    (div.col-span-12.border-b-1.border-blue-900.mt-8.mb-8 > img.absolute.bg-white);
+ *  - the call-to-action uses the store's primary button look (brand blue, white bold
+ *    text, 4px corners, as the source "Subscribe" button), sized for a page-level CTA.
+ */
+.product-listing {
+  text-align: center;
+}
+
+.product-listing::before {
+  content: '';
+  display: block;
+  height: 27px;
+
+  /* rule is 32px from the banner above and the listing below (27px box, line at 13px) */
+  margin: 19px 0;
+  background:
+    url('/icons/exchange-mini-logo.png') center / 26px 27px no-repeat,
+    linear-gradient(var(--background-color), var(--background-color)) center / 26px 27px no-repeat,
+    linear-gradient(var(--brand-primary), var(--brand-primary)) center / 100% 1px no-repeat;
+}
+
+.product-listing .button-wrapper {
+  margin: 0;
+}
+
+main .product-listing a.button:any-link {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  background-color: var(--brand-primary);
+  color: #fff;
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+main .product-listing a.button:any-link:hover,
+main .product-listing a.button:any-link:focus-visible {
+  background-color: #03304f;
+  color: #fff;
+  text-decoration: underline;
+}
+
+main .product-listing a.button:any-link:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.product-listing.product-listing-empty {
+  display: none;
+}

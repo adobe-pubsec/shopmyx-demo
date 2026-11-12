@@ -5,8 +5,18 @@
  * Parser for hero-image-banner (www.shopmyexchange.com, template: home).
  * Source: #mt_id_hero.grid > .carousel > .carousel-slides > .carousel-slide > a > img
  * (desktop image; the mobile-only duplicate is removed by the cleanup transformer).
- * Output: row 1 = linked banner image; row 2 = optional text (only if the slide has text).
+ * Output: row 1 = [banner image | destination link]; row 2 = optional text (only if the slide has text).
  */
+// Content model shared by every linked-image block: [image | destination link].
+// The image cell holds only the image (a DM URL link after the DM transformer);
+// the link cell holds the destination, its text describing the image.
+function destinationLink(document, href, image) {
+  const a = document.createElement('a');
+  a.href = href;
+  a.textContent = (image.alt || '').trim() || href;
+  return a;
+}
+
 export default function parse(element, { document, params }) {
   const slide = element.querySelector('.carousel-slide') || element;
   const imgs = Array.from(slide.querySelectorAll('img'))
@@ -21,10 +31,7 @@ export default function parse(element, { document, params }) {
     if (img.getAttribute('alt')) image.alt = img.getAttribute('alt');
     const link = img.closest('a');
     if (link && link.getAttribute('href')) {
-      const a = document.createElement('a');
-      a.href = link.getAttribute('href');
-      a.append(image);
-      cells.push([a]);
+      cells.push([image, destinationLink(document, link.getAttribute('href'), image)]);
     } else {
       cells.push([image]);
     }

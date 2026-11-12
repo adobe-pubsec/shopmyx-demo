@@ -62,3 +62,131 @@
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
+
+/*
+ * Category-page looks (classes added by the block JS from the content, or authored as
+ * variants). Scoped to .tiles / .guides only: home and deals instances never get them.
+ * Source: #category > div.lpcategory-container (tiles) and
+ * #sizecharts > div.guide-container (guides): flex-wrap, justify-content: center,
+ * tiles w-1/2 -> md:w-1/4 (guides md:w-1/3) -> lg:w-1/6, so the last row centers.
+ */
+.cards-category.tiles {
+  margin: 0 12px;
+}
+
+.cards-category.guides {
+  margin: 0 0 8px;
+}
+
+.cards-category.tiles > ul,
+.cards-category.guides > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.cards-category.guides > ul {
+  align-items: center;
+}
+
+.cards-category.tiles .cards-category-card,
+.cards-category.guides .cards-category-card {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 16px;
+  margin: 0 0 16px;
+}
+
+.cards-category.tiles .cards-category-card {
+  padding: 0 24px;
+  margin: 0 0 8px;
+}
+
+/* label: 16px / 500 / line-height 1.1, uppercase, centered, #666 */
+.cards-category.tiles .cards-category-card-label,
+.cards-category.guides .cards-category-card-label {
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cards-category.tiles .cards-category-card-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 32px;
+  margin: 8px 0 16px;
+}
+
+.cards-category.guides .cards-category-card-label {
+  display: block;
+  margin: 4px 0;
+}
+
+/* guide tile image: w-full mx-auto, padding 0 0.5em, max-width 204px */
+.cards-category.guides .cards-category-card-image img {
+  box-sizing: border-box;
+  max-width: 204px;
+  padding: 0 8px;
+}
+
+@media (width >= 768px) {
+  .cards-category.tiles .cards-category-card {
+    width: 25%;
+    padding: 0 16px;
+  }
+
+  .cards-category.guides .cards-category-card {
+    width: calc(100% / 3);
+  }
+}
+
+@media (width >= 1024px) {
+  .cards-category.tiles .cards-category-card,
+  .cards-category.guides .cards-category-card {
+    width: calc(100% / 6);
+  }
+
+  .cards-category.tiles .cards-category-card-label {
+    margin: 12px 0 16px;
+  }
+}
+
+/*
+ * Authored option `see-more`: first row only, plus a "See More" / "Show Less" toggle.
+ * Source: #category #toggle-button (bg-white text-neutral-700 font-medium uppercase
+ * px-8 py-2 -mt-5) sits centered on the panel's bottom rule.
+ */
+.cards-category.see-more:not(.expanded) .cards-category-more {
+  display: none;
+}
+
+.cards-category .cards-category-toggle {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0 auto -36px;
+  padding: 8px 32px;
+  border: 0;
+  background-color: var(--background-color);
+  color: rgb(74 85 104);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cards-category .cards-category-toggle:hover {
+  text-decoration: underline;
+}
+
+.cards-category .cards-category-toggle:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}

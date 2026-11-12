@@ -42,30 +42,38 @@ var CustomImportScript = (() => {
   });
 
   // tools/importer/parsers/columns-promo-strip.js
+  function destinationLink(document, href, image) {
+    const a = document.createElement("a");
+    a.href = href;
+    a.textContent = (image.alt || "").trim() || href;
+    return a;
+  }
   function parse(element, { document, params }) {
     const grid = element.querySelector(":scope > div.grid") || element;
     let items = Array.from(grid.children).filter((child) => child.querySelector("img"));
     if (!items.length) items = Array.from(element.querySelectorAll("a")).filter((a) => a.querySelector("img"));
-    const row = items.map((item) => {
+    const cells = [];
+    items.forEach((item) => {
       const link = item.matches("a") ? item : item.querySelector("a");
       const img = item.querySelector("img");
-      if (link && img && link.contains(img)) {
-        const a = document.createElement("a");
-        a.href = link.getAttribute("href");
-        const image = document.createElement("img");
-        image.src = img.getAttribute("src");
-        if (img.getAttribute("alt")) image.alt = img.getAttribute("alt");
-        a.append(image);
-        return a;
-      }
-      return img || "";
+      if (!img) return;
+      const image = document.createElement("img");
+      image.src = img.getAttribute("src");
+      if (img.getAttribute("alt")) image.alt = img.getAttribute("alt");
+      const href = link && link.contains(img) && link.getAttribute("href");
+      cells.push(href ? [image, destinationLink(document, href, image)] : [image, ""]);
     });
-    const cells = row.length ? [row] : [];
     const block = WebImporter.Blocks.createBlock(document, { name: "columns-promo-strip", cells });
     element.replaceWith(block);
   }
 
   // tools/importer/parsers/hero-image-banner.js
+  function destinationLink2(document, href, image) {
+    const a = document.createElement("a");
+    a.href = href;
+    a.textContent = (image.alt || "").trim() || href;
+    return a;
+  }
   function parse2(element, { document, params }) {
     const slide = element.querySelector(".carousel-slide") || element;
     const imgs = Array.from(slide.querySelectorAll("img")).filter((img2) => !img2.closest(".carousel-control"));
@@ -77,10 +85,7 @@ var CustomImportScript = (() => {
       if (img.getAttribute("alt")) image.alt = img.getAttribute("alt");
       const link = img.closest("a");
       if (link && link.getAttribute("href")) {
-        const a = document.createElement("a");
-        a.href = link.getAttribute("href");
-        a.append(image);
-        cells.push([a]);
+        cells.push([image, destinationLink2(document, link.getAttribute("href"), image)]);
       } else {
         cells.push([image]);
       }
@@ -93,12 +98,23 @@ var CustomImportScript = (() => {
 
   // tools/importer/parsers/cards-promo-wide.js
   var MERGED_ATTR = "data-cards-promo-wide-merged";
-  function findMergePartner(element) {
+  var HALF_BANNER = "div.banner-container.md\\:w-1\\/2";
+  function findMergePartners(element) {
     const prev = element.previousElementSibling;
-    if (!prev || prev.id !== "mt_id_hp9") return null;
-    const doc = element.ownerDocument;
-    const partner = doc.querySelector("#mt_id_hp10 + div.grid");
-    return partner && partner !== element ? partner : null;
+    if (prev && prev.id === "mt_id_hp9") {
+      const partner = element.ownerDocument.querySelector("#mt_id_hp10 + div.grid");
+      return partner && partner !== element ? [partner] : [];
+    }
+    if (element.matches(HALF_BANNER)) {
+      const partners = [];
+      let next = element.nextElementSibling;
+      while (next && next.matches(HALF_BANNER) && !next.hasAttribute(MERGED_ATTR)) {
+        partners.push(next);
+        next = next.nextElementSibling;
+      }
+      return partners;
+    }
+    return [];
   }
   function collectCards(root) {
     let grid = root;
@@ -111,6 +127,12 @@ var CustomImportScript = (() => {
     }
     return cards;
   }
+  function destinationLink3(document, href, image) {
+    const a = document.createElement("a");
+    a.href = href;
+    a.textContent = (image.alt || "").trim() || href;
+    return a;
+  }
   function buildRow(card, document) {
     const img = card.querySelector("img");
     if (!img) return null;
@@ -119,10 +141,7 @@ var CustomImportScript = (() => {
     image.src = img.getAttribute("src");
     if (img.getAttribute("alt")) image.alt = img.getAttribute("alt").replace(/\s+/g, " ").trim();
     if (link && link.getAttribute("href")) {
-      const a = document.createElement("a");
-      a.href = link.getAttribute("href");
-      a.append(image);
-      return [a, ""];
+      return [image, destinationLink3(document, link.getAttribute("href"), image)];
     }
     return [image, ""];
   }
@@ -131,9 +150,8 @@ var CustomImportScript = (() => {
       element.remove();
       return;
     }
-    const sources = [element];
-    const partner = findMergePartner(element);
-    if (partner) sources.push(partner);
+    const partners = findMergePartners(element);
+    const sources = [element, ...partners];
     const cells = [];
     sources.forEach((src) => {
       collectCards(src).forEach((card) => {
@@ -143,15 +161,15 @@ var CustomImportScript = (() => {
     });
     const block = WebImporter.Blocks.createBlock(document, { name: "cards-promo-wide", cells });
     element.replaceWith(block);
-    if (partner) {
+    partners.forEach((partner) => {
       partner.setAttribute(MERGED_ATTR, "");
       partner.remove();
-    }
+    });
   }
 
   // tools/importer/parsers/cards-promo-tiles.js
   var MERGED_ATTR2 = "data-cards-promo-tiles-merged";
-  function findMergePartner2(element) {
+  function findMergePartner(element) {
     const parent = element.parentElement;
     if (!parent || parent.id !== "mt_id_hp6") return null;
     const partner = element.ownerDocument.querySelector("#mt_id_hp7 > div.grid");
@@ -171,6 +189,12 @@ var CustomImportScript = (() => {
     }
     return tiles;
   }
+  function destinationLink4(document, href, image) {
+    const a = document.createElement("a");
+    a.href = href;
+    a.textContent = (image.alt || "").trim() || href;
+    return a;
+  }
   function buildRow2(tile, document) {
     const img = tile.querySelector("img");
     if (!img) return null;
@@ -180,10 +204,7 @@ var CustomImportScript = (() => {
     if (img.getAttribute("alt")) image.alt = img.getAttribute("alt").replace(/\s+/g, " ").trim();
     const href = link && link.getAttribute("href");
     if (href && !/^javascript:/i.test(href)) {
-      const a = document.createElement("a");
-      a.href = href;
-      a.append(image);
-      return [a, ""];
+      return [image, destinationLink4(document, href, image)];
     }
     return [image, ""];
   }
@@ -193,7 +214,7 @@ var CustomImportScript = (() => {
       return;
     }
     const sources = [element];
-    const partner = findMergePartner2(element);
+    const partner = findMergePartner(element);
     if (partner) sources.push(partner);
     const cells = [];
     sources.forEach((src) => {
@@ -260,11 +281,17 @@ var CustomImportScript = (() => {
     }
     return tiles;
   }
-  function findMergePartner3(element) {
+  function findMergePartner2(element) {
     const parent = element.parentElement;
     if (!parent || parent.id !== "mt_id_hp4") return null;
     const partner = element.ownerDocument.querySelector("#mt_id_hp5 > div.grid");
     return partner && partner !== element ? partner : null;
+  }
+  function destinationLink5(document, href, image) {
+    const a = document.createElement("a");
+    a.href = href;
+    a.textContent = (image.alt || "").trim() || href;
+    return a;
   }
   function buildRow3(tile, document) {
     const img = tile.querySelector("img");
@@ -275,10 +302,7 @@ var CustomImportScript = (() => {
     if (img.getAttribute("alt")) image.alt = img.getAttribute("alt").replace(/\s+/g, " ").trim();
     const href = link && link.getAttribute("href");
     if (href && !/^javascript:/i.test(href)) {
-      const a = document.createElement("a");
-      a.href = href;
-      a.append(image);
-      return [a, ""];
+      return [image, destinationLink5(document, href, image)];
     }
     return [image, ""];
   }
@@ -288,7 +312,7 @@ var CustomImportScript = (() => {
       return;
     }
     const sources = [element];
-    const partner = findMergePartner3(element);
+    const partner = findMergePartner2(element);
     if (partner) sources.push(partner);
     const cells = [];
     sources.forEach((src) => {
@@ -406,10 +430,17 @@ var CustomImportScript = (() => {
   }
 
   // tools/importer/parsers/cards-logo-circle.js
+  function destinationLink6(document, href, image) {
+    const a = document.createElement("a");
+    a.href = href;
+    a.textContent = (image.alt || "").trim() || href;
+    return a;
+  }
   function parse7(element, { document, params }) {
     let tiles = Array.from(element.querySelectorAll(":scope > div.banner-tile"));
     if (!tiles.length) tiles = Array.from(element.children).filter((c) => c.querySelector("a img"));
     if (!tiles.length) tiles = Array.from(element.querySelectorAll("a")).filter((a) => a.querySelector("img"));
+    if (!tiles.length) tiles = Array.from(element.children).filter((c) => c.querySelector("img"));
     const cells = [];
     tiles.forEach((tile) => {
       const img = tile.querySelector("img");
@@ -417,13 +448,10 @@ var CustomImportScript = (() => {
       const image = document.createElement("img");
       image.src = img.getAttribute("src");
       if (img.getAttribute("alt")) image.alt = img.getAttribute("alt").replace(/\s+/g, " ").trim();
-      const link = img.closest("a");
+      const link = img.closest("a") || (tile.matches("a") ? null : tile.querySelector("a[href]"));
       const href = link && link.getAttribute("href");
       if (href && !/^javascript:/i.test(href)) {
-        const a = document.createElement("a");
-        a.href = href;
-        a.append(image);
-        cells.push([a, ""]);
+        cells.push([image, destinationLink6(document, href, image)]);
       } else {
         cells.push([image, ""]);
       }
@@ -433,16 +461,25 @@ var CustomImportScript = (() => {
   }
 
   // tools/importer/parsers/cards-category.js
+  function paragraphLabel(item, clean3) {
+    return [...item.querySelectorAll("p")].map((p) => {
+      const copy = p.cloneNode(true);
+      copy.querySelectorAll(".exchevron").forEach((s) => s.remove());
+      return clean3(copy.textContent);
+    }).find(Boolean) || "";
+  }
   function parse8(element, { document, params }) {
     const grid = element.querySelector(":scope > div.grid") || element.querySelector("div.grid") || element;
     let items = Array.from(grid.children).filter((c) => c.querySelector("a[href]"));
     if (!items.length) items = Array.from(element.querySelectorAll("a[href]")).filter((a) => a.querySelector("img"));
+    if (!items.length) items = Array.from(grid.children).filter((c) => c.querySelector("img"));
     const cells = [];
     items.forEach((item) => {
       const link = item.matches("a") ? item : item.querySelector("a[href]");
       const img = item.querySelector("img");
-      const labelEl = item.querySelector("span");
-      const label = ((labelEl ? labelEl.textContent : link && link.textContent) || "").replace(/\s+/g, " ").trim();
+      const clean3 = (t) => (t || "").replace(/\s+/g, " ").trim();
+      const labelEl = [...item.querySelectorAll("span")].find((s) => clean3(s.textContent));
+      const label = paragraphLabel(item, clean3) || clean3(labelEl && labelEl.textContent) || clean3(link && link.textContent) || clean3(img && img.getAttribute("alt"));
       if (!img && !label) return;
       let imageCell = "";
       if (img && img.getAttribute("src")) {
@@ -486,15 +523,7 @@ var CustomImportScript = (() => {
         const image = document.createElement("img");
         image.src = img.getAttribute("src");
         if (img.getAttribute("alt")) image.alt = clean2(img.getAttribute("alt"));
-        const imgLink = img.closest("a");
-        if (imgLink && imgLink.getAttribute("href")) {
-          const a = document.createElement("a");
-          a.href = imgLink.getAttribute("href");
-          a.append(image);
-          iconCell = a;
-        } else {
-          iconCell = image;
-        }
+        iconCell = image;
       }
       const content = [];
       const heading = item.querySelector("h1, h2, h3, h4, h5, h6");
@@ -563,12 +592,58 @@ var CustomImportScript = (() => {
     return !el.querySelector("img, picture, video, iframe, a[href], table, hr");
   }
   function transform(hookName, element, payload) {
+    if (hookName === "preprocess") {
+      if (!element.querySelector("main section#category.lp-standard-category")) return;
+      element.querySelectorAll(
+        "#category .lpcategory-container > div, #brands .lpcategory-container > div, #sizecharts .guide-container > div"
+      ).forEach((tile) => {
+        const img = tile.querySelector(":scope > img");
+        const a = tile.querySelector(":scope > a[href]");
+        if (!img || !a || a.textContent.trim() || a.querySelector("img")) return;
+        a.prepend(img);
+      });
+      return;
+    }
     if (hookName === "beforeTransform") {
       WebImporter.DOMUtils.remove(element, [
         "div.flex.min-h-screen > div.headercontainer",
         "section.relative.min-h-\\[760px\\]",
         "section.SME-footer"
       ]);
+      const isCategoryPage = !!element.querySelector("main section#category.lp-standard-category");
+      if (isCategoryPage) {
+        WebImporter.DOMUtils.remove(element, [
+          "div.gap-x-5.md\\:flex-row > :not(main)",
+          // Hidden web/app duplicate "Electronic Guides" panel (the visible
+          // #sizecharts without .hidden is kept for cards-category).
+          "section#sizecharts.hidden",
+          // Hidden appDisplay duplicate "You May Also Like" heading + empty
+          // slider placeholder in the CMS area; the real one lives in
+          // #recommendationContainer (section rc2).
+          "main h2.hidden",
+          "main div.hidden"
+        ]);
+        element.querySelectorAll("main nav.mb-5.flex").forEach((nav) => {
+          const doc = nav.ownerDocument;
+          nav.querySelectorAll('img[src^="data:"], .sr-only').forEach((el) => el.remove());
+          const p = doc.createElement("p");
+          const items = Array.from(nav.querySelectorAll("li")).filter((li) => li.textContent.trim());
+          items.forEach((li, i) => {
+            if (i > 0) p.append(doc.createTextNode(" \xBB "));
+            const a = li.querySelector("a[href]");
+            if (a) {
+              const link = doc.createElement("a");
+              link.setAttribute("href", a.getAttribute("href"));
+              link.textContent = a.textContent.trim();
+              p.append(link);
+            } else {
+              p.append(doc.createTextNode(li.textContent.trim()));
+            }
+          });
+          if (items.length) nav.replaceWith(p);
+          else nav.remove();
+        });
+      }
       WebImporter.DOMUtils.remove(element, [
         "div.hidden.pointer-events-none.bg-amber-300",
         "div.App",
@@ -583,10 +658,19 @@ var CustomImportScript = (() => {
         'img[src*="sp.analytics.yahoo.com"]',
         'img[src*="facebook.com/tr"]',
         'img[src*="doubleclick.net"]',
-        'img[src*="bat.bing.com"]'
+        'img[src*="bat.bing.com"]',
+        // Deals: breadcrumb trail ("Exchange > Deals"). On category pages the
+        // breadcrumb was already converted to a paragraph above.
+        "nav.mb-5.flex",
+        // Deals: app-only duplicate titles; the visible headings are the h2
+        // inside div.clear-both.pt-10.
+        "p#app-screen-title"
       ]);
       Array.from(element.querySelectorAll("[class]")).filter((el) => isHiddenOnDesktop(el)).forEach((el) => {
         if (el.isConnected !== false && el.parentNode) el.remove();
+      });
+      element.querySelectorAll('a[href^="javascript:"]').forEach((a) => {
+        a.replaceWith(...Array.from(a.childNodes));
       });
     }
     if (hookName === "afterTransform") {
@@ -665,8 +749,13 @@ var CustomImportScript = (() => {
           console.warn(`[dm-images] Skipping DM image in mixed-content link: ${dmUrl}`);
           return;
         }
-        anchor.setAttribute("title", dmUrl);
-        anchor.textContent = altText;
+        const imageLink = document.createElement("a");
+        imageLink.setAttribute("href", dmUrl);
+        imageLink.textContent = altText;
+        const destination = document.createElement("a");
+        destination.setAttribute("href", anchor.getAttribute("href"));
+        destination.textContent = altText === EMPTY_ALT_SENTINEL ? anchor.getAttribute("href") : altText;
+        anchor.replaceWith(imageLink, document.createTextNode(" "), destination);
         return;
       }
       const picture = img.parentElement && img.parentElement.tagName === "PICTURE" ? img.parentElement : null;
@@ -703,7 +792,8 @@ var CustomImportScript = (() => {
         "instances": [
           "#mt_id_hp2",
           "#mt_id_hp9 + div.grid",
-          "#mt_id_hp10 + div.grid"
+          "#mt_id_hp10 + div.grid",
+          "#mt_id_milstar:not(.hidden) > div.banner-tile"
         ]
       },
       {

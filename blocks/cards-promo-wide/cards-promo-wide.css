@@ -43,3 +43,35 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Tall banner pairs (category landing pages, ~1.55:1; `tall` set by JS from the image ratio).
+   Source: .banner-container.w-full.md:w-1/2 — square corners, stacked below 768px (mb-4),
+   2-up from 768px with md:pr-2 / md:pl-2 (8px + 8px gutter). */
+.cards-promo-wide.tall .cards-promo-wide-card-image img {
+  border-radius: 0;
+}
+
+@media (width >= 640px) and (width < 768px) {
+  .cards-promo-wide.tall > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Single full-width banner (e.g. the Military Star banner under its heading):
+   natural size up to the row width, left-aligned, square corners. */
+.cards-promo-wide > ul:has(> li:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.cards-promo-wide > ul:has(> li:only-child) .cards-promo-wide-card-image img {
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Category landing pages (section with the category-tile look): a single banner
+   stretches to the full row, as the source (img.w-full) does. */
+.section:has(.cards-category.tiles) .cards-promo-wide > ul:has(> li:only-child) .cards-promo-wide-card-image img {
+  width: 100%;
+}

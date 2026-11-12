@@ -2,12 +2,13 @@
   "status": "success",
   "url": "https://www.shopmyexchange.com/",
   "path": "index",
-  "timestamp": "2026-11-10T20:04:14.499Z",
+  "timestamp": "2026-11-11T19:01:58.832Z",
   "title": "Shop Army & Air Force Exchange Service",
   "template": "home",
   "blocks": [
     "columns-promo-strip",
     "hero-image-banner",
+    "cards-promo-wide",
     "cards-promo-wide",
     "cards-promo-wide",
     "cards-promo-wide",
@@ -22,5 +23,5 @@
     "cards-category",
     "cards-icon-feature"
   ],
-  "importScript": "93526f0863fe"
+  "importScript": "1086b3fa978a"
 }

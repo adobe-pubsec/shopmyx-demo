@@ -25,7 +25,8 @@
           "instances": [
             "#mt_id_hp2",
             "#mt_id_hp9 + div.grid",
-            "#mt_id_hp10 + div.grid"
+            "#mt_id_hp10 + div.grid",
+            "#mt_id_milstar:not(.hidden) > div.banner-tile"
           ]
         },
         {
@@ -99,6 +100,140 @@
             "#mt_id_shopbycategory > h3",
             "#mt_id_hp9",
             "#mt_id_servingfamily"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "deals",
+      "urls": [
+        "https://www.shopmyexchange.com/deals"
+      ],
+      "representativeUrl": "https://www.shopmyexchange.com/deals",
+      "description": "Deals landing page: title banner, promo banners, deal tile grids, product sliders, Military Star banner, sale categories",
+      "blocks": [
+        {
+          "name": "cards-promo-wide",
+          "instances": [
+            "div.banner-container.md\\:w-1\\/2",
+            "#mt_id_milstar:not(.hidden) > div.banner-tile"
+          ]
+        },
+        {
+          "name": "cards-category",
+          "instances": [
+            "div.cat-container:not(#mt-deals)",
+            "#mt-deals",
+            "#mt_id_shopbycategory > div.mx-4.mb-5"
+          ]
+        },
+        {
+          "name": "cards-product-slider",
+          "instances": [
+            "div[id^=\"mt-slider-\"]"
+          ]
+        }
+      ],
+      "urlPattern": "/deals",
+      "sections": [
+        {
+          "id": "main",
+          "name": "Deals main content",
+          "selector": [
+            "div:has(> div.banner-container.pointer-events-none)",
+            "div:has(> #mt-deals)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-promo-wide",
+            "cards-category",
+            "cards-product-slider"
+          ],
+          "defaultContent": [
+            "div.banner-container.pointer-events-none",
+            "div.clear-both.pt-10",
+            "div[id^=\"mt-slider-\"] h3",
+            "#mt_id_milstar:not(.hidden)",
+            "#mt_id_shopbycategory > h3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "category",
+      "urls": [
+        "https://www.shopmyexchange.com/browse?pageCategories=Electronics",
+        "https://www.shopmyexchange.com/browse?pageCategories=Electronics%20%3E%20Computers"
+      ],
+      "representativeUrl": "https://www.shopmyexchange.com/browse?pageCategories=Electronics",
+      "description": "Category landing pages (browse?pageCategories=...): breadcrumb, category tiles, featured brands, guides, promo banners, live product listing placeholder, recommendations",
+      "blocks": [
+        {
+          "name": "cards-category",
+          "instances": [
+            "#category > div.lpcategory-container",
+            "#sizecharts:not(.hidden) > div.guide-container"
+          ]
+        },
+        {
+          "name": "cards-logo-circle",
+          "instances": [
+            "#brands > div.lpcategory-container"
+          ]
+        },
+        {
+          "name": "cards-promo-wide",
+          "instances": [
+            "div.banner-container.md\\:w-1\\/2",
+            "div.banner-container.body-banner"
+          ]
+        },
+        {
+          "name": "product-listing",
+          "instances": [
+            "main > div.w-full:has(#product-list-container)"
+          ]
+        },
+        {
+          "name": "cards-product-slider",
+          "instances": [
+            "div[id^=\"mt-slider-\"]"
+          ]
+        }
+      ],
+      "urlPattern": "/browse",
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Category landing main content",
+          "selector": [
+            "main:has(#category)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-category",
+            "cards-logo-circle",
+            "cards-promo-wide",
+            "product-listing"
+          ],
+          "defaultContent": [
+            "#category > h3",
+            "#brands > h3",
+            "#sizecharts:not(.hidden) > h3"
+          ]
+        },
+        {
+          "id": "rc2",
+          "name": "You May Also Like recommendations",
+          "selector": [
+            "#recommendationContainer"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-product-slider"
+          ],
+          "defaultContent": [
+            "#recommendationContainer h2"
           ]
         }
       ]

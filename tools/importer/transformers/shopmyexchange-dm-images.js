@@ -8,8 +8,10 @@
  * Runs in afterTransform only (parsers need <img> nodes before then).
  * Rewrites DM <img> into anchors that survive the markdown round-trip:
  *  - Unlinked image: <a href="DM-URL">alt</a>
- *  - Linked image (sole meaningful child of <a>): keep navigation href,
- *    move DM URL to title, replace link content with alt text.
+ *  - Images never stay inside a link. Blocks use one content model,
+ *    [image | destination link], built by the parsers. A linked image left
+ *    outside a block becomes the image link followed by its destination link
+ *    (text = alt), the same order an author would write.
  *  - Mixed-content anchors are skipped with a warning.
  * Empty alt becomes the visible sentinel "Image without alt text"; the
  * scripts.js auto-block translates it back to alt="".
@@ -72,8 +74,13 @@ export default function transform(hookName, element, payload) {
         console.warn(`[dm-images] Skipping DM image in mixed-content link: ${dmUrl}`);
         return;
       }
-      anchor.setAttribute('title', dmUrl);
-      anchor.textContent = altText;
+      const imageLink = document.createElement('a');
+      imageLink.setAttribute('href', dmUrl);
+      imageLink.textContent = altText;
+      const destination = document.createElement('a');
+      destination.setAttribute('href', anchor.getAttribute('href'));
+      destination.textContent = altText === EMPTY_ALT_SENTINEL ? anchor.getAttribute('href') : altText;
+      anchor.replaceWith(imageLink, document.createTextNode(' '), destination);
       return;
     }
 

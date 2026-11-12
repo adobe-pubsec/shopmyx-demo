@@ -38,7 +38,8 @@ const PAGE_TEMPLATE = {
       "instances": [
         "#mt_id_hp2",
         "#mt_id_hp9 + div.grid",
-        "#mt_id_hp10 + div.grid"
+        "#mt_id_hp10 + div.grid",
+        "#mt_id_milstar:not(.hidden) > div.banner-tile"
       ]
     },
     {

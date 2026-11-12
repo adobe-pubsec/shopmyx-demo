@@ -4,8 +4,8 @@ const TITLE_TAG = 'H4';
 
 /**
  * Icon feature item: icon, title (heading or first strong/plain line) and one or more
- * linked lines. Cells are merged and classified by content, so authors can put the icon
- * in its own cell or in the text cell.
+ * linked lines. The icon is linked with the title's destination. Cells are merged and
+ * classified by content, so authors can put the icon in its own cell or in the text cell.
  */
 function decorateCard(li) {
   const icon = document.createElement('div');
@@ -45,6 +45,17 @@ function decorateCard(li) {
     title = heading;
   }
   if (title) title.classList.add('cards-icon-feature-card-title');
+
+  // Content model: [icon image | title linked to the destination + lines]. The icon
+  // links to the same destination as the title.
+  const iconPic = icon.querySelector('picture');
+  const titleLink = (title && title.querySelector('a[href]')) || body.querySelector('a[href]');
+  if (iconPic && !iconPic.closest('a') && titleLink) {
+    const anchor = titleLink.cloneNode(false);
+    anchor.removeAttribute('title');
+    anchor.append(iconPic);
+    icon.replaceChildren(anchor);
+  }
 
   li.replaceChildren();
   if (icon.children.length) li.append(icon);

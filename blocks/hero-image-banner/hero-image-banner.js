@@ -15,15 +15,17 @@ export default function decorate(block) {
   const pic = block.querySelector('picture');
   if (!pic) return;
 
-  // Linked banner: picture may already be inside a link, or the link may sit in a separate
-  // paragraph/row. Use the first link that isn't wrapping other content.
+  // Content model: [banner image | destination link]. The picture is wrapped in the
+  // destination link; its text is the accessible label only when the image has no alt.
   let anchor = pic.closest('a');
   if (!anchor) {
     const link = block.querySelector('a[href]');
     if (link) {
       anchor = link.cloneNode(false);
+      anchor.removeAttribute('title');
       const label = link.textContent.trim();
-      if (label && !/^(https?:)?\/\//.test(label) && !label.startsWith('/')) {
+      const hasAlt = Boolean(pic.querySelector('img')?.alt);
+      if (!hasAlt && label && !/^(https?:)?\/\//.test(label) && !label.startsWith('/')) {
         anchor.setAttribute('aria-label', label);
       }
       const holder = link.closest('p') || link;

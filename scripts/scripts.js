@@ -10,6 +10,7 @@ import {
   loadSections,
   loadCSS,
   buildBlock,
+  getMetadata,
 } from './aem.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
@@ -113,8 +114,6 @@ function findDmOnAnchor(a) {
   if (!a || typeof a.getAttribute !== 'function') return null;
   const href = a.getAttribute('href') || '';
   if (detectDynamicMediaUrl(href)) return { mode: 'unlinked', dmUrl: href };
-  const title = a.getAttribute('title') || '';
-  if (detectDynamicMediaUrl(title)) return { mode: 'linked', dmUrl: title };
   return null;
 }
 
@@ -189,16 +188,13 @@ function renderDmOpenApiPicture(src, alt) {
 }
 
 function buildDynamicMediaImages(main) {
-  // Anchors carrying DM URLs from the markdown round-trip. The transformer
-  // turns <img DM> into <a href=DM-URL> (or <a href=/page title=DM-URL>
-  // for the linked case); CommonMark's [text](url "title") syntax
-  // survives docx and the title attribute round-trips back to a real
-  // HTML attribute at render time.
+  // Anchors whose href is a DM URL are images: the import transformer (and
+  // the asset selector in link mode) writes <img DM> as <a href=DM-URL>alt</a>.
   main.querySelectorAll('a').forEach((a) => {
     const match = findDmOnAnchor(a);
     if (!match) return;
 
-    const { mode, dmUrl } = match;
+    const { dmUrl } = match;
     // Translate link text back to alt: sentinel ('Image without alt text')
     // means the source had alt="" — render with alt="" for a11y. Any other
     // text (including the author's edit of the placeholder) is real alt.
@@ -229,15 +225,9 @@ function buildDynamicMediaImages(main) {
       if (buttonContainer.classList.length === 0) buttonContainer.removeAttribute('class');
     }
 
-    if (mode === 'linked') {
-      // Keep the outer <a> and its navigation href. Drop the DM URL from title
-      // (it's been consumed) and replace the anchor's content with the picture.
-      a.removeAttribute('title');
-      a.replaceChildren(picture);
-      return;
-    }
-
-    // Unlinked: the whole anchor is just a carrier for the DM URL.
+    // The anchor is just a carrier for the DM URL: an image cell, as the asset
+    // selector inserts it in link mode. Blocks link an image through a separate
+    // destination-link cell: [image | destination link].
     // If it's the markdown-generated <p> wrapper around a standalone
     // image, unwrap so the picture becomes a top-level grid cell.
     // NEVER unwrap <div> — those are block-content cells (cards,
@@ -301,8 +291,25 @@ function buildWidgetAutoBlocks(main) {
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
+/**
+ * Adds the breadcrumb block (built from the page path) at the top of the page.
+ * Every page except the homepage gets one unless its metadata says `Breadcrumbs: off`.
+ * Only the page's own <main>: fragments (nav, footer) are decorated with this too.
+ * @param {Element} main The container element
+ */
+function buildBreadcrumbAutoBlock(main) {
+  if (main !== document.querySelector('body > main')) return;
+  if (getMetadata('breadcrumbs').toLowerCase() === 'off') return;
+  const path = window.location.pathname.replace(/^\/content(?=\/)/, '').replace(/\/(index)?$/, '');
+  if (!path || main.querySelector('.breadcrumb')) return;
+  const section = main.querySelector(':scope > div');
+  if (!section) return;
+  section.prepend(buildBlock('breadcrumb', ''));
+}
+
 function buildAutoBlocks(main) {
   try {
+    buildBreadcrumbAutoBlock(main);
     // auto load `*/fragments/*` references
     const fragments = [...main.querySelectorAll('a[href*="/fragments/"]')].filter((f) => !f.closest('.fragment'));
     if (fragments.length > 0) {

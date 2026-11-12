@@ -12,7 +12,16 @@
   },
   "options": [],
   "memberVariantIds": [],
-  "usage": "Wide (~4:1) linked promo banners, two per row.",
+  "usage": {
+    "purpose": "Wide (~4:1) linked promo banners, two per row.",
+    "pagesUsing": [
+      "/deals",
+      "/categories/electronics",
+      "/categories/electronics/computers"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-11-11"
+  },
   "reuseGuidance": "Use for wide image-only banners. For near-square tiles use cards-promo-tiles; for the mixed wide/narrow layout use cards-promo-bento.",
   "sourceUrl": "https://www.shopmyexchange.com/"
 }

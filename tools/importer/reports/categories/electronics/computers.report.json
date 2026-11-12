@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.shopmyexchange.com/browse?pageCategories=Electronics%20%3E%20Computers",
+  "path": "categories/electronics/computers",
+  "timestamp": "2026-11-12T00:46:27.104Z",
+  "title": "Shop Army & Air Force Exchange Service",
+  "template": "category",
+  "blocks": [
+    "cards-category",
+    "cards-logo-circle",
+    "cards-promo-wide",
+    "product-listing",
+    "cards-product-slider"
+  ],
+  "importScript": "588ea05d0566"
+}

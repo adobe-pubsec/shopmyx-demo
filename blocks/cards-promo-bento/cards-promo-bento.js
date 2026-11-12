@@ -5,9 +5,9 @@ function isUrlText(text) {
 }
 
 /**
- * Image-only linked card: the picture becomes the link. Accepts an already linked image,
- * or an image plus a link in either cell. Link text (when not a bare URL) becomes the
- * accessible label; it is not shown.
+ * Image-only linked card. Content model: [image | destination link]. The picture is
+ * wrapped in the destination link; the link text is not shown and becomes the
+ * accessible label only when the image has no alt text.
  */
 function decorateCard(li) {
   const pic = li.querySelector('picture');
@@ -16,8 +16,7 @@ function decorateCard(li) {
 
   if (pic && !anchor && link) {
     anchor = link.cloneNode(false);
-    const label = link.textContent.trim();
-    if (label && !isUrlText(label)) anchor.setAttribute('aria-label', label);
+    anchor.removeAttribute('title');
   }
 
   const media = document.createElement('div');

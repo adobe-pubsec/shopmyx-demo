@@ -5,9 +5,9 @@ function isUrlText(text) {
 }
 
 /**
- * Image-only linked card: the picture becomes the link. Accepts an already linked image,
- * or an image plus a link in either cell. Link text (when not a bare URL) becomes the
- * accessible label; it is not shown.
+ * Image-only linked card. Content model: [image | destination link]. The picture is
+ * wrapped in the destination link; the link text is not shown and becomes the
+ * accessible label only when the image has no alt text.
  */
 function decorateCard(li) {
   const pic = li.querySelector('picture');
@@ -16,8 +16,7 @@ function decorateCard(li) {
 
   if (pic && !anchor && link) {
     anchor = link.cloneNode(false);
-    const label = link.textContent.trim();
-    if (label && !isUrlText(label)) anchor.setAttribute('aria-label', label);
+    anchor.removeAttribute('title');
   }
 
   const media = document.createElement('div');
@@ -44,6 +43,35 @@ function decorateCard(li) {
   else if (link) li.append(link);
 }
 
+// Wide logos (width/height at or above this) are rectangular brand tiles, not circles.
+const TILE_MIN_RATIO = 2;
+
+/**
+ * Category-page brand tiles (source: .lpcategory-container > .brandtile) are wide
+ * rectangles laid out 2/4/6 per row with no gap. Round logos (homepage, about 312x330)
+ * keep the default grid. Uses the authored `tiles` variant when present, otherwise
+ * the first logo's natural size once it loads. The images carry no width/height, so
+ * the block has no height until then and switching layout causes no extra shift.
+ */
+function markTiles(block) {
+  const TILES = 'cards-logo-circle-tiles';
+  if (block.classList.contains('tiles')) {
+    block.classList.add(TILES);
+    return;
+  }
+  const imgs = [...block.querySelectorAll('img')];
+  let decided = false;
+  const check = (img) => {
+    if (decided || !img.naturalWidth || !img.naturalHeight) return;
+    decided = true;
+    if (img.naturalWidth / img.naturalHeight >= TILE_MIN_RATIO) block.classList.add(TILES);
+  };
+  imgs.forEach((img) => {
+    if (img.complete) check(img);
+    else img.addEventListener('load', () => check(img), { once: true });
+  });
+}
+
 export default function decorate(block) {
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -62,4 +90,5 @@ export default function decorate(block) {
   });
 
   block.replaceChildren(ul);
+  markTiles(block);
 }

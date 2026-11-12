@@ -1,0 +1,18 @@
+{
+  "variantName": "product-listing",
+  "baseBlock": "product-listing",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Placeholder for the live product listing of a store category",
+    "description": "Until it is connected to the store search system, renders a single centered call-to-action link \"Shop all <last category level>\" to the live listing on shopmyexchange.com. No product data."
+  },
+  "contentPattern": {
+    "structure": "1 row, 2 cells: Category | <category path>",
+    "description": "Store category path with levels separated by \" > \" (e.g. Electronics > Computers). The path alone in one cell is also accepted; empty rows are ignored. The parsed path is exposed on the block as data-category."
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Placeholder for a category's product listing (item count, sort, product grid, paging) on category pages.",
+  "reuseGuidance": "Use once per category page where the source shows the store's product grid. Author only the category path; the block links to the live listing until the search integration is built.",
+  "sourceUrl": "https://www.shopmyexchange.com/browse?pageCategories=Electronics%20%3E%20Computers"
+}

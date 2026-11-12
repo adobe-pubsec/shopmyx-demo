@@ -9,17 +9,37 @@
  *  - #mt_id_hp10 + div.grid -> div > a.coverlink > img (2 cards)
  * The hp9 and hp10 grids are one visual "Discover More" group, so the hp9 parse
  * merges the hp10 grid into a single block of 4 cards and removes the hp10 grid.
- * Output: one row per card: [linked image | (empty link cell)].
+ *
+ * Template: deals (www.shopmyexchange.com/deals).
+ * Instance:
+ *  - div.banner-container.md:w-1/2 -> a.banner-link > img (desktop, with alt) + img (mobile dup)
+ *    The selector matches TWO sibling half-width containers (Home Depot, 60% Clearance) that
+ *    form one 2-up row, so the first parse merges the following matching siblings into one
+ *    block of 2 cards and removes them; the second instance is skipped if it is still attached.
+ * Output: one row per card: [image | destination link].
  */
 
 const MERGED_ATTR = 'data-cards-promo-wide-merged';
+const HALF_BANNER = 'div.banner-container.md\\:w-1\\/2';
 
-function findMergePartner(element) {
+function findMergePartners(element) {
+  // Homepage: the #mt_id_hp9 grid absorbs the #mt_id_hp10 grid.
   const prev = element.previousElementSibling;
-  if (!prev || prev.id !== 'mt_id_hp9') return null;
-  const doc = element.ownerDocument;
-  const partner = doc.querySelector('#mt_id_hp10 + div.grid');
-  return partner && partner !== element ? partner : null;
+  if (prev && prev.id === 'mt_id_hp9') {
+    const partner = element.ownerDocument.querySelector('#mt_id_hp10 + div.grid');
+    return partner && partner !== element ? [partner] : [];
+  }
+  // Deals: consecutive half-width banner containers form one row.
+  if (element.matches(HALF_BANNER)) {
+    const partners = [];
+    let next = element.nextElementSibling;
+    while (next && next.matches(HALF_BANNER) && !next.hasAttribute(MERGED_ATTR)) {
+      partners.push(next);
+      next = next.nextElementSibling;
+    }
+    return partners;
+  }
+  return [];
 }
 
 function collectCards(root) {
@@ -36,6 +56,16 @@ function collectCards(root) {
   return cards;
 }
 
+// Content model shared by every linked-image block: [image | destination link].
+// The image cell holds only the image (a DM URL link after the DM transformer);
+// the link cell holds the destination, its text describing the image.
+function destinationLink(document, href, image) {
+  const a = document.createElement('a');
+  a.href = href;
+  a.textContent = (image.alt || '').trim() || href;
+  return a;
+}
+
 function buildRow(card, document) {
   const img = card.querySelector('img');
   if (!img) return null;
@@ -44,10 +74,7 @@ function buildRow(card, document) {
   image.src = img.getAttribute('src');
   if (img.getAttribute('alt')) image.alt = img.getAttribute('alt').replace(/\s+/g, ' ').trim();
   if (link && link.getAttribute('href')) {
-    const a = document.createElement('a');
-    a.href = link.getAttribute('href');
-    a.append(image);
-    return [a, ''];
+    return [image, destinationLink(document, link.getAttribute('href'), image)];
   }
   return [image, ''];
 }
@@ -59,9 +86,8 @@ export default function parse(element, { document, params }) {
     return;
   }
 
-  const sources = [element];
-  const partner = findMergePartner(element);
-  if (partner) sources.push(partner);
+  const partners = findMergePartners(element);
+  const sources = [element, ...partners];
 
   const cells = [];
   sources.forEach((src) => {
@@ -74,8 +100,8 @@ export default function parse(element, { document, params }) {
   const block = WebImporter.Blocks.createBlock(document, { name: 'cards-promo-wide', cells });
   element.replaceWith(block);
 
-  if (partner) {
+  partners.forEach((partner) => {
     partner.setAttribute(MERGED_ATTR, '');
     partner.remove();
-  }
+  });
 }

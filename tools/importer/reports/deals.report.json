@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.shopmyexchange.com/deals",
+  "path": "deals",
+  "timestamp": "2026-11-11T19:02:57.899Z",
+  "title": "Shop Army & Air Force Exchange Service",
+  "template": "deals",
+  "blocks": [
+    "cards-promo-wide",
+    "cards-promo-wide",
+    "cards-promo-wide",
+    "cards-category",
+    "cards-category",
+    "cards-category",
+    "cards-product-slider",
+    "cards-product-slider"
+  ],
+  "importScript": "b467de7dfd0f"
+}
