@@ -34,26 +34,6 @@ var CustomImportScript = (() => {
     return to;
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-  var __async = (__this, __arguments, generator) => {
-    return new Promise((resolve, reject) => {
-      var fulfilled = (value) => {
-        try {
-          step(generator.next(value));
-        } catch (e) {
-          reject(e);
-        }
-      };
-      var rejected = (value) => {
-        try {
-          step(generator.throw(value));
-        } catch (e) {
-          reject(e);
-        }
-      };
-      var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
-      step((generator = generator.apply(__this, __arguments)).next());
-    });
-  };
 
   // tools/importer/import-category.js
   var import_category_exports = {};
@@ -69,7 +49,7 @@ var CustomImportScript = (() => {
       return clean2(copy.textContent);
     }).find(Boolean) || "";
   }
-  function parse(element, { document: document2, params }) {
+  function parse(element, { document, params }) {
     const grid = element.querySelector(":scope > div.grid") || element.querySelector("div.grid") || element;
     let items = Array.from(grid.children).filter((c) => c.querySelector("a[href]"));
     if (!items.length) items = Array.from(element.querySelectorAll("a[href]")).filter((a) => a.querySelector("img"));
@@ -84,7 +64,7 @@ var CustomImportScript = (() => {
       if (!img && !label) return;
       let imageCell = "";
       if (img && img.getAttribute("src")) {
-        const image = document2.createElement("img");
+        const image = document.createElement("img");
         image.src = img.getAttribute("src");
         const alt = (img.getAttribute("alt") || "").trim() || label;
         if (alt) image.alt = alt;
@@ -92,26 +72,25 @@ var CustomImportScript = (() => {
       }
       let labelCell = label;
       if (link && link.getAttribute("href")) {
-        const a = document2.createElement("a");
+        const a = document.createElement("a");
         a.href = link.getAttribute("href");
         a.textContent = label || link.getAttribute("href");
         labelCell = a;
       }
       cells.push([imageCell, labelCell]);
     });
-    const name = element.hasAttribute("data-see-more") ? "cards-category (see-more)" : "cards-category";
-    const block = WebImporter.Blocks.createBlock(document2, { name, cells });
+    const block = WebImporter.Blocks.createBlock(document, { name: "cards-category", cells });
     element.replaceWith(block);
   }
 
   // tools/importer/parsers/cards-logo-circle.js
-  function destinationLink(document2, href, image) {
-    const a = document2.createElement("a");
+  function destinationLink(document, href, image) {
+    const a = document.createElement("a");
     a.href = href;
     a.textContent = (image.alt || "").trim() || href;
     return a;
   }
-  function parse2(element, { document: document2, params }) {
+  function parse2(element, { document, params }) {
     let tiles = Array.from(element.querySelectorAll(":scope > div.banner-tile"));
     if (!tiles.length) tiles = Array.from(element.children).filter((c) => c.querySelector("a img"));
     if (!tiles.length) tiles = Array.from(element.querySelectorAll("a")).filter((a) => a.querySelector("img"));
@@ -120,18 +99,18 @@ var CustomImportScript = (() => {
     tiles.forEach((tile) => {
       const img = tile.querySelector("img");
       if (!img) return;
-      const image = document2.createElement("img");
+      const image = document.createElement("img");
       image.src = img.getAttribute("src");
       if (img.getAttribute("alt")) image.alt = img.getAttribute("alt").replace(/\s+/g, " ").trim();
       const link = img.closest("a") || (tile.matches("a") ? null : tile.querySelector("a[href]"));
       const href = link && link.getAttribute("href");
       if (href && !/^javascript:/i.test(href)) {
-        cells.push([image, destinationLink(document2, href, image)]);
+        cells.push([image, destinationLink(document, href, image)]);
       } else {
         cells.push([image, ""]);
       }
     });
-    const block = WebImporter.Blocks.createBlock(document2, { name: "cards-logo-circle", cells });
+    const block = WebImporter.Blocks.createBlock(document, { name: "cards-logo-circle", cells });
     element.replaceWith(block);
   }
 
@@ -166,25 +145,25 @@ var CustomImportScript = (() => {
     }
     return cards;
   }
-  function destinationLink2(document2, href, image) {
-    const a = document2.createElement("a");
+  function destinationLink2(document, href, image) {
+    const a = document.createElement("a");
     a.href = href;
     a.textContent = (image.alt || "").trim() || href;
     return a;
   }
-  function buildRow(card, document2) {
+  function buildRow(card, document) {
     const img = card.querySelector("img");
     if (!img) return null;
     const link = img.closest("a");
-    const image = document2.createElement("img");
+    const image = document.createElement("img");
     image.src = img.getAttribute("src");
     if (img.getAttribute("alt")) image.alt = img.getAttribute("alt").replace(/\s+/g, " ").trim();
     if (link && link.getAttribute("href")) {
-      return [image, destinationLink2(document2, link.getAttribute("href"), image)];
+      return [image, destinationLink2(document, link.getAttribute("href"), image)];
     }
     return [image, ""];
   }
-  function parse3(element, { document: document2, params }) {
+  function parse3(element, { document, params }) {
     if (element.hasAttribute(MERGED_ATTR)) {
       element.remove();
       return;
@@ -194,11 +173,11 @@ var CustomImportScript = (() => {
     const cells = [];
     sources.forEach((src) => {
       collectCards(src).forEach((card) => {
-        const row = buildRow(card, document2);
+        const row = buildRow(card, document);
         if (row) cells.push(row);
       });
     });
-    const block = WebImporter.Blocks.createBlock(document2, { name: "cards-promo-wide", cells });
+    const block = WebImporter.Blocks.createBlock(document, { name: "cards-promo-wide", cells });
     element.replaceWith(block);
     partners.forEach((partner) => {
       partner.setAttribute(MERGED_ATTR, "");
@@ -216,7 +195,7 @@ var CustomImportScript = (() => {
     const leaves = Array.from(priceInfo.querySelectorAll("span, p")).filter((el) => !el.querySelector("span, p")).map((el) => clean(el.textContent)).filter(Boolean);
     return leaves.length ? leaves.join(" ") : clean(priceInfo.textContent);
   }
-  function buildRow2(item, document2) {
+  function buildRow2(item, document) {
     const link = item.querySelector("a.mt-aafes-product-link") || item.querySelector("a[href]");
     const img = item.querySelector(".mt-image img") || item.querySelector("img");
     const nameEl = item.querySelector(".aafes-item-name");
@@ -224,7 +203,7 @@ var CustomImportScript = (() => {
     if (!img && !name) return null;
     let imageCell = "";
     if (img && img.getAttribute("src")) {
-      const image = document2.createElement("img");
+      const image = document.createElement("img");
       image.src = img.getAttribute("src");
       const alt = clean(img.getAttribute("alt")) || name;
       if (alt) image.alt = alt;
@@ -232,9 +211,9 @@ var CustomImportScript = (() => {
     }
     const content = [];
     if (name) {
-      const p = document2.createElement("p");
+      const p = document.createElement("p");
       if (link && link.getAttribute("href")) {
-        const a = document2.createElement("a");
+        const a = document.createElement("a");
         a.href = link.getAttribute("href");
         a.textContent = name;
         p.append(a);
@@ -245,13 +224,13 @@ var CustomImportScript = (() => {
     }
     const price = priceLine(item);
     if (price) {
-      const p = document2.createElement("p");
+      const p = document.createElement("p");
       p.textContent = price;
       content.push(p);
     }
     return [imageCell, content.length ? content : ""];
   }
-  function parse4(element, { document: document2, params }) {
+  function parse4(element, { document, params }) {
     let items = Array.from(element.querySelectorAll(".mt-merch-item"));
     if (!items.length) {
       items = Array.from(element.querySelectorAll("li")).filter((li) => li.querySelector("a[href]") && li.querySelector("img"));
@@ -267,16 +246,16 @@ var CustomImportScript = (() => {
     });
     const cells = [];
     items.forEach((item) => {
-      const row = buildRow2(item, document2);
+      const row = buildRow2(item, document);
       if (row) cells.push(row);
     });
     const title = element.querySelector("h3, h2");
     if (title && clean(title.textContent)) {
-      const heading = document2.createElement(title.tagName.toLowerCase());
+      const heading = document.createElement(title.tagName.toLowerCase());
       heading.textContent = clean(title.textContent);
       element.before(heading);
     }
-    const block = WebImporter.Blocks.createBlock(document2, { name: "cards-product-slider", cells });
+    const block = WebImporter.Blocks.createBlock(document, { name: "cards-product-slider", cells });
     element.replaceWith(block);
   }
 
@@ -289,13 +268,13 @@ var CustomImportScript = (() => {
       return "";
     }
   }
-  function parse5(element, { document: document2, params }) {
+  function parse5(element, { document, params }) {
     const path = categoryPath(params.originalURL);
     if (!path) {
       element.remove();
       return;
     }
-    const block = WebImporter.Blocks.createBlock(document2, {
+    const block = WebImporter.Blocks.createBlock(document, {
       name: "product-listing",
       cells: [["Category", path]]
     });
@@ -365,12 +344,6 @@ var CustomImportScript = (() => {
       ]);
       const isCategoryPage = !!element.querySelector("main section#category.lp-standard-category");
       if (isCategoryPage) {
-        element.querySelectorAll("#category").forEach((panel) => {
-          const container = panel.querySelector(".lpcategory-container");
-          if (container && panel.querySelector("#toggle-button") && panel.querySelector(".categorytile.hidden")) {
-            container.setAttribute("data-see-more", "");
-          }
-        });
         element.querySelectorAll("#category .categorytile.hidden").forEach((tile) => {
           tile.classList.remove("hidden");
         });
@@ -486,7 +459,7 @@ var CustomImportScript = (() => {
   }
   function transform2(hookName, element, payload) {
     if (hookName !== "afterTransform") return;
-    const document2 = element.ownerDocument;
+    const document = element.ownerDocument;
     Array.from(element.querySelectorAll("img")).forEach((img) => {
       const rawSrc = getImageSrc(img);
       if (!rawSrc) return;
@@ -498,17 +471,17 @@ var CustomImportScript = (() => {
           console.warn(`[dm-images] Skipping DM image in mixed-content link: ${dmUrl}`);
           return;
         }
-        const imageLink = document2.createElement("a");
+        const imageLink = document.createElement("a");
         imageLink.setAttribute("href", dmUrl);
         imageLink.textContent = altText;
-        const destination = document2.createElement("a");
+        const destination = document.createElement("a");
         destination.setAttribute("href", anchor.getAttribute("href"));
         destination.textContent = altText === EMPTY_ALT_SENTINEL ? anchor.getAttribute("href") : altText;
-        anchor.replaceWith(imageLink, document2.createTextNode(" "), destination);
+        anchor.replaceWith(imageLink, document.createTextNode(" "), destination);
         return;
       }
       const picture = img.parentElement && img.parentElement.tagName === "PICTURE" ? img.parentElement : null;
-      const link = document2.createElement("a");
+      const link = document.createElement("a");
       link.setAttribute("href", dmUrl);
       link.textContent = altText;
       (picture || img).replaceWith(link);
@@ -532,14 +505,14 @@ var CustomImportScript = (() => {
   function transform3(hookName, element, payload) {
     const sections = payload && payload.template && payload.template.sections || [];
     if (sections.length < 2) return;
-    const document2 = element.ownerDocument;
+    const document = element.ownerDocument;
     if (hookName === "beforeTransform") {
       for (let i = sections.length - 1; i >= 0; i -= 1) {
         const section = sections[i];
         const el = findSectionElement(element, section);
         if (!el || !el.parentNode) continue;
         if (i === 0 && !section.style) continue;
-        const hr = document2.createElement("hr");
+        const hr = document.createElement("hr");
         if (section.style) hr.setAttribute(MARKER, section.id);
         el.parentNode.insertBefore(hr, el);
       }
@@ -551,7 +524,7 @@ var CustomImportScript = (() => {
         const marker = element.querySelector(`hr[${MARKER}="${section.id}"]`);
         const anchor = marker || findSectionElement(element, section);
         if (!anchor || !anchor.parentNode) continue;
-        const meta = WebImporter.Blocks.createBlock(document2, {
+        const meta = WebImporter.Blocks.createBlock(document, {
           name: "Section Metadata",
           cells: { style: section.style }
         });
@@ -674,7 +647,7 @@ var CustomImportScript = (() => {
       }
     });
   }
-  function findBlocksOnPage(document2, template, url) {
+  function findBlocksOnPage(document, template, url) {
     const pageBlocks = [];
     const pageKey = (u) => {
       try {
@@ -688,7 +661,7 @@ var CustomImportScript = (() => {
     const claim = (blockDef, selector) => {
       let matches = [];
       try {
-        matches = document2.querySelectorAll(selector);
+        matches = document.querySelectorAll(selector);
       } catch (e) {
         return;
       }
@@ -705,16 +678,16 @@ var CustomImportScript = (() => {
     return pageBlocks;
   }
   function markPageTargets(payload) {
-    const { document: document2, params } = payload;
-    executeTransformers("beforeTransform", document2.body, payload, earlyTransformers);
-    const blocks = findBlocksOnPage(document2, PAGE_TEMPLATE, params.originalURL).map(({ name, selector, element }, i) => {
+    const { document, params } = payload;
+    executeTransformers("beforeTransform", document.body, payload, earlyTransformers);
+    const blocks = findBlocksOnPage(document, PAGE_TEMPLATE, params.originalURL).map(({ name, selector, element }, i) => {
       element.setAttribute("data-excat-block", String(i));
       return { name, selector };
     });
     const sections = (PAGE_TEMPLATE.sections || []).map((section, i) => {
       const target = (section.selector || []).map((s) => {
         try {
-          return document2.querySelector(s);
+          return document.querySelector(s);
         } catch (e) {
           return null;
         }
@@ -744,58 +717,45 @@ var CustomImportScript = (() => {
     return rawPath === "" ? "/index" : rawPath;
   }
   var import_category_default = {
-    // The source applies the "See More" collapse of the category tiles (hidden tiles +
-    // #toggle-button) only after the window load event; the importer may start on
-    // DOMContentLoaded. Wait for the full load (max 20s) so that state is captured.
-    onLoad: () => __async(null, null, function* () {
-      if (document.readyState === "complete") return;
-      yield new Promise((resolve) => {
-        const timer = setTimeout(resolve, 2e4);
-        window.addEventListener("load", () => {
-          clearTimeout(timer);
-          setTimeout(resolve, 1500);
-        }, { once: true });
-      });
-    }),
     preprocess: (payload) => {
       executeTransformers("preprocess", payload.document.body, payload, earlyTransformers);
       if (CATALOG) markPageTargets(payload);
     },
     transform: (payload) => {
-      const { document: document2, url, params } = payload;
-      const main = document2.body;
+      const { document, url, params } = payload;
+      const main = document.body;
       params.fragments = [];
       if (!params.targets) markPageTargets(payload);
-      const pageBlocks = params.targets.blocks.map((block, i) => __spreadProps(__spreadValues({}, block), { element: document2.querySelector(`[data-excat-block="${i}"]`) })).filter((block) => block.element);
+      const pageBlocks = params.targets.blocks.map((block, i) => __spreadProps(__spreadValues({}, block), { element: document.querySelector(`[data-excat-block="${i}"]`) })).filter((block) => block.element);
       executeTransformers("beforeTransform", main, __spreadProps(__spreadValues({}, payload), { pageBlocks }), lateTransformers);
       pageBlocks.forEach((block) => {
         if (!main.contains(block.element)) return;
         const parser = parsers[block.name];
         if (!parser) return;
         try {
-          parser(block.element, { document: document2, url, params });
+          parser(block.element, { document, url, params });
         } catch (e) {
           console.error(`Failed to parse ${block.name} (${block.selector}):`, e);
         }
       });
       executeTransformers("afterTransform", main, payload);
-      main.appendChild(document2.createElement("hr"));
-      const meta = WebImporter.Blocks.getMetadata(document2) || {};
+      main.appendChild(document.createElement("hr"));
+      const meta = WebImporter.Blocks.getMetadata(document) || {};
       const level = categoryLevels(params.originalURL).pop();
       if (level) meta["Breadcrumb Title"] = level;
-      if (Object.keys(meta).length) main.append(WebImporter.Blocks.getMetadataBlock(document2, meta));
-      WebImporter.rules.transformBackgroundImages(main, document2);
+      if (Object.keys(meta).length) main.append(WebImporter.Blocks.getMetadataBlock(document, meta));
+      WebImporter.rules.transformBackgroundImages(main, document);
       WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
       params.fragments.forEach(({ element }) => {
         executeTransformers("afterTransform", element, payload, earlyTransformers);
-        WebImporter.rules.transformBackgroundImages(element, document2);
+        WebImporter.rules.transformBackgroundImages(element, document);
         WebImporter.rules.adjustImageUrls(element, url, params.originalURL);
       });
       const path = WebImporter.FileUtils.sanitizePath(documentPath(params.originalURL));
       return [{
         element: main,
         path,
-        report: { title: document2.title, template: PAGE_TEMPLATE.name, blocks: pageBlocks.map((b) => b.name) }
+        report: { title: document.title, template: PAGE_TEMPLATE.name, blocks: pageBlocks.map((b) => b.name) }
       }, ...params.fragments];
     }
   };

@@ -75,9 +75,8 @@ export default function parse(element, { document, params }) {
     cells.push([imageCell, labelCell]);
   });
 
-  // Category panels that hide tiles behind "See More" (flagged by the cleanup
-  // transformer) keep that behavior as the authored `see-more` option.
-  const name = element.hasAttribute('data-see-more') ? 'cards-category (see-more)' : 'cards-category';
-  const block = WebImporter.Blocks.createBlock(document, { name, cells });
+  // "See More" collapsing is an author's choice (`Cards Category (see-more)`), never
+  // set on import: the source applies it inconsistently.
+  const block = WebImporter.Blocks.createBlock(document, { name: 'cards-category', cells });
   element.replaceWith(block);
 }

@@ -188,16 +188,6 @@ function documentPath(originalURL) {
 }
 
 export default {
-  // The source applies the "See More" collapse of the category tiles (hidden tiles +
-  // #toggle-button) only after the window load event; the importer may start on
-  // DOMContentLoaded. Wait for the full load (max 20s) so that state is captured.
-  onLoad: async () => {
-    if (document.readyState === 'complete') return;
-    await new Promise((resolve) => {
-      const timer = setTimeout(resolve, 20000);
-      window.addEventListener('load', () => { clearTimeout(timer); setTimeout(resolve, 1500); }, { once: true });
-    });
-  },
   preprocess: (payload) => {
     // The importer drops text-less links between preprocess and transform; the cleanup
     // transformer's `preprocess` hook keeps the category tiles' overlay links.

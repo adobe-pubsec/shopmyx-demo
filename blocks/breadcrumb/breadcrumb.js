@@ -14,7 +14,7 @@ function splitBase(pathname) {
   return { base, path };
 }
 
-/** "tvs-and-home-theaters" -> "Tvs And Home Theaters" (used when a page has no breadcrumb title). */
+/** "tvs-and-home-theaters" -> "Tvs And Home Theaters" (when a page has no breadcrumb title). */
 function labelFromSlug(slug) {
   return decodeURIComponent(slug)
     .replace(/[-_]+/g, ' ')

@@ -88,15 +88,10 @@ export default function transform(hookName, element, payload) {
     const isCategoryPage = !!element.querySelector('main section#category.lp-standard-category');
     if (isCategoryPage) {
       // "Shop By Category" shows 6 tiles and hides the rest behind a "See More"
-      // toggle; all tiles are content, so un-hide them (before the hidden-element
-      // cleanup below) and drop the toggle button. The tile container is flagged
-      // (data-see-more) so the cards-category parser writes the `see-more` option.
-      element.querySelectorAll('#category').forEach((panel) => {
-        const container = panel.querySelector('.lpcategory-container');
-        if (container && panel.querySelector('#toggle-button') && panel.querySelector('.categorytile.hidden')) {
-          container.setAttribute('data-see-more', '');
-        }
-      });
+      // toggle (not on every load: the source applies it inconsistently); all tiles
+      // are content, so un-hide them (before the hidden-element cleanup below) and
+      // drop the toggle button. Collapsing is the author's choice: the
+      // `Cards Category (see-more)` option.
       element.querySelectorAll('#category .categorytile.hidden').forEach((tile) => {
         tile.classList.remove('hidden');
       });
