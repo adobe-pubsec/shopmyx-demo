@@ -139,10 +139,7 @@ async function render(frame, html) {
 }
 
 (async function init() {
-  const sdk = await DA_SDK;
-  const { context, actions } = sdk;
-  let msgs = 0;
-  let dbg = '';
+  const { context, actions } = await DA_SDK;
   const url = pageUrl(context);
 
   const stage = el('div', { class: 'bp-stage' });
@@ -195,12 +192,10 @@ async function render(frame, html) {
     rendering = true;
     try {
       const ok = await render(frame, liveHtml);
-      if (!ok) dbg = `render=false doc=${!!readyDoc(frame)} hook=${!!frame.contentWindow.__bpRender}`;
       if (ok) setStatus('Live', 'live');
     } catch (e) {
       setStatus('Last preview', 'stale');
       // eslint-disable-next-line no-console
-      dbg = String(e && e.stack ? e.stack.slice(0, 200) : e);
       console.warn('Breakpoint preview: live render failed', e);
     }
     rendering = false;
@@ -217,7 +212,7 @@ async function render(frame, html) {
 
   async function load() {
     setStatus('Loading…', 'stale');
-    // a page that was never previewed has no published copy: borrow the site's home page as the shell
+    // a page that was never saved has no copy to load: borrow the site's home page as the shell
     let src = url;
     try {
       const head = await fetch(url, { method: 'HEAD' });
@@ -227,17 +222,7 @@ async function render(frame, html) {
     }
     frame.addEventListener('load', async () => {
       const doc = await whenReady(frame);
-      if (!doc) {
-        try {
-          const d = frame.contentDocument;
-          dbg = `origin=${window.origin} src=${frame.src.slice(0, 90)} `;
-          dbg += `timeout doc=${!!d} main=${!!(d && d.querySelector('main'))} appear=${!!(d && d.body.classList.contains('appear'))} url=${d && d.location.href} sb=${window.frameElement ? window.frameElement.getAttribute('sandbox') : 'top'}`;
-        } catch (err) {
-          dbg = `access: ${err.message} origin=${window.origin}`;
-        }
-      }
       if (!doc || !(await install(frame, doc))) {
-        if (doc) dbg = 'install failed';
         setStatus('Last preview', 'stale');
         return;
       }
@@ -271,7 +256,6 @@ async function render(frame, html) {
 
   try {
     actions.subscribeLiveDocument(({ html }) => {
-      msgs += 1;
       liveHtml = html;
       schedule();
     });
@@ -279,7 +263,6 @@ async function render(frame, html) {
     setStatus('Last preview', 'stale');
   }
 
-  setInterval(() => { size.title = `msgs=${msgs} ${dbg}`; }, 500);
   new ResizeObserver(layout).observe(stage);
   select(current);
   load();
