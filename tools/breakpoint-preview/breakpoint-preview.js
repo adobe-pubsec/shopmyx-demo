@@ -137,7 +137,9 @@ async function render(frame, html) {
 }
 
 (async function init() {
-  const { context, actions } = await DA_SDK;
+  const sdk = await DA_SDK;
+  const { context, actions } = sdk;
+  let msgs = 0;
   const url = pageUrl(context);
 
   const stage = el('div', { class: 'bp-stage' });
@@ -254,6 +256,7 @@ async function render(frame, html) {
 
   try {
     actions.subscribeLiveDocument(({ html }) => {
+      msgs += 1;
       liveHtml = html;
       schedule();
     });
@@ -261,6 +264,7 @@ async function render(frame, html) {
     setStatus('Last preview', 'stale');
   }
 
+  setInterval(() => { size.title = `caps=${JSON.stringify(sdk.capabilities)} msgs=${msgs} keys=${Object.keys(sdk)}`; size.textContent = size.textContent.split(' |')[0] + ` | m${msgs} c${JSON.stringify(sdk.capabilities)}`; }, 500);
   new ResizeObserver(layout).observe(stage);
   select(current);
   load();
