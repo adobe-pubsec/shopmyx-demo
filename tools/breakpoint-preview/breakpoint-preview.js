@@ -225,7 +225,14 @@ async function render(frame, html) {
     }
     frame.addEventListener('load', async () => {
       const doc = await whenReady(frame);
-      if (!doc) dbg = 'whenReady timeout';
+      if (!doc) {
+        try {
+          const d = frame.contentDocument;
+          dbg = `timeout doc=${!!d} main=${!!(d && d.querySelector('main'))} appear=${!!(d && d.body.classList.contains('appear'))} url=${d && d.location.href} sb=${window.frameElement ? window.frameElement.getAttribute('sandbox') : 'top'}`;
+        } catch (err) {
+          dbg = `access: ${err.message} origin=${window.origin}`;
+        }
+      }
       if (!doc || !(await install(frame, doc))) {
         if (doc) dbg = 'install failed';
         setStatus('Last preview', 'stale');
