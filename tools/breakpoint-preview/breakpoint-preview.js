@@ -26,7 +26,10 @@ const DEVICES = [
 ];
 
 const RELOAD_SHAPES = [['path', { d: 'M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6' }]];
-const EXPAND_SHAPES = [['path', { d: 'M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7' }]];
+const EXPAND_SHAPES = [
+  ['path', { d: 'M4 9V6a2 2 0 0 1 2-2h3M15 4h3a2 2 0 0 1 2 2v3M20 15v3a2 2 0 0 1-2 2h-3M9 20H6a2 2 0 0 1-2-2v-3' }],
+  ['rect', { x: 9, y: 9, width: 6, height: 6, rx: 1 }],
+];
 
 // title of the second library entry (opens in a dialog) that the expand button asks the host to show
 const LARGE_PANEL = 'Breakpoints (large)';
