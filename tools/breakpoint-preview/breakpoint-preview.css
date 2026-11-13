@@ -135,3 +135,8 @@ body {
 .bp-bar button[hidden] {
   display: none;
 }
+
+.bp-bar svg.bp-filled {
+  fill: currentcolor;
+  stroke: none;
+}

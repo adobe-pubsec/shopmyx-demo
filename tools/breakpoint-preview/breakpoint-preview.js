@@ -26,10 +26,18 @@ const DEVICES = [
 ];
 
 const RELOAD_SHAPES = [['path', { d: 'M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6' }]];
-const EXPAND_SHAPES = [
-  ['path', { d: 'M4 9V6a2 2 0 0 1 2-2h3M15 4h3a2 2 0 0 1 2 2v3M20 15v3a2 2 0 0 1-2 2h-3M9 20H6a2 2 0 0 1-2-2v-3' }],
-  ['rect', { x: 9, y: 9, width: 6, height: 6, rx: 1 }],
-];
+// da.live/img/icons/s2-icon-fullscreen-20-n.svg (20x20, filled), the icon the block library uses
+const EXPAND_ICON = {
+  viewBox: '0 0 20 20',
+  filled: true,
+  shapes: [
+    ['path', { d: 'M12.75,14.93652h-5.5c-1.24072,0-2.25-1.00928-2.25-2.25v-5.5c0-1.24072,1.00928-2.25,2.25-2.25h5.5c1.24072,0,2.25,1.00928,2.25,2.25v5.5c0,1.24072-1.00928,2.25-2.25,2.25ZM7.25,6.43652c-.41357,0-.75.33643-.75.75v5.5c0,.41357.33643.75.75.75h5.5c.41357,0,.75-.33643.75-.75v-5.5c0-.41357-.33643-.75-.75-.75h-5.5Z' }],
+    ['path', { d: 'M4.5,19h-2.25c-.68945,0-1.25-.56055-1.25-1.25v-2.25c0-.41406.33594-.75.75-.75s.75.33594.75.75v2h2c.41406,0,.75.33594.75.75s-.33594.75-.75.75Z' }],
+    ['path', { d: 'M17.75,19h-2.25c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h2v-2c0-.41406.33594-.75.75-.75s.75.33594.75.75v2.25c0,.68945-.56055,1.25-1.25,1.25Z' }],
+    ['path', { d: 'M18.25,5.25c-.41406,0-.75-.33594-.75-.75v-2h-2c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h2.25c.68945,0,1.25.56055,1.25,1.25v2.25c0,.41406-.33594.75-.75.75ZM17.75,2.5h.00977-.00977Z' }],
+    ['path', { d: 'M1.75,5.25c-.41406,0-.75-.33594-.75-.75v-2.25c0-.68945.56055-1.25,1.25-1.25h2.25c.41406,0,.75.33594.75.75s-.33594.75-.75.75h-2v2c0,.41406-.33594.75-.75.75Z' }],
+  ],
+};
 
 // title of the second library entry (opens in a dialog) that the expand button asks the host to show
 const LARGE_PANEL = 'Breakpoints (large)';
@@ -58,10 +66,11 @@ function el(tag, attrs = {}, ...children) {
   return node;
 }
 
-function icon(shapes) {
+function icon(shapes, { viewBox = '0 0 24 24', filled = false } = {}) {
   const svg = document.createElementNS(SVG_NS, 'svg');
-  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('viewBox', viewBox);
   svg.setAttribute('aria-hidden', 'true');
+  if (filled) svg.setAttribute('class', 'bp-filled');
   shapes.forEach(([tag, attrs]) => {
     const shape = document.createElementNS(SVG_NS, tag);
     Object.entries(attrs).forEach(([k, v]) => shape.setAttribute(k, v));
@@ -167,7 +176,7 @@ async function render(frame, html) {
   const reload = el('button', { type: 'button', title: 'Reload preview', 'aria-label': 'Reload preview' });
   reload.append(icon(RELOAD_SHAPES));
   const expand = el('button', { type: 'button', title: 'Open large view', 'aria-label': 'Open large view' });
-  expand.append(icon(EXPAND_SHAPES));
+  expand.append(icon(EXPAND_ICON.shapes, EXPAND_ICON));
   expand.addEventListener('click', () => actions.showPanel(LARGE_PANEL));
   // already large (dialog): no need for the button
   const toggleExpand = () => { expand.hidden = window.innerWidth >= 700; };
