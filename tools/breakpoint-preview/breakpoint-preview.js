@@ -73,7 +73,9 @@ function pageUrl({ org, repo, path = '', ref = 'main' }) {
   pagePath = pagePath.replace(/\.html$/, '').replace(/\/index$/, '/');
   if (!pagePath.startsWith('/')) pagePath = `/${pagePath}`;
   const branch = !ref || ref === 'local' ? 'main' : ref;
-  return `https://${branch}--${repo}--${org}.aem.page${pagePath}`;
+  // DA serves plugins from the project's preview.da.live origin: frame the page there so it is same-origin
+  const host = window.location.hostname.endsWith('.da.live') ? window.location.origin : `https://${branch}--${repo}--${org}.aem.page`;
+  return `${host}${pagePath}`;
 }
 
 function showMessage(stage, text) {
