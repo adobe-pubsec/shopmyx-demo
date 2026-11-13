@@ -228,7 +228,8 @@ async function render(frame, html) {
       if (!doc) {
         try {
           const d = frame.contentDocument;
-          dbg = `timeout doc=${!!d} main=${!!(d && d.querySelector('main'))} appear=${!!(d && d.body.classList.contains('appear'))} url=${d && d.location.href} sb=${window.frameElement ? window.frameElement.getAttribute('sandbox') : 'top'}`;
+          dbg = `origin=${window.origin} src=${frame.src.slice(0, 90)} `;
+          dbg += `timeout doc=${!!d} main=${!!(d && d.querySelector('main'))} appear=${!!(d && d.body.classList.contains('appear'))} url=${d && d.location.href} sb=${window.frameElement ? window.frameElement.getAttribute('sandbox') : 'top'}`;
         } catch (err) {
           dbg = `access: ${err.message} origin=${window.origin}`;
         }
