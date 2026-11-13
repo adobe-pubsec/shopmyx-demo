@@ -106,3 +106,28 @@ body {
   text-align: center;
   line-height: 1.5;
 }
+
+.bp-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 4px;
+  color: #6e6e6e;
+  font-size: 12px;
+}
+
+.bp-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b3b3b3;
+}
+
+.bp-status[data-mode="live"] {
+  color: #292929;
+}
+
+.bp-status[data-mode="live"]::before {
+  background: #2d9d78;
+}

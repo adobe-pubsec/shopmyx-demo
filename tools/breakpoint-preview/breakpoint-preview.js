@@ -1,6 +1,8 @@
 import DA_SDK from 'https://da.live/nx/utils/sdk.js';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
+const RENDER_DELAY = 250;
+const READY_TIMEOUT = 10000;
 
 const DEVICES = [
   {
@@ -25,6 +27,23 @@ const DEVICES = [
 
 const RELOAD_SHAPES = [['path', { d: 'M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6' }]];
 
+/**
+ * Runs inside the framed page (same origin), once. It exposes a function that
+ * re-decorates the page's <main> with the site's own code, so blocks render as
+ * they would after a preview, without needing one.
+ */
+const INSTALL = `
+import { decorateMain } from '/scripts/scripts.js';
+import { loadSections } from '/scripts/aem.js';
+window.__bpRender = async () => {
+  const main = document.querySelector('main');
+  decorateMain(main);
+  document.body.classList.add('appear');
+  await loadSections(main);
+};
+window.dispatchEvent(new Event('bp-ready'));
+`;
+
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
   Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
@@ -44,7 +63,9 @@ function icon(shapes) {
   return svg;
 }
 
-/** Builds the page URL (on the code branch, as previewed) from the editor context. */
+const wait = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
+
+/** Builds the page URL (on the code branch) from the editor context. */
 function pageUrl({ org, repo, path = '', ref = 'main' }) {
   if (!org || !repo) return null;
   const prefix = `/${org}/${repo}`;
@@ -59,12 +80,69 @@ function showMessage(stage, text) {
   stage.replaceChildren(el('p', { class: 'bp-message' }, text));
 }
 
+/** The page's own document, if it is ready to be re-rendered. */
+function readyDoc(frame) {
+  try {
+    const doc = frame.contentDocument;
+    if (doc && doc.querySelector('main') && doc.body.classList.contains('appear')) return doc;
+  } catch (e) {
+    // not same-origin yet
+  }
+  return null;
+}
+
+async function whenReady(frame) {
+  const start = Date.now();
+  while (Date.now() - start < READY_TIMEOUT) {
+    const doc = readyDoc(frame);
+    if (doc) return doc;
+    // eslint-disable-next-line no-await-in-loop
+    await wait(100);
+  }
+  return null;
+}
+
+/** Installs the render hook in the framed page. */
+async function install(frame, doc) {
+  const win = frame.contentWindow;
+  if (win.__bpRender) return true;
+  const ready = new Promise((resolve) => {
+    win.addEventListener('bp-ready', () => resolve(true), { once: true });
+    setTimeout(() => resolve(false), READY_TIMEOUT);
+  });
+  const script = doc.createElement('script');
+  script.type = 'module';
+  const withNonce = doc.querySelector('script[nonce]');
+  if (withNonce) script.nonce = withNonce.nonce;
+  script.textContent = INSTALL;
+  doc.head.append(script);
+  return ready;
+}
+
+/** Swaps the framed page's <main> for the editor's current content and decorates it. */
+async function render(frame, html) {
+  const doc = readyDoc(frame);
+  if (!doc || !frame.contentWindow.__bpRender) return false;
+  const win = frame.contentWindow;
+  const parsed = new win.DOMParser().parseFromString(html, 'text/html');
+  const source = parsed.querySelector('main');
+  const fresh = doc.createElement('main');
+  if (source) [...source.childNodes].forEach((n) => fresh.append(doc.importNode(n, true)));
+  else [...parsed.body.childNodes].forEach((n) => fresh.append(doc.importNode(n, true)));
+  const { scrollY } = win;
+  doc.querySelector('main').replaceWith(fresh);
+  await win.__bpRender();
+  win.scrollTo(0, scrollY);
+  return true;
+}
+
 (async function init() {
-  const { context } = await DA_SDK;
+  const { context, actions } = await DA_SDK;
   const url = pageUrl(context);
 
   const stage = el('div', { class: 'bp-stage' });
   const size = el('span', { class: 'bp-size' });
+  const status = el('span', { class: 'bp-status' });
   const bar = el('div', { class: 'bp-bar', role: 'toolbar', 'aria-label': 'Preview size' });
   const buttons = DEVICES.map((device) => {
     const button = el('button', {
@@ -79,7 +157,7 @@ function showMessage(stage, text) {
   });
   const reload = el('button', { type: 'button', title: 'Reload preview', 'aria-label': 'Reload preview' });
   reload.append(icon(RELOAD_SHAPES));
-  bar.append(...buttons, size, el('span', { class: 'bp-spacer' }), reload);
+  bar.append(...buttons, size, el('span', { class: 'bp-spacer' }), status, reload);
   document.body.append(bar, stage);
 
   if (!url) {
@@ -87,11 +165,70 @@ function showMessage(stage, text) {
     return;
   }
 
-  const frame = el('iframe', { title: 'Page preview', src: url });
+  const frame = el('iframe', { title: 'Page preview' });
   const device = el('div', { class: 'bp-device' }, frame);
   stage.append(device);
 
   let current = DEVICES[0];
+  let liveHtml = null;
+  let rendering = false;
+  let queued = false;
+  let timer;
+
+  const setStatus = (text, mode) => {
+    status.textContent = text;
+    status.dataset.mode = mode;
+  };
+
+  /** Renders the latest editor content; coalesces edits made while a render runs. */
+  async function flush() {
+    if (liveHtml === null) return;
+    if (rendering) {
+      queued = true;
+      return;
+    }
+    rendering = true;
+    try {
+      const ok = await render(frame, liveHtml);
+      if (ok) setStatus('Live', 'live');
+    } catch (e) {
+      setStatus('Last preview', 'stale');
+      // eslint-disable-next-line no-console
+      console.warn('Breakpoint preview: live render failed', e);
+    }
+    rendering = false;
+    if (queued) {
+      queued = false;
+      flush();
+    }
+  }
+
+  const schedule = () => {
+    clearTimeout(timer);
+    timer = setTimeout(flush, RENDER_DELAY);
+  };
+
+  async function load() {
+    setStatus('Loading…', 'stale');
+    // a page that was never previewed has no published copy: borrow the site's home page as the shell
+    let src = url;
+    try {
+      const head = await fetch(url, { method: 'HEAD' });
+      if (!head.ok) src = `${new URL(url).origin}/`;
+    } catch (e) {
+      src = url;
+    }
+    frame.addEventListener('load', async () => {
+      const doc = await whenReady(frame);
+      if (!doc || !(await install(frame, doc))) {
+        setStatus('Last preview', 'stale');
+        return;
+      }
+      setStatus(liveHtml === null ? 'Last preview' : 'Live', liveHtml === null ? 'stale' : 'live');
+      flush();
+    }, { once: true });
+    frame.src = src;
+  }
 
   /** Sizes the frame to the device width and scales it down when the dialog is narrower. */
   function layout() {
@@ -113,12 +250,18 @@ function showMessage(stage, text) {
     layout();
   }
 
-  reload.addEventListener('click', () => {
-    const u = new URL(url);
-    u.searchParams.set('bp', Date.now());
-    frame.src = u.href;
-  });
+  reload.addEventListener('click', load);
+
+  try {
+    actions.subscribeLiveDocument(({ html }) => {
+      liveHtml = html;
+      schedule();
+    });
+  } catch (e) {
+    setStatus('Last preview', 'stale');
+  }
 
   new ResizeObserver(layout).observe(stage);
   select(current);
+  load();
 }());
