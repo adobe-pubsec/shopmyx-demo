@@ -131,3 +131,7 @@ body {
 .bp-status[data-mode="live"]::before {
   background: #2d9d78;
 }
+
+.bp-bar button[hidden] {
+  display: none;
+}

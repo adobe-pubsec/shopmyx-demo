@@ -26,6 +26,10 @@ const DEVICES = [
 ];
 
 const RELOAD_SHAPES = [['path', { d: 'M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6' }]];
+const EXPAND_SHAPES = [['path', { d: 'M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7' }]];
+
+// title of the second library entry (opens in a dialog) that the expand button asks the host to show
+const LARGE_PANEL = 'Breakpoints (large)';
 
 /**
  * Runs inside the framed page (same origin), once. It exposes a function that
@@ -159,7 +163,14 @@ async function render(frame, html) {
   });
   const reload = el('button', { type: 'button', title: 'Reload preview', 'aria-label': 'Reload preview' });
   reload.append(icon(RELOAD_SHAPES));
-  bar.append(...buttons, size, el('span', { class: 'bp-spacer' }), status, reload);
+  const expand = el('button', { type: 'button', title: 'Open large view', 'aria-label': 'Open large view' });
+  expand.append(icon(EXPAND_SHAPES));
+  expand.addEventListener('click', () => actions.showPanel(LARGE_PANEL));
+  // already large (dialog): no need for the button
+  const toggleExpand = () => { expand.hidden = window.innerWidth >= 700; };
+  window.addEventListener('resize', toggleExpand);
+  toggleExpand();
+  bar.append(...buttons, size, el('span', { class: 'bp-spacer' }), status, reload, expand);
   document.body.append(bar, stage);
 
   if (!url) {
