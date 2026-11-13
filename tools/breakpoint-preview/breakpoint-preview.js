@@ -140,6 +140,7 @@ async function render(frame, html) {
   const sdk = await DA_SDK;
   const { context, actions } = sdk;
   let msgs = 0;
+  let dbg = '';
   const url = pageUrl(context);
 
   const stage = el('div', { class: 'bp-stage' });
@@ -192,10 +193,12 @@ async function render(frame, html) {
     rendering = true;
     try {
       const ok = await render(frame, liveHtml);
+      if (!ok) dbg = `render=false doc=${!!readyDoc(frame)} hook=${!!frame.contentWindow.__bpRender}`;
       if (ok) setStatus('Live', 'live');
     } catch (e) {
       setStatus('Last preview', 'stale');
       // eslint-disable-next-line no-console
+      dbg = String(e && e.stack ? e.stack.slice(0, 200) : e);
       console.warn('Breakpoint preview: live render failed', e);
     }
     rendering = false;
@@ -222,7 +225,9 @@ async function render(frame, html) {
     }
     frame.addEventListener('load', async () => {
       const doc = await whenReady(frame);
+      if (!doc) dbg = 'whenReady timeout';
       if (!doc || !(await install(frame, doc))) {
+        if (doc) dbg = 'install failed';
         setStatus('Last preview', 'stale');
         return;
       }
@@ -264,7 +269,7 @@ async function render(frame, html) {
     setStatus('Last preview', 'stale');
   }
 
-  setInterval(() => { size.title = `caps=${JSON.stringify(sdk.capabilities)} msgs=${msgs} keys=${Object.keys(sdk)}`; size.textContent = size.textContent.split(' |')[0] + ` | m${msgs} c${JSON.stringify(sdk.capabilities)}`; }, 500);
+  setInterval(() => { size.title = `msgs=${msgs} ${dbg}`; }, 500);
   new ResizeObserver(layout).observe(stage);
   select(current);
   load();
