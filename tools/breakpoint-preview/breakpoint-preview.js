@@ -83,7 +83,7 @@ function showMessage(stage, text) {
   document.body.append(bar, stage);
 
   if (!url) {
-    showMessage(stage, `Open a page in the editor to preview it. (context: ${JSON.stringify(context)})`);
+    showMessage(stage, 'Open a page in the editor to preview it.');
     return;
   }
 
