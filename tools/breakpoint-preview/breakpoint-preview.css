@@ -1,0 +1,108 @@
+* { box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Adobe Clean", "Source Sans Pro", -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #292929;
+  background: #f3f3f3;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.bp-bar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: #292929;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bp-bar button:hover {
+  background: #e6e6e6;
+}
+
+.bp-bar button[aria-pressed="true"] {
+  color: #fff;
+  background: #292929;
+}
+
+.bp-bar button:focus-visible {
+  outline: 2px solid #1473e6;
+  outline-offset: 2px;
+}
+
+.bp-bar svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bp-size {
+  margin-left: 4px;
+  color: #6e6e6e;
+  font-size: 12px;
+}
+
+.bp-spacer {
+  flex: 1;
+}
+
+.bp-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.bp-device {
+  flex: none;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 12%);
+  transform-origin: top left;
+}
+
+.bp-device iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.bp-message {
+  align-self: center;
+  max-width: 480px;
+  color: #6e6e6e;
+  text-align: center;
+  line-height: 1.5;
+}
