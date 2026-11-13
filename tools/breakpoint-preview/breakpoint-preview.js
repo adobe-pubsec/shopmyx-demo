@@ -39,8 +39,8 @@ const EXPAND_ICON = {
   ],
 };
 
-// title of the second library entry (opens in a dialog) that the expand button asks the host to show
-const LARGE_PANEL = 'Breakpoints (large)';
+// id of the second library entry (opens in a dialog): its title lower-cased, spaces as dashes
+const LARGE_PANEL = 'breakpoints-(large)';
 
 /**
  * Runs inside the framed page (same origin), once. It exposes a function that
