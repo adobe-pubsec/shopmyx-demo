@@ -1,0 +1,9 @@
+[    1234ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://author-p49252-e308251.adobeaemcloud.com/favicon.ico:1
+[    4823ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://author-p49252-e308251.adobeaemcloud.com/nav/nav.plain.html:1
+[    4824ms] [LOG] failed to load module for header TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (https://author-p49252-e308251.adobeaemcloud.com/content/edc-ue.resource/blocks/header/header.js:137:19)
+    at async https://author-p49252-e308251.adobeaemcloud.com/content/edc-ue.resource/scripts/aem.js:552:15 @ https://author-p49252-e308251.adobeaemcloud.com/content/edc-ue.resource/scripts/aem.js:556
+[    4924ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://author-p49252-e308251.adobeaemcloud.com/nav/footer.plain.html:1
+[    4925ms] [LOG] failed to load module for footer TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (https://author-p49252-e308251.adobeaemcloud.com/content/edc-ue.resource/blocks/footer/footer.js:17:19)
+    at async https://author-p49252-e308251.adobeaemcloud.com/content/edc-ue.resource/scripts/aem.js:552:15 @ https://author-p49252-e308251.adobeaemcloud.com/content/edc-ue.resource/scripts/aem.js:556
