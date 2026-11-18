@@ -1,4 +1,5 @@
-import DA_SDK from 'https://da.live/nx/utils/sdk.js';
+/* eslint no-underscore-dangle: ["error", { "allow": ["__bpRender"] }] */
+import DA_SDK from 'https://da.live/nx/utils/sdk.js'; // eslint-disable-line import/no-unresolved
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const RENDER_DELAY = 250;
@@ -9,19 +10,25 @@ const DEVICES = [
     id: 'desktop',
     label: 'Desktop',
     width: 1280,
-    shapes: [['rect', { x: 3, y: 4, width: 18, height: 12, rx: 2 }], ['path', { d: 'M8 20h8M12 16v4' }]],
+    shapes: [['rect', {
+      x: 3, y: 4, width: 18, height: 12, rx: 2,
+    }], ['path', { d: 'M8 20h8M12 16v4' }]],
   },
   {
     id: 'tablet',
     label: 'Tablet',
     width: 768,
-    shapes: [['rect', { x: 4, y: 3, width: 16, height: 18, rx: 2 }], ['path', { d: 'M11 18h2' }]],
+    shapes: [['rect', {
+      x: 4, y: 3, width: 16, height: 18, rx: 2,
+    }], ['path', { d: 'M11 18h2' }]],
   },
   {
     id: 'mobile',
     label: 'Mobile',
     width: 375,
-    shapes: [['rect', { x: 7, y: 2, width: 10, height: 20, rx: 2 }], ['path', { d: 'M11 19h2' }]],
+    shapes: [['rect', {
+      x: 7, y: 2, width: 10, height: 20, rx: 2,
+    }], ['path', { d: 'M11 19h2' }]],
   },
 ];
 
@@ -82,14 +89,16 @@ function icon(shapes, { viewBox = '0 0 24 24', filled = false } = {}) {
 const wait = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
 
 /** Builds the page URL (on the code branch) from the editor context. */
-function pageUrl({ org, repo, path = '', ref = 'main' }) {
+function pageUrl({
+  org, repo, path = '', ref = 'main',
+}) {
   if (!org || !repo) return null;
   const prefix = `/${org}/${repo}`;
   let pagePath = path.startsWith(prefix) ? path.slice(prefix.length) : path;
   pagePath = pagePath.replace(/\.html$/, '').replace(/\/index$/, '/');
   if (!pagePath.startsWith('/')) pagePath = `/${pagePath}`;
   const branch = !ref || ref === 'local' ? 'main' : ref;
-  // DA serves plugins from the project's preview.da.live origin: frame the page there so it is same-origin
+  // DA serves plugins from preview.da.live: frame the page there so it is same-origin
   const host = window.location.hostname.endsWith('.da.live') ? window.location.origin : `https://${branch}--${repo}--${org}.aem.page`;
   return `${host}${pagePath}`;
 }
