@@ -34,12 +34,8 @@
       const output = document.querySelector('output');
 
       function update() {
-        block.className = 'layout-grid';
-        const options = document.createElement('div');
-        const value = document.createElement('div');
-        value.textContent = select.selectedOptions[0].dataset.heading;
-        options.append(value);
-        block.replaceChildren(options);
+        block.className = `layout-grid ${select.value}`;
+        block.replaceChildren();
         const tiles = select.value.startsWith('wide-') ? artwork.slice(0, 3) : artwork;
         tiles.forEach(([label, asset]) => {
           const row = document.createElement('div');
@@ -61,7 +57,7 @@
           block.append(row);
         });
         decorate(block);
-        output.textContent = `Layout Grid | First row: ${value.textContent}`;
+        output.textContent = `Layout Grid (${select.selectedOptions[0].dataset.heading})`;
       }
 
       select.addEventListener('change', update);

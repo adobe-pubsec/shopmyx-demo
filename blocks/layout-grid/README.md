@@ -5,30 +5,36 @@ then add one image per row. All promotional text belongs in the artwork.
 
 ## Choose a Layout
 
-Keep the block heading **Layout Grid**. The first content row below that heading
-contains the layout selection, for example **Feature Left**. Images start on the
-next row. The options row is not displayed on the published page.
+Choose a class-based variant in the block heading, for example
+**Layout Grid (Feature Left)**. Images start on the first content row; no layout
+property row is needed. **Layout Grid** without a variant uses Three Columns.
 
-| Dropdown label | Stored value | Images | Desktop arrangement |
+| Variant label | CSS class | Images | Desktop arrangement |
 | --- | --- | --- | --- |
-| Equal Tiles: Two Columns | Two Columns | Any | Two equal tiles per row |
-| Equal Tiles: Three Columns | Three Columns | Any | Three equal tiles per row; the default |
-| Equal Tiles: Four Columns | Four Columns | Any | Four equal tiles per row |
-| Feature Left | Feature Left | Five | One large square left, four small squares right |
-| Feature Right | Feature Right | Five | Four small squares left, one large square right |
-| Wide Left | Wide Left | Three | One wide tile left, two square tiles right |
-| Wide Right | Wide Right | Three | Two square tiles left, one wide tile right |
+| Equal Tiles: Two Columns | two-columns | Any | Two equal tiles per row |
+| Equal Tiles: Three Columns | three-columns | Any | Three equal tiles per row; the default |
+| Equal Tiles: Four Columns | four-columns | Any | Four equal tiles per row |
+| Feature Left | feature-left | Five | One large square left, four small squares right |
+| Feature Right | feature-right | Five | Four small squares left, one large square right |
+| Wide Left | wide-left | Three | One wide tile left, two square tiles right |
+| Wide Right | wide-right | Three | Two square tiles left, one wide tile right |
 
-For a block inspector dropdown, target the first content row's first cell
-(row 0, cell 0; the block heading is not counted), use the labels and stored values
-above, and set **Three Columns** as the default. Hyphenated values such as
-`feature-right` are also accepted. This repository does not contain the inspector's
-options sheet; it must be configured separately in Document Authoring.
+The Block Inspector's Variant control lists variants from the configured Blocks
+library. Each library example must use the matching variant in its block heading.
+Switching variants changes the classes, not the image count, order, or artwork.
+Use the Blocks library to replace the entire template when those need to change.
+Layout Grid does not need an entry in the options sheet.
 
-The options row may be a single merged cell or have an empty second cell. A
-two-cell `Layout | Feature Right` row is also accepted; the value belongs in the
-last cell. Empty or unrecognized values use Three Columns. Older documents that
-use a class-based variant without an options row remain supported.
+Each library template, including the default without a variant, includes a
+`fields` property in Library Metadata. Its nested table has a **Fields** header
+spanning two columns, followed by one item row labeled **Image** and **Link**.
+The library index's `editor` sheet must contain `block: layout-grid` and
+`property: multi`. This makes the schema reusable for adding, removing, and
+reordering image rows instead of defining fields separately for every sample.
+
+Older layout property rows remain accepted as a fallback when no recognized
+variant class is present. An explicit variant class takes precedence, and the
+legacy row is hidden. Empty or unrecognized legacy values use Three Columns.
 
 Layout sketches use numbers matching the image rows in the document:
 
@@ -52,9 +58,8 @@ Amazon, Apple, Acer, Cameras, LG.
 
 ## Add Images and Links
 
-| Layout Grid | |
+| Layout Grid (Feature Left) | |
 | --- | --- |
-| Feature Left | |
 | KitchenAid image | [KitchenAid](https://www.shopmyexchange.com/) |
 | Instant Pot image | [Instant Pot](https://www.shopmyexchange.com/) |
 | Food Storage image | [Food Storage](https://www.shopmyexchange.com/) |

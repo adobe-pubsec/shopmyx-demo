@@ -17,8 +17,9 @@ export default function decorate(block) {
     const value = [...options.children]
       .map((cell) => cell.textContent.trim()).filter(Boolean).pop();
     const layout = toClassName(value || '');
-    block.classList.remove(...LAYOUTS);
-    block.classList.add(LAYOUTS.includes(layout) ? layout : 'three-columns');
+    if (!LAYOUTS.some((variant) => block.classList.contains(variant))) {
+      block.classList.add(LAYOUTS.includes(layout) ? layout : 'three-columns');
+    }
     rows.shift();
   }
 
