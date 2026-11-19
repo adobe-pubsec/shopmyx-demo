@@ -1,0 +1,8 @@
+.scheduled-fragment[hidden],
+.scheduled-fragment > div:not(.section) {
+  display: none;
+}
+
+.scheduled-fragment > .section {
+  margin: 0;
+}
