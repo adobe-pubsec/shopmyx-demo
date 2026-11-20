@@ -1,0 +1,81 @@
+.countdown-timer {
+  padding: clamp(40px, 6vw, 80px) 24px;
+  background: #b00008;
+  color: #fff;
+  font-size: clamp(24px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.countdown-timer .countdown-timer-text {
+  overflow-wrap: anywhere;
+}
+
+.countdown-timer .countdown-timer-text :is(p, h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+}
+
+.countdown-timer .countdown-timer-text a:any-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.countdown-timer .countdown-timer-text a:focus-visible {
+  outline-color: #fff;
+}
+
+.countdown-timer .countdown-timer-calendar {
+  position: relative;
+  display: inline-block;
+  min-width: 1.6em;
+  margin: 0.25em 0.2em;
+  border-top: 0.4em solid #ef1c24;
+  border-radius: 0.14em;
+  background: linear-gradient(135deg, #fff, #f0f3f5);
+  box-shadow: 0.06em 0.12em 0.16em rgb(0 0 0 / 25%);
+  color: #b00008;
+  line-height: 1.2;
+  vertical-align: middle;
+  transform: rotate(-10deg);
+}
+
+.countdown-timer .countdown-timer-calendar::before,
+.countdown-timer .countdown-timer-calendar::after {
+  position: absolute;
+  top: -0.58em;
+  width: 0.12em;
+  height: 0.3em;
+  border-radius: 0.08em;
+  background: #586565;
+  box-shadow: 0.02em 0.03em 0 #333;
+  content: '';
+}
+
+.countdown-timer .countdown-timer-calendar::before {
+  left: 20%;
+}
+
+.countdown-timer .countdown-timer-calendar::after {
+  right: 20%;
+}
+
+.countdown-timer .countdown-timer-number {
+  display: block;
+  padding: 0.02em 0.1em 0.08em;
+  font-size: 1.4em;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-timer .countdown-timer-number::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 0.08em 0 0.1em;
+  background: linear-gradient(135deg, #d0dce5 50%, #fff 51%);
+  content: '';
+}
