@@ -62,8 +62,8 @@ tablet, and desktop.
 ## Block Inspector
 
 `tools/scheduled-fragment/library.html` contains the authoring template and a
-nested Fields table with **Fragment** and **On Time** labels. When registering
-this template in the DA Blocks library, set `block: scheduled-fragment` and
-`property: multi` in the library index's `editor` sheet. The single schema row
-then applies to every queued item. This local template has not been uploaded or
-published to DA.
+nested Fields table with **Fragment** and **On Time** labels. The template is
+saved in the DA Blocks library as `library/blocks/scheduled-fragment.html` and
+registered in `library/library.json`. Its `editor` sheet sets
+`block: scheduled-fragment` and `property: multi`, so the single schema row
+applies to every queued item. These library updates have not been published.
