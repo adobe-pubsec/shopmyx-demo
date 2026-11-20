@@ -1,0 +1,25 @@
+{
+  "variantName": "shipping-deadlines",
+  "baseBlock": "shipping-deadlines",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Holiday shipping deadline panel with CSS calendars",
+    "description": "Green (#59a17b) title bar with white uppercase Roboto Condensed text; teal (#38a1be) body, radius 16px; stocking art left, deadline groups centre (consecutive rows with the same group share a heading, groups separated by dotted white rules), each date drawn as a CSS calendar (white card, red month, teal day panel, two rings) with an uppercase label below; truck art right with the note under it. Whole panel clickable via the title link. Mobile: groups wrap above the art."
+  },
+  "contentPattern": {
+    "structure": "Title row (heading + link); art row (Left image | Right image); deadline rows (Group | Date e.g. Dec 16 | Label, optional); note row (single text cell). Rows are detected by content",
+    "description": "Last day to order online for delivery before December 25: OCONUS APO/FPO Dec 8; CONUS Dec 16 Regular Ground, Dec 18 Priority; FedEx Dec 21 2 Day, Dec 23 Overnight; Some exclusions apply"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "purpose": "Editable shipping/order deadlines with calendar graphics.",
+    "pagesUsing": [
+      "/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-17"
+  },
+  "reuseGuidance": "Author dates as 'Mon D' (e.g. Dec 16) so they render as calendars. Repeat the group name on each row; consecutive equal groups merge.",
+  "sourceUrl": "https://www.shopmyexchange.com/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+}

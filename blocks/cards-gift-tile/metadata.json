@@ -1,0 +1,25 @@
+{
+  "variantName": "cards-gift-tile",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Gift category tiles: product photo with a teal label bar, whole card linked",
+    "description": "White rounded (12px) card, product photo, teal (#329ab3) bar with white uppercase Roboto Condensed Bold label; 4 per row desktop, 2 per row mobile, 16px gap."
+  },
+  "contentPattern": {
+    "structure": "one row per card, 2 cells (Image | Destination link; link text is the visible label)",
+    "description": "Sixteen holiday gift category tiles (Ultimate Gifts, For Her, For Him, Stocking Stuffers ... For the Traveler)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "purpose": "Linked gift category tiles with a visible label bar.",
+    "pagesUsing": [
+      "/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-17"
+  },
+  "reuseGuidance": "Use for photo tiles whose label is real text. Author one row per tile in visual order; the label is the link text.",
+  "sourceUrl": "https://www.shopmyexchange.com/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.shopmyexchange.com/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26",
+  "path": "cp/category-landing-pages/shared-promotions/holiday-gift-guide-26",
+  "timestamp": "2026-11-17T21:40:32.939Z",
+  "title": "Shop Army & Air Force Exchange Service",
+  "template": "gift-guide",
+  "blocks": [
+    "promo-banner",
+    "promo-banner",
+    "cards-promo-tiles",
+    "cards-gift-tile",
+    "columns-gift-feature",
+    "shipping-deadlines"
+  ],
+  "importScript": "d9cde53d9dae"
+}

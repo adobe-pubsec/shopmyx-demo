@@ -1,0 +1,119 @@
+/* Gift feature row: tile | feature text | tile (1fr 2fr 1fr desktop, stacked mobile) */
+.columns-gift-feature .columns-gift-feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+/* tile: same look as cards-gift-tile */
+.columns-gift-feature .columns-gift-feature-tile {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.columns-gift-feature .columns-gift-feature-tile-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.columns-gift-feature .columns-gift-feature-tile-image {
+  display: block;
+  flex: 1 1 auto;
+  line-height: 0;
+}
+
+.columns-gift-feature .columns-gift-feature-tile-image picture,
+.columns-gift-feature .columns-gift-feature-tile-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.columns-gift-feature .columns-gift-feature-tile-label {
+  display: block;
+  padding: 8px;
+  background-color: #329ab3;
+  font-family: 'Roboto Condensed', 'Arial Narrow', arial, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* no hover effect, as on the source; keyboard focus stays visible */
+.columns-gift-feature a.columns-gift-feature-tile-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* feature text */
+.columns-gift-feature .columns-gift-feature-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.columns-gift-feature .columns-gift-feature-title {
+  margin: 0;
+
+  /* the font draws the white face and its outlined 3D extrusion itself */
+  font-family: var(--promo-display-font-family);
+  font-weight: 700;
+  font-size: clamp(30px, 5.1vw, 66px);
+  line-height: 0.88;
+
+  /* wraps as "Find the / Perfect Gift", like the art */
+  max-width: 7.6em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.columns-gift-feature .columns-gift-feature-subtitle {
+  /* two lines, "for everyone who / is naughty & nice", as in the art */
+  max-width: 6.6em;
+  margin: 8px 0 0;
+  font-family: var(--promo-script-font-family);
+  font-weight: 400;
+  font-size: clamp(24px, 4.4vw, 56px);
+  line-height: 0.8;
+  color: #fff;
+}
+
+.columns-gift-feature .columns-gift-feature-media {
+  margin-top: 16px;
+  line-height: 0;
+}
+
+.columns-gift-feature .columns-gift-feature-media img {
+  display: block;
+  max-width: min(100%, 180px);
+  height: auto;
+}
+
+@media (width >= 768px) {
+  .columns-gift-feature .columns-gift-feature-row {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+
+  .columns-gift-feature .columns-gift-feature-tile {
+    max-width: none;
+  }
+
+  .columns-gift-feature.columns-gift-feature-3-cols .columns-gift-feature-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  }
+
+}

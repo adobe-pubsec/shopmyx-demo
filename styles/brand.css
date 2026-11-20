@@ -18,6 +18,10 @@
   --body-font-family: lato, lato-fallback, sans-serif;
   --heading-font-family: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif;
 
+  /* holiday promo fonts (Adobe Fonts kit dsy2fmf, loaded in fonts.css): outlined 3D display face + script */
+  --promo-display-font-family: rig-solid-bold-reverse, lato, 'Arial Black', arial, sans-serif;
+  --promo-script-font-family: cc-matinee-idol, 'Segoe Script', 'Brush Script MT', cursive;
+
   /* body sizes */
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;

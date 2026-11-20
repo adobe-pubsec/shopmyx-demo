@@ -1,0 +1,25 @@
+{
+  "variantName": "columns-gift-feature",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Feature row: linked catalog tile | centered display headline with script subtitle and art | linked catalog tile",
+    "description": "Tiles share the cards-gift-tile look (white rounded card, image, teal label bar from link text); feature cell centers a white heavy uppercase headline with dark-red offset shadow, script subtitle and an image below. Desktop 1fr 2fr 1fr, stacked on mobile."
+  },
+  "contentPattern": {
+    "structure": "one row; each cell is a tile (Image + Destination link) or a feature (Heading + subtitle + image), detected by content",
+    "description": "Shop Toy Book tile | Find The Perfect Gift feature | Shop Gift Guide tile"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "purpose": "Tile | feature text | tile row.",
+    "pagesUsing": [
+      "/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-17"
+  },
+  "reuseGuidance": "Use one row. Cells with a heading become the feature text; cells with image + link become label-bar tiles. Three cells give 1fr 2fr 1fr; other counts split equally.",
+  "sourceUrl": "https://www.shopmyexchange.com/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+}
