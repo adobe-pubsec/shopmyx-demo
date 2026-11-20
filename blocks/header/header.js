@@ -24,6 +24,22 @@ function parseNav({ html, base }) {
     img.loading = 'lazy';
     img.decoding = 'async';
   });
+  // DA wraps list-item content in <p>; unwrap it so the fragment has the local-preview shape
+  doc.querySelectorAll('li > p').forEach((p) => p.replaceWith(...p.childNodes));
+  // join an icon-only link with the label after it (a text node or a second link)
+  doc.querySelectorAll('li').forEach((li) => {
+    const a = li.querySelector(':scope > a');
+    if (!a || a.textContent.trim()) return;
+    let next = a.nextSibling;
+    while (next && next.nodeType === Node.TEXT_NODE && !next.textContent.trim()) {
+      next = next.nextSibling;
+    }
+    if (!next || (next.nodeType === Node.ELEMENT_NODE && next.tagName !== 'A')) return;
+    const label = next.textContent.trim();
+    if (!label) return;
+    a.append(` ${label}`);
+    next.remove();
+  });
   return [...doc.body.children].filter((el) => el.tagName === 'DIV');
 }
 

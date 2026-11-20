@@ -1,0 +1,14 @@
+- generic [ref=e5]:
+  - banner [ref=e7]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - button "Skip to main content" [ref=e12]
+        - button "Adobe Experience Cloud" [ref=e14]
+      - generic [ref=e16]:
+        - button "Help" [ref=e17]
+        - button "Notifications and Announcements" [ref=e23]
+        - button "Profile" [ref=e28]:
+          - figure [ref=e29]
+  - generic [ref=e31]:
+    - iframe [ref=e32]
+    - progressbar "Loading" [ref=e36]

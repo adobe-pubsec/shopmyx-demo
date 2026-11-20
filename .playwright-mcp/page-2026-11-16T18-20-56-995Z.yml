@@ -1,0 +1,161 @@
+- generic [ref=f5e5]:
+  - banner [ref=f5e7]:
+    - generic [ref=f5e9]:
+      - generic [ref=f5e10]:
+        - button "Skip to main content" [ref=f5e12]
+        - button "Adobe CX Enterprise" [ref=f5e14]
+      - generic [ref=f5e16]:
+        - 'button "Select another org account. Selected org: Jeff Foxx" [ref=f5e17]':
+          - generic [ref=f5e18]: Jeff Foxx
+        - separator [ref=f5e19]
+        - button "Launch sidebar" [ref=f5e20]
+        - button "Help" [ref=f5e24]
+        - 'button "Notifications and Announcements. unread notifications : 10 . Has new announcement" [ref=f5e61]':
+          - generic [ref=f5e62]: 9+
+        - button "Switch to another Solution" [ref=f5e35]
+        - button "Profile" [ref=f5e47]:
+          - figure [ref=f5e48]:
+            - img "User Profile" [ref=f5e67]
+  - iframe [active] [ref=f5e51]:
+    - generic [ref=f6e1]:
+      - generic [ref=f6e5]:
+        - link "Skip to content" [ref=f6e6] [cursor=pointer]:
+          - /url: "#ue-canvas"
+        - toolbar "Editor toolbar" [ref=f6e7]:
+          - generic [ref=f6e8]:
+            - generic [ref=f6e9]:
+              - button "Home" [ref=f6e10] [cursor=pointer]
+              - button "Undo" [disabled] [ref=f6e14] [cursor=pointer]
+              - button "Redo" [disabled] [ref=f6e18] [cursor=pointer]
+              - button "Location bar" [ref=f6e23] [cursor=pointer]:
+                - generic [ref=f6e24]: author-p49252-e308251.adobeaemcloud.com
+                - generic [ref=f6e32]: /demo-form.html
+            - generic [ref=f6e33]:
+              - button "Rule Editor" [ref=f6e77] [cursor=pointer]
+              - button "Edit Form Properties" [ref=f6e84] [cursor=pointer]
+              - separator [ref=f6e88]
+              - button "Page Properties" [ref=f6e89] [cursor=pointer]
+              - button "Open in Site Admin" [ref=f6e93] [cursor=pointer]
+              - button "Unlocked" [ref=f6e99] [cursor=pointer]
+              - button "Workflows" [ref=f6e104] [cursor=pointer]
+              - button "Local developer login" [ref=f6e34] [cursor=pointer]
+              - separator [ref=f6e39]
+              - button "Responsive Mode" [ref=f6e40] [cursor=pointer]
+              - button "Preview" [ref=f6e44] [cursor=pointer]
+              - button "Open page" [ref=f6e109] [cursor=pointer]
+              - button "Publish" [ref=f6e114] [cursor=pointer]
+              - button "More actions" [ref=f6e116] [cursor=pointer]
+        - main "Content area" [ref=f6e48]:
+          - region "Editable content overlay":
+            - generic [ref=f6e50]: To open the edit menu, press shift+o
+            - generic [ref=f6e125] [cursor=pointer]:
+              - button "Page" [ref=f6e126]
+              - generic: Page
+            - button [disabled] [ref=f6e127] [cursor=pointer]:
+              - button "Main" [disabled] [ref=f6e128]
+              - generic: Main
+            - button [ref=f6e129] [cursor=pointer]:
+              - button "Section" [ref=f6e130]
+              - generic: Section
+            - button [ref=f6e131] [cursor=pointer]:
+              - button "Adaptive Form" [ref=f6e132]
+              - generic: Adaptive Form
+            - button [ref=f6e133] [cursor=pointer]:
+              - button "First Name" [ref=f6e134]
+              - generic: First Name
+            - button [ref=f6e135] [cursor=pointer]:
+              - button "Last Name" [ref=f6e136]
+              - generic: Last Name
+            - button [ref=f6e137] [cursor=pointer]:
+              - button "Email" [ref=f6e138]
+              - generic: Email
+            - button [ref=f6e139] [cursor=pointer]:
+              - button "Message" [ref=f6e140]
+              - generic: Message
+            - button [ref=f6e141] [cursor=pointer]:
+              - button "Submit" [ref=f6e142]
+              - generic: Submit
+          - status [ref=f6e51]
+          - iframe [ref=f6e52]:
+            - generic [ref=f7e1]:
+              - banner [ref=f7e2]
+              - main [ref=f7e3]:
+                - generic [ref=f7e9]:
+                  - generic [ref=f7e10]:
+                    - text: First Name
+                    - textbox "First Name" [ref=f7e11]
+                  - generic [ref=f7e12]:
+                    - text: Last Name
+                    - textbox "Last Name" [ref=f7e13]
+                  - generic [ref=f7e14]:
+                    - text: Email
+                    - textbox "Email" [ref=f7e15]
+                  - generic [ref=f7e16]:
+                    - text: Message
+                    - textbox "Message" [ref=f7e17]
+                  - button "Submit" [ref=f7e19] [cursor=pointer]
+              - contentinfo
+        - complementary "Properties and tools" [ref=f6e53]:
+          - region "Content tree" [ref=f6e194]:
+            - button "Resize panel" [ref=f6e56]
+            - generic [ref=f6e195]:
+              - generic [ref=f6e197]:
+                - heading "Content tree" [level=3] [ref=f6e199]
+                - button "Open contextual menu" [ref=f6e200] [cursor=pointer]
+              - treegrid "Content tree" [ref=f6e211]:
+                - row "Page" [expanded] [level=1] [ref=f6e212] [cursor=pointer]:
+                  - gridcell "Collapse Page Page" [ref=f6e213]:
+                    - generic [ref=f6e214]:
+                      - button "Collapse Page" [ref=f6e216]
+                      - generic [ref=f6e223]: Page
+                - row "Main" [expanded] [level=2] [ref=f6e224] [cursor=pointer]:
+                  - gridcell "Collapse Main Main" [ref=f6e225]:
+                    - generic [ref=f6e226]:
+                      - button "Collapse Main" [ref=f6e228]
+                      - generic [ref=f6e237]: Main
+                - row "Section" [expanded] [active] [level=3] [ref=f6e238] [cursor=pointer]:
+                  - gridcell "Collapse Section Section" [ref=f6e261]:
+                    - generic [ref=f6e240]:
+                      - button "Collapse Section" [ref=f6e262]
+                      - generic [ref=f6e251]: Section
+                - row "Adaptive Form" [level=4] [ref=f6e263] [cursor=pointer]:
+                  - gridcell "Expand Adaptive Form Adaptive Form" [ref=f6e264]:
+                    - generic [ref=f6e265]:
+                      - button "Expand Adaptive Form" [ref=f6e267]
+                      - generic [ref=f6e276]: Adaptive Form
+          - toolbar "Editor actions" [ref=f6e64]:
+            - generic [ref=f6e65]:
+              - button "Properties" [ref=f6e66] [cursor=pointer]
+              - button "Content tree" [pressed] [ref=f6e71] [cursor=pointer]
+            - separator [ref=f6e143]
+            - generic [ref=f6e144]:
+              - button "Generate Variations" [ref=f6e145] [cursor=pointer]
+              - button "Task Management" [ref=f6e151] [cursor=pointer]
+              - button "Content drafts" [ref=f6e160] [cursor=pointer]
+              - button "Data Sources" [ref=f6e165] [cursor=pointer]
+              - button "Preflight" [ref=f6e171] [cursor=pointer]
+              - button "Experimentation" [ref=f6e177] [cursor=pointer]
+      - generic [aria-hidden]:
+        - iframe [aria-hidden] [ref=f6e182]
+        - iframe [aria-hidden] [ref=f6e183]:
+          - generic [ref=f9e1]: IFrame for integration with Host (AEM)...
+        - iframe [aria-hidden] [ref=f6e184]:
+          - generic [ref=f10e1]: IFrame for integration with Host (AEM)...
+        - iframe [aria-hidden] [ref=f6e185]:
+          - generic [ref=f11e1]: IFrame for integration with Host (AEM)...
+        - iframe [aria-hidden] [ref=f6e186]:
+          - generic [ref=f12e1]: IFrame for integration with Host (AEM)...
+        - iframe [aria-hidden] [ref=f6e187]:
+          - generic [ref=f13e1]: IFrame for integration with Host (AEM)...
+        - iframe [aria-hidden] [ref=f6e188]
+        - iframe [aria-hidden] [ref=f6e189]
+        - iframe [aria-hidden] [ref=f6e190]:
+          - generic [ref=f16e1]: IFrame for integration with Host ...
+        - iframe [aria-hidden] [ref=f6e191]:
+          - generic [ref=f17e4]:
+            - img "Loading…" [ref=f17e5]
+            - text: IFrame for integration with Host (AEM)...
+        - iframe [aria-hidden] [ref=f6e192]:
+          - generic [ref=f18e1]: IFrame for integration with Host (Universal Editor)
+        - iframe [aria-hidden] [ref=f6e193]:
+          - generic [ref=f19e1]: IFrame for integration with Host (AEM)...

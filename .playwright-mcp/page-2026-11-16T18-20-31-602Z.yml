@@ -1,0 +1,55 @@
+- generic [ref=f5e5]:
+  - banner [ref=f5e7]:
+    - generic [ref=f5e9]:
+      - generic [ref=f5e10]:
+        - button "Skip to main content" [ref=f5e12]
+        - button "Adobe CX Enterprise" [ref=f5e14]
+      - generic [ref=f5e16]:
+        - 'button "Select another org account. Selected org: Jeff Foxx" [ref=f5e17]':
+          - generic [ref=f5e18]: Jeff Foxx
+        - separator [ref=f5e19]
+        - button "Launch sidebar" [ref=f5e20]
+        - button "Help" [ref=f5e24]
+        - button "Notifications and Announcements" [ref=f5e30]
+        - button "Switch to another Solution" [ref=f5e35]
+        - button "Profile" [ref=f5e47]:
+          - figure [ref=f5e48]
+  - generic [ref=f5e50]:
+    - iframe [ref=f5e51]:
+      - generic [ref=f6e5]:
+        - link "Skip to content" [ref=f6e6] [cursor=pointer]:
+          - /url: "#ue-canvas"
+        - toolbar "Editor toolbar" [ref=f6e7]:
+          - generic [ref=f6e8]:
+            - generic [ref=f6e9]:
+              - button "Home" [ref=f6e10] [cursor=pointer]
+              - button "Undo" [disabled] [ref=f6e14] [cursor=pointer]
+              - button "Redo" [disabled] [ref=f6e18] [cursor=pointer]
+              - button "Location bar" [ref=f6e23] [cursor=pointer]:
+                - generic [ref=f6e24]: author-p49252-e308251.adobeaemcloud.com
+                - generic [ref=f6e32]: /demo-form.html
+            - generic [ref=f6e33]:
+              - button "Local developer login" [ref=f6e34] [cursor=pointer]
+              - separator [ref=f6e39]
+              - button "Responsive Mode" [ref=f6e40] [cursor=pointer]
+              - button "Preview" [ref=f6e44] [cursor=pointer]
+        - main "Content area" [ref=f6e48]:
+          - region "Editable content overlay":
+            - generic [ref=f6e50]: To open the edit menu, press shift+o
+          - status [ref=f6e51]
+          - iframe [ref=f6e52]:
+            - generic [ref=f7e1]:
+              - banner [ref=f7e2]
+              - main
+              - contentinfo
+        - complementary "Properties and tools" [ref=f6e53]:
+          - region "Properties" [ref=f6e55]:
+            - button "Resize panel" [ref=f6e56]
+            - generic [ref=f6e58]:
+              - heading "No component selected" [level=3] [ref=f6e62]
+              - generic [ref=f6e63]: Select a component on the canvas to activate this panel.
+          - toolbar "Editor actions" [ref=f6e64]:
+            - generic [ref=f6e65]:
+              - button "Properties" [pressed] [ref=f6e66] [cursor=pointer]
+              - button "Content tree" [ref=f6e71] [cursor=pointer]
+    - progressbar "Loading" [ref=f5e55]

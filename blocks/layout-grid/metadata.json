@@ -1,0 +1,25 @@
+{
+  "variantName": "layout-grid",
+  "baseBlock": "layout-grid",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Flexible image-only promotional grids with named author-selectable layouts",
+    "description": "Equal tiles, a large square feature on either side, or a wide feature on either side."
+  },
+  "contentPattern": {
+    "structure": "block heading: Layout Grid with a layout variant; each content row: image with optional destination link in a second cell",
+    "description": "Choose a class-based variant, such as Layout Grid (Feature Right). Linked images follow in reading order; no property row or nested blocks."
+  },
+  "variants": [
+    "two-columns",
+    "three-columns",
+    "four-columns",
+    "feature-left",
+    "feature-right",
+    "wide-left",
+    "wide-right"
+  ],
+  "memberVariantIds": [],
+  "usage": "Choose a variant in the Block Inspector or use a heading such as Layout Grid (Feature Left). Three Columns is the default when no variant is set.",
+  "reuseGuidance": "Use five images for Feature layouts, three for Wide layouts, or any count for equal columns."
+}

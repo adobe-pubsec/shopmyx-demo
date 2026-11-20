@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout Grid</title>
+    <link rel="stylesheet" href="/blocks/layout-grid/layout-grid.css">
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #242424; background: #fff; font-family: Verdana, sans-serif; }
+      header { padding: 20px 24px; border-bottom: 3px solid #a51720; background: #f5f5f5; }
+      h1 { margin: 0 0 16px; font-size: 24px; }
+      label { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+      select { max-width: 100%; padding: 8px; border: 1px solid #777; background: #fff; font: inherit; }
+      output { display: block; margin-top: 16px; font: 14px monospace; overflow-wrap: anywhere; }
+      main { max-width: 1440px; margin: auto; padding: 24px; }
+      @media (width < 600px) {
+        header, main { padding: 16px; }
+        label { align-items: start; flex-direction: column; }
+      }
+    </style>
+    <script type="module">
+      import decorate from '/blocks/layout-grid/layout-grid.js';
+
+      const artwork = [
+        ['Sports & Outdoors', '14aefbdde385e81e221c4713fe7d343c9e11ab62e'],
+        ['Shoes', '1f517bc1c4478436bce69a58eebbb6ae951d8d457'],
+        ['Clothing & Accessories', '1ca330400b28e1df5b9bffac5304ab104a2845720'],
+        ['Beauty & Health', '1b1faa930aecf415952bd5454f92e16883f2d7c10'],
+        ['Jewelry & Watches', '1410f5ee08e4722896e18f387c9088b3064b70fed'],
+      ];
+      const select = document.querySelector('select');
+      const block = document.querySelector('.layout-grid');
+      const output = document.querySelector('output');
+
+      function update() {
+        block.className = `layout-grid ${select.value}`;
+        block.replaceChildren();
+        const tiles = select.value.startsWith('wide-') ? artwork.slice(0, 3) : artwork;
+        tiles.forEach(([label, asset]) => {
+          const row = document.createElement('div');
+          const cell = document.createElement('div');
+          const picture = document.createElement('picture');
+          const image = document.createElement('img');
+          image.src = `https://main--shopmyx-demo--adobe-pubsec.aem.page/media_${asset}.avif?width=750&format=avif&optimize=medium`;
+          image.alt = label;
+          image.width = 750;
+          image.height = 750;
+          const linkCell = document.createElement('div');
+          const link = document.createElement('a');
+          link.href = 'https://www.shopmyexchange.com/';
+          link.textContent = label;
+          linkCell.append(link);
+          picture.append(image);
+          cell.append(picture);
+          row.append(cell, linkCell);
+          block.append(row);
+        });
+        decorate(block);
+        output.textContent = `Layout Grid (${select.selectedOptions[0].dataset.heading})`;
+      }
+
+      select.addEventListener('change', update);
+      update();
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Layout Grid</h1>
+      <label>Layout
+        <select>
+          <option value="feature-left" data-heading="Feature Left">Feature Left</option>
+          <option value="feature-right" data-heading="Feature Right">Feature Right</option>
+          <option value="two-columns" data-heading="Two Columns">Equal Tiles: Two Columns</option>
+          <option value="three-columns" data-heading="Three Columns">Equal Tiles: Three Columns</option>
+          <option value="four-columns" data-heading="Four Columns">Equal Tiles: Four Columns</option>
+          <option value="wide-left" data-heading="Wide Left">Wide Left</option>
+          <option value="wide-right" data-heading="Wide Right">Wide Right</option>
+        </select>
+      </label>
+      <output aria-live="polite"></output>
+    </header>
+    <main>
+      <div class="layout-grid"></div>
+    </main>
+  </body>
+</html>
