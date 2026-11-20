@@ -93,12 +93,17 @@ function buildScene7Rendition(src, { width, format }) {
   const base = qIdx >= 0 ? normalized.slice(0, qIdx) : normalized;
   const query = qIdx >= 0 ? normalized.slice(qIdx + 1) : '';
   const pairs = query.split('&').filter((p) => p);
+  // An authored `fmt=…-alpha` (e.g. a transparent bow on a colored band) keeps
+  // its transparency: webp → webp-alpha, jpg (no alpha) → png-alpha.
+  const alpha = pairs.some((p) => /^fmt=[a-z0-9]+-alpha$/i.test(p));
   const filtered = pairs.filter((p) => {
     const k = p.split('=')[0];
     return k !== 'wid' && k !== 'fmt' && k !== 'fit';
   });
   filtered.push(`wid=${width}`);
-  filtered.push(`fmt=${format}`);
+  let fmt = format;
+  if (alpha) fmt = format === 'webp' ? 'webp-alpha' : 'png-alpha';
+  filtered.push(`fmt=${fmt}`);
   // Scene7 pads the canvas to `wid` when the asset is narrower (a 440px strip at
   // wid=2000 comes back 2000px wide, letterboxed). `fit=constrain` caps the
   // rendition at the asset's native size while still downscaling larger ones.

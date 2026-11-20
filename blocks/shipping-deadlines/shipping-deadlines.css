@@ -1,0 +1,265 @@
+/* Shipping deadlines: green title bar, teal body; stocking | grouped calendars | truck + note */
+.shipping-deadlines {
+  --shipping-deadlines-green: #59a17b;
+
+  /* same teal as the art's background, so the cropped stocking/truck blend in */
+  --shipping-deadlines-teal: #2f9bb8;
+  --shipping-deadlines-red: #d91f26;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--shipping-deadlines-teal);
+  color: #fff;
+  font-family: 'Roboto Condensed', 'Arial Narrow', arial, sans-serif;
+  font-weight: 700;
+}
+
+.shipping-deadlines .shipping-deadlines-title {
+  padding: 6px 12px;
+  background-color: var(--shipping-deadlines-green);
+  text-align: center;
+}
+
+.shipping-deadlines .shipping-deadlines-title > * {
+  margin: 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: clamp(18px, 2.6vw, 32px);
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.shipping-deadlines .shipping-deadlines-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  grid-template-areas:
+    'groups groups'
+    'left right';
+  align-items: end;
+  gap: 12px;
+  padding: 16px 12px 12px;
+}
+
+.shipping-deadlines .shipping-deadlines-art {
+  line-height: 0;
+}
+
+.shipping-deadlines .shipping-deadlines-art img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.shipping-deadlines .shipping-deadlines-art-left {
+  grid-area: left;
+}
+
+.shipping-deadlines .shipping-deadlines-art-left img {
+  max-height: 150px;
+  width: auto;
+}
+
+.shipping-deadlines .shipping-deadlines-art-right {
+  grid-area: right;
+  text-align: right;
+}
+
+.shipping-deadlines .shipping-deadlines-art-right picture {
+  display: block;
+}
+
+.shipping-deadlines .shipping-deadlines-art-right img {
+  margin-left: auto;
+}
+
+.shipping-deadlines .shipping-deadlines-note {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* groups */
+.shipping-deadlines .shipping-deadlines-groups {
+  grid-area: groups;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 16px;
+}
+
+.shipping-deadlines .shipping-deadlines-group {
+  flex: 1 1 100%;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* stacked groups (below 1024px): dotted rule between them, running across */
+.shipping-deadlines .shipping-deadlines-group + .shipping-deadlines-group {
+  padding-top: 16px;
+  border-top: 3px dotted #fff;
+}
+
+.shipping-deadlines .shipping-deadlines-group-name {
+  max-width: 8em;
+  margin: 0 auto 12px;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.shipping-deadlines .shipping-deadlines-group:has(.shipping-deadlines-item + .shipping-deadlines-item) .shipping-deadlines-group-name {
+  max-width: none;
+}
+
+.shipping-deadlines .shipping-deadlines-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.shipping-deadlines .shipping-deadlines-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 7.5em;
+  font-size: 14px;
+}
+
+.shipping-deadlines .shipping-deadlines-label {
+  margin-top: 10px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* CSS calendar: white card, red month, teal day panel, two binder rings */
+.shipping-deadlines .shipping-deadlines-calendar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 56px;
+  padding: 3px 4px 4px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.shipping-deadlines .shipping-deadlines-calendar::before,
+.shipping-deadlines .shipping-deadlines-calendar::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 4px;
+  height: 9px;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px var(--shipping-deadlines-teal);
+}
+
+.shipping-deadlines .shipping-deadlines-calendar::before {
+  left: 25%;
+}
+
+.shipping-deadlines .shipping-deadlines-calendar::after {
+  right: 25%;
+}
+
+.shipping-deadlines .shipping-deadlines-month {
+  padding: 2px 0;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--shipping-deadlines-red);
+}
+
+.shipping-deadlines .shipping-deadlines-day {
+  padding: 3px 0;
+  border-radius: 2px;
+  background-color: var(--shipping-deadlines-teal);
+  font-size: 26px;
+  text-align: center;
+  color: #fff;
+}
+
+/* the title link makes the whole panel clickable; its text stays for assistive tech */
+.shipping-deadlines a.shipping-deadlines-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  font-size: 0;
+  color: transparent;
+}
+
+.shipping-deadlines a.shipping-deadlines-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
+@media (width >= 768px) {
+  .shipping-deadlines .shipping-deadlines-groups {
+    flex-wrap: nowrap;
+  }
+
+  /* groups side by side: dotted rule between them, running down */
+  .shipping-deadlines .shipping-deadlines-group {
+    flex: 0 0 auto;
+  }
+
+  .shipping-deadlines .shipping-deadlines-group + .shipping-deadlines-group {
+    padding-top: 0;
+    border-top: 0;
+    border-left: 3px dotted #fff;
+  }
+}
+
+@media (width >= 1024px) {
+  .shipping-deadlines .shipping-deadlines-body {
+    grid-template-columns: minmax(0, 12fr) minmax(0, 62fr) minmax(0, 26fr);
+    grid-template-areas: 'left groups right';
+    align-items: center;
+    gap: 0;
+    padding: 16px 16px 12px 24px;
+  }
+
+  .shipping-deadlines .shipping-deadlines-art-left img {
+    max-height: none;
+    width: 100%;
+  }
+
+  .shipping-deadlines .shipping-deadlines-art-right {
+    align-self: end;
+  }
+
+  .shipping-deadlines .shipping-deadlines-group-name {
+    font-size: 18px;
+  }
+
+  .shipping-deadlines .shipping-deadlines-item {
+    width: 6.5em;
+    font-size: 17px;
+  }
+
+  .shipping-deadlines .shipping-deadlines-calendar {
+    width: 72px;
+  }
+
+  .shipping-deadlines .shipping-deadlines-month {
+    font-size: 18px;
+  }
+
+  .shipping-deadlines .shipping-deadlines-day {
+    font-size: 32px;
+  }
+
+  .shipping-deadlines .shipping-deadlines-note {
+    font-size: 17px;
+  }
+}

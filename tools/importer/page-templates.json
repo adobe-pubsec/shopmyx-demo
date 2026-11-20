@@ -316,6 +316,91 @@
           ]
         }
       ]
+    },
+    {
+      "name": "gift-guide",
+      "urls": [
+        "https://www.shopmyexchange.com/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+      ],
+      "representativeUrl": "https://www.shopmyexchange.com/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26",
+      "description": "Holiday gift guide promo landing page (image-only source art converted to editable blocks)",
+      "blocks": [
+        {
+          "name": "promo-banner",
+          "instances": [
+            "div.banner-container:has(img[src*=\"gift-guide-2026-header01\"])",
+            "div.banner-container:has(img[src*=\"gift-guide-2026-gift-cards01\"])"
+          ]
+        },
+        {
+          "name": "cards-promo-tiles",
+          "instances": [
+            "section.bg-holidaygiftguide div.lpcategory-container:has(img[src*=\"-dollar-bow\"])"
+          ]
+        },
+        {
+          "name": "cards-gift-tile",
+          "instances": [
+            "section.bg-holidaygiftguide div.lpcategory-container:has(img[src*=\"gift-guide-2026-tile-\"])"
+          ]
+        },
+        {
+          "name": "columns-gift-feature",
+          "instances": [
+            "section.bg-holidaygiftguide div.lpcategory-container:has(img[src*=\"gift-tabs-\"])"
+          ]
+        },
+        {
+          "name": "shipping-deadlines",
+          "instances": [
+            "div.banner-container:has(img[src*=\"shipping-delivery01\"])"
+          ]
+        }
+      ],
+      "urlPattern": "/cp/category-landing-pages/shared-promotions/*",
+      "sections": [
+        {
+          "id": "S1",
+          "name": "Hero",
+          "selector": [
+            "div.banner-container:has(img[src*=\"gift-guide-2026-header01\"])"
+          ],
+          "style": null,
+          "blocks": [
+            "promo-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "S2",
+          "name": "Red gift band",
+          "selector": [
+            "div.banner-container.bg-holidaygiftguide:has(img[src*=\"gifts-under01\"])"
+          ],
+          "style": "holiday-red",
+          "blocks": [
+            "cards-promo-tiles",
+            "cards-gift-tile",
+            "promo-banner",
+            "columns-gift-feature"
+          ],
+          "defaultContent": [
+            "div.banner-container.bg-holidaygiftguide:has(img[src*=\"gifts-under01\"])"
+          ]
+        },
+        {
+          "id": "S3",
+          "name": "Shipping deadlines",
+          "selector": [
+            "div.banner-container:has(img[src*=\"shipping-delivery01\"])"
+          ],
+          "style": "holiday-red",
+          "blocks": [
+            "shipping-deadlines"
+          ],
+          "defaultContent": []
+        }
+      ]
     }
   ],
   "metadata": {

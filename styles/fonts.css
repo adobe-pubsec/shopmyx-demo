@@ -1,2 +1,15 @@
 /* Lato (body font of www.shopmyexchange.com), served from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* Adobe Fonts kit: rig-solid-bold-reverse (holiday display headings) and cc-matinee-idol (script
+   subtitles). The font files only download on pages that use them. */
+@import url('https://use.typekit.net/dsy2fmf.css');
+
+/* Roboto Condensed Bold (gift-guide labels: cards-gift-tile, columns-gift-feature, shipping-deadlines) */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/roboto-condensed-bold.woff2') format('woff2');
+}

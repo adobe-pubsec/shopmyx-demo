@@ -1,0 +1,25 @@
+{
+  "variantName": "promo-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Editable teal promo banner: display headline + script subtitle with core art; H1 instance is the page hero",
+    "description": "Teal (#2f9bb8) panel, white heavy uppercase headline with dark offset 3D shadow, white script subtitle, text left (~58%) and cropped core art right; stacked and centered on mobile. H1 instance: square corners, larger type, optional full-width decorative border strip below. H2 instance: rounded 8px, whole banner clickable via the text-cell link."
+  },
+  "contentPattern": {
+    "structure": "Row 1: 2 cells (Core image | Heading + subtitle paragraph + optional link). Row 2 (optional): 1 cell (decorative full-width border image)",
+    "description": "Holiday gift guide hero (Merry Everything) with lights/polka-dot border strip; Add Holiday Cheer gift-card banner linking to gift cards"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "purpose": "Editable promo banner (headline, script subtitle, core art); hero when the heading is an H1.",
+    "pagesUsing": [
+      "/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-17"
+  },
+  "reuseGuidance": "Use for text-on-color promo banners rebuilt from flat Scene7 art: author the copy as real text and only the cropped art as the image. Use H1 only for the page hero. A link in the text cell makes the whole banner clickable.",
+  "sourceUrl": "https://www.shopmyexchange.com/cp/category-landing-pages/shared-promotions/holiday-gift-guide-26"
+}
